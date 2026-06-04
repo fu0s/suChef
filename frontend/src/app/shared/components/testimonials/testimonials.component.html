@@ -1,0 +1,17 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div *ngFor="let testimonial of testimonials" class="testimonial-card animate-on-scroll">
+    <div class="mb-4 flex items-center">
+      <span style="color: var(--primary-600);">{{ getStars(testimonial.rating) }}</span>
+    </div>
+    <p class="mb-6 italic" style="color: #57534e;">"{{ testimonial.quote }}"</p>
+    <div class="flex items-center">
+      <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-bold" style="background: var(--gradient-1);">
+        {{ testimonial.name.charAt(0) }}
+      </div>
+      <div>
+        <p class="font-bold" style="color: #1c1917;">{{ testimonial.name }}</p>
+        <p class="text-sm" style="color: #78716b;">{{ testimonial.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

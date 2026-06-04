@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11
+      author: suchef-bot
+      changes:
+        # Step 1: Add restaurant_id to users
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: restaurant_id
+                  type: VARCHAR(36)
+                  constraints:
+                    nullable: true
+        # Step 2: Add foreign key constraint to users table
+        - addForeignKeyConstraint:
+            baseTableName: users
+            baseColumnNames: restaurant_id
+            constraintName: fk_users_restaurants
+            referencedTableName: restaurants
+            referencedColumnNames: id
+            
+        # Step 3: Drop foreign key constraint from restaurants table
+        - dropForeignKeyConstraint:
+            baseTableName: restaurants
+            constraintName: fk_restaurants_users
+            
+        # Step 4: Drop user_id column from restaurants
+        - dropColumn:
+            tableName: restaurants
+            columnName: user_id

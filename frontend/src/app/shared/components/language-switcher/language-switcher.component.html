@@ -1,0 +1,28 @@
+<div class="relative">
+  <button
+    (click)="toggleDropdown()"
+    class="flex items-center justify-center w-10 h-10 rounded-lg transition-all"
+    [style]="'background: var(--gradient-1); border: 2px solid var(--primary-600);'"
+  >
+    <span class="text-lg">{{ getFlagForLanguage(currentLanguage) }}</span>
+  </button>
+
+  @if (isDropdownOpen) {
+    <div
+      class="absolute left-0 mt-2 rounded-lg shadow-lg z-50"
+      style="background: white; border: 2px solid var(--primary-600); width: 40px;"
+    >
+      @for (lang of languages; track lang.code) {
+        <button
+          (click)="setLanguage(lang.code)"
+          class="w-full flex items-center justify-center py-2 transition h-10"
+          [style]="'border-bottom: 1px solid rgba(6,182,212,0.12); background: ' + (currentLanguage === lang.code ? 'var(--primary-600)' : 'transparent')"
+          (mouseenter)="onLanguageHover($event, lang.code, true)"
+          (mouseleave)="onLanguageHover($event, lang.code, false)"
+        >
+          <span class="text-lg">{{ lang.flag }}</span>
+        </button>
+      }
+    </div>
+  }
+</div>

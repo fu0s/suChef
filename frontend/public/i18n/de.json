@@ -1,0 +1,572 @@
+{
+  "common": {
+    "appName": "SuChef",
+    "menu": "Menü",
+    "expand": "Erweitern",
+    "collapse": "Ausblenden",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "home": "Startseite",
+    "pricing": "Preisgestaltung",
+    "dashboard": "Dashboard",
+    "documents": "Dokumente",
+    "signUp": "Anmelden",
+    "continueAsGuest": "Als Gast fortfahren",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "fullName": "Vollständiger Name",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "noResults": "Keine Ergebnisse gefunden"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "documents": "Dokumente hochladen",
+    "chat": "KI-Chat-Assistent",
+    "subscription": "Abonnement",
+    "profile": "Profil"
+  },
+  "header": {
+    "title": "SuChef - Restaurantverwaltung leicht gemacht"
+  },
+  "landing": {
+    "nav": {
+      "home": "Startseite",
+      "features": "Funktionen",
+      "ai": "KI",
+      "pricing": "Preise",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "title": "Ihr unverzichtbarer KI-Küchenassistent",
+      "subheadline": "Revolutionieren Sie die Restaurantverwaltung mit KI-gestützten Erkenntnissen für Lagerbestand, Gewinne, Rezepte, Trends und Margen",
+      "startFreeTrial": "Kostenlos testen",
+      "watchDemo": "Demo ansehen"
+    },
+    "features": {
+      "title": "Leistungsstarke Funktionen für den Erfolg",
+      "sectionTitle": "Leistungsstarke Funktionen für den Erfolg",
+      "sectionSubtitle": "Alles, was Sie für die Optimierung Ihrer Restaurantabläufe benötigen",
+      "stockSummary": {
+        "title": "Lagerbestandsübersicht & Warnmeldungen",
+        "description": "Echtzeit-Bestandsverfolgung mit intelligenten Niedrigbestandswarnungen und automatischen Nachbestellungsvorschlägen zur Vermeidung von Bestandsfehlern",
+        "benefit1": "Echtzeit-Verfolgung",
+        "benefit2": "Intelligente Niedrigbestandswarnungen",
+        "benefit3": "Automatische Nachbestellungsvorschläge"
+      },
+      "profitMetrics": {
+        "title": "Gewinn-Metriken-Dashboard",
+        "description": "Umfassende Umsatzaufschlüsselung, Kostenanalyse und Rentabilitätsmetriken auf einen Blick",
+        "benefit1": "Umsatzaufschlüsselung",
+        "benefit2": "Kostenanalyse",
+        "benefit3": "Gewinnmetriken"
+      },
+      "recipeOptimization": {
+        "title": "Rezeptoptimierung",
+        "description": "Optimieren Sie Rezepte für Kosten und Qualität, verfolgen Sie die Zutatenverwwendung und reduzieren Sie Lebensmittelverschwendung",
+        "benefit1": "Kostenoptimierung",
+        "benefit2": "Abfallreduzierung",
+        "benefit3": "Qualitätsverfolgung"
+      },
+      "trendNotifications": {
+        "title": "Trend-Benachrichtigungen",
+        "description": "Bleiben Sie mit Echtzeit-Benachrichtigungen über Trendgerichte, saisonale Muster und Marktchancen informiert",
+        "benefit1": "Echtzeit-Warnmeldungen",
+        "benefit2": "Trendanalyse",
+        "benefit3": "Markteinblicke"
+      },
+      "marginBoost": {
+        "title": "Margin-Boost-Angebote",
+        "description": "KI-generierte Empfehlungen für Preisanpassungen und Werbeaktionen zur Maximierung der Margen",
+        "benefit1": "Intelligente Preisgestaltung",
+        "benefit2": "Angebotsempfehlungen",
+        "benefit3": "Margin-Optimierung"
+      },
+      "bestsellerInsights": {
+        "title": "Bestseller-Erkenntnisse",
+        "description": "Identifizieren Sie Ihre Top-Performer und nutzen Sie diese mit detaillierten Analysen und Empfehlungen",
+        "benefit1": "Leistungsverfolgung",
+        "benefit2": "Top-Gericht-Analysen",
+        "benefit3": "Wachstumsempfehlungen"
+      },
+      "aiChat": {
+        "title": "KI-Chat-Assistent",
+        "description": "24/7 KI-gestützter Assistent für sofortige Antworten auf Fragen zu Bestand, Preisgestaltung und Betrieb",
+        "benefit1": "Sofortige Antworten",
+        "benefit2": "24/7 Verfügbarkeit",
+        "benefit3": "Intelligente Vorschläge"
+      },
+      "advancedAnalytics": {
+        "title": "Erweiterte Analytik",
+        "description": "Tiefer Einblick in Ihre Restaurantmetriken mit leistungsstarker Berichterstattung und Predictive Analytics",
+        "benefit1": "Benutzerdefinierte Berichte",
+        "benefit2": "Prognoseerkenntnisse",
+        "benefit3": "Exportfunktionen"
+      }
+    },
+    "aiSection": {
+      "title": "KI, die 2026 unverzichtbar ist",
+      "subtitle": "Ihre Restaurant Geheimwaffe",
+      "stat1": "30% Margin-Steigerung",
+      "stat1Description": "Durchschnittliche Steigerung der Gewinnmargen",
+      "stat2": "Keine Bestandslücken",
+      "stat2Description": "Keine verpassten Verkaufschancen mehr",
+      "stat3": "50% Weniger Lebensmittelverschwendung",
+      "stat3Description": "Intelligentere Bestandsverwaltung",
+      "stat4": "24/7 KI-Erkenntnisse",
+      "stat4Description": "Immer verfügbare Intelligenz",
+      "stat5": "10x Effizienz",
+      "stat5Description": "Schnellere Entscheidungsfindung",
+      "stat6": "100% Datengetrieben",
+      "stat6Description": "Garantierte Genauigkeit"
+    },
+    "recommendations": {
+      "title": "Empfohlen von Branchenführern",
+      "sectionTitle": "Vertraut von Restaurantbesitzern weltweit",
+      "sectionSubtitle": "Sehen Sie, was erfolgreiche Restaurants über suChef sagen",
+      "chef1": {
+        "name": "Chef Marco Rossi",
+        "restaurant": "The Golden Fork",
+        "role": "Küchenchef & Besitzer",
+        "quote": "suChef hat meine Margen über Nacht verändert. Die KI-Vorschläge sind unglaublich genau und haben mir geholfen, unsere Menüpreise perfekt zu optimieren."
+      },
+      "owner1": {
+        "name": "Lisa Chen",
+        "restaurant": "Urban Eats Co.",
+        "role": "Restaurantbesitzerin",
+        "quote": "Endlich kann ich mich auf die Küche konzentrieren statt auf Tabellenkalkulationen. Die automatischen Bestandswarnungen haben uns Tausende bei Lebensmittelverschwendung gespart."
+      },
+      "chef2": {
+        "name": "Chef David Thompson",
+        "restaurant": "Coastal Fine Dining",
+        "role": "Ausführender Chef",
+        "quote": "Bestandswarnungen allein haben uns vor zahlreichen Bestandslücken bewahrt. Das System ist intuitiv und wirklich hilfreich für den täglichen Betrieb."
+      },
+      "owner2": {
+        "name": "Priya Patel",
+        "restaurant": "Spice Route",
+        "role": "Restaurant-Gründerin",
+        "quote": "Die KI-Erkenntnisse, die ich erhalte, sind unglaublich. Wir haben nie zuvor dieses Maß an umsetzbarer Intelligenz über unser Geschäft gehabt."
+      },
+      "chef3": {
+        "name": "Chef Thomas Anderson",
+        "restaurant": "Farm to Table",
+        "role": "Chef & Co-Gründer",
+        "quote": "Game-Changer für unsere Küchenabläufe. Die Rezeptoptimierungsfunktion hat uns geholfen, die Qualität zu bewahren und gleichzeitig die Kosten zu senken."
+      }
+    },
+    "pricing": {
+      "title": "Einfache, transparente Preisgestaltung",
+      "monthly": "Monatlich",
+      "annual": "Jährlich",
+      "sectionTitle": "Einfache, transparente Preisgestaltung",
+      "sectionSubtitle": "Wählen Sie den Plan, der zu Ihrem Restaurant passt",
+      "billingToggle": "Jährlich abrechnen und 10% sparen",
+      "annualDiscount": "10% Rabatt bei jährlicher Abrechnung",
+      "perMonth": "/Monat",
+      "perYear": "/Jahr",
+      "free": {
+        "name": "Kostenlos",
+        "description": "Perfekt für den Start",
+        "price": "Kostenlos",
+        "cta": "Loslegen"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Am beliebtesten für wachsende Restaurants",
+        "price": "€99/Monat",
+        "annualPrice": "€990/Jahr",
+        "cta": "Kostenlos testen",
+        "badge": "Am beliebtesten"
+      },
+      "enterprise": {
+        "name": "Unternehmensversion",
+        "description": "Für große Mehrstandort-Betriebe",
+        "price": "€299/Monat",
+        "annualPrice": "€2.990/Jahr",
+        "cta": "Vertrieb kontaktieren"
+      },
+      "features": {
+        "inventoryBasic": "Grundlegende Bestandsverfolgung",
+        "dashboard": "Restaurant-Dashboard",
+        "reports": "Erweiterte Berichte & Analysen",
+        "aiChat": "KI-Chat-Assistent",
+        "trendAnalysis": "Trendanalyse & Benachrichtigungen",
+        "locations": "Bis zu 10 Standorte",
+        "support24": "24/7 Premium-Support",
+        "customIntegrations": "Benutzerdefinierte Integrationen"
+      }
+    },
+    "contact": {
+      "title": "Bereit, Ihr Restaurant zu optimieren?",
+      "subtitle": "Starten Sie heute noch",
+      "sectionTitle": "Bereit, Ihr Restaurant zu optimieren?",
+      "sectionSubtitle": "Treten Sie Hunderten erfolgreicher Restaurants bei, die suChef nutzen",
+      "labels": {
+        "name": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "restaurantName": "Name des Restaurants",
+        "restaurantType": "Art des Restaurants",
+        "selectType": "Wählen Sie eine Art von Restaurant",
+        "numberOfLocations": "Anzahl der Standorte",
+        "message": "Nachricht (Optional)",
+        "optional": "optional",
+        "agreeToTerms": "Ich stimme den Bedingungen und der Datenschutzrichtlinie zu"
+      },
+      "submit": "Besprechung planen",
+      "success": "Vielen Dank! Wir werden Sie bald kontaktieren.",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+      "errors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen ein",
+        "nameTooShort": "Der Name muss mindestens 2 Zeichen lang sein",
+        "emailRequired": "Bitte geben Sie Ihre E-Mail ein",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "restaurantRequired": "Bitte geben Sie den Namen Ihres Restaurants ein",
+        "restaurantNameTooShort": "Der Name des Restaurants muss mindestens 2 Zeichen lang sein",
+        "typeRequired": "Bitte wählen Sie eine Art von Restaurant",
+        "locationsRequired": "Die Anzahl der Standorte muss zwischen 1 und 1000 liegen",
+        "messageTooLong": "Die Nachricht darf nicht länger als 2000 Zeichen sein",
+        "termsRequired": "Sie müssen den Bedingungen zustimmen"
+      },
+      "formLabels": {
+        "name": "Ihr Name",
+        "email": "E-Mail-Adresse",
+        "restaurantName": "Name des Restaurants",
+        "restaurantType": "Art des Restaurants",
+        "numberOfLocations": "Anzahl der Standorte",
+        "message": "Erzählen Sie uns von Ihrem Restaurant",
+        "agreeToTerms": "Ich stimme den Bedingungen und der Datenschutzrichtlinie zu"
+      },
+      "restaurantTypes": [
+        "Fine Dining",
+        "Casual Dining",
+        "Fast Casual",
+        "Fast Food",
+        "Bäckerei",
+        "Café",
+        "Food Truck",
+        "Catering",
+        "Cloud Kitchen",
+        "Sonstiges"
+      ],
+      "submitButton": "Kostenlose Demo planen",
+      "submitting": "Wird gesendet...",
+      "successMessage": "Danke! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden, um Ihre Demo zu planen.",
+      "successTitle": "Demo geplant!",
+      "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut oder kontaktieren Sie den Support.",
+      "errorTitle": "Hoppla!",
+      "validationErrors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen ein",
+        "nameTooShort": "Der Name muss mindestens 2 Zeichen lang sein",
+        "emailRequired": "Bitte geben Sie Их E-Mail ein",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "restaurantNameRequired": "Bitte geben Sie den Namen Ihres Restaurants ein",
+        "restaurantNameTooShort": "Der Name des Restaurants muss mindestens 2 Zeichen lang sein",
+        "restaurantTypeRequired": "Bitte wählen Sie eine Restauranttyp",
+        "locationsInvalid": "Die Anzahl der Standorte muss zwischen 1 und 1000 liegen",
+        "messageTooLong": "Die Nachricht darf 2000 Zeichen nicht überschreiten",
+        "termsRequired": "Sie müssen den Bedingungen zustimmen"
+      }
+    },
+    "emailPlaceholder": "ihre@restaurant.com",
+    "restaurantNamePlaceholder": "z.B. Marcos Küche",
+    "watchDemo": "Demo anschauen →",
+    "privacy": "Mit dem Absenden stimmen Sie unseren Bedingungen zu. Kein Spam, je.",
+    "socialProof": {
+      "asSeenIn": "Zu sehen in"
+    },
+    "testimonials": {
+      "title": "Vertraut von Restaurantführern",
+      "subtitle": "Echte Ergebnisse von echten Köchen, die sich auf Rentabilität konzentrieren.",
+      "testimonial1": {
+        "text": "suChef sparte uns innerhalb von 90 Tagen 18% der Lebensmittelkosten. Ich habe früher bei Menüpreisen geraten – jetzt kenne ich sie auf den Cent genau. Es ist, als hätte man einen CFO in meiner Küche.",
+        "author": "Marco Rossi",
+        "role": "Executive Chef, Nonnas Küche"
+      },
+      "testimonial2": {
+        "text": "Die Trend-Benachrichtigungen sind ein Spielwechsler. Als pflanzlich viral ging, pivotierten wir vor unseren Konkurrenten. Unsere Gewinnmarge stieg sogar, während wir innovierten. Unglaublich.",
+        "author": "Elena Rodriguez",
+        "role": "Inhaberin, Verde & Vida"
+      },
+      "testimonial3": {
+        "text": "Endlich ein Werkzeug, das die Sprache von Köchen spricht, nicht von Buchhaltern. Es ist intuitiv, schön und löst wirklich echte Probleme in der Küche. Jeden Cent wert.",
+        "author": "Chef Thomas Laurent",
+        "role": "Küchenchef, Bistro Lumière"
+      }
+    },
+    "benefits": {
+      "title": "Entwickelt, um Ihre Margen zu maximieren",
+      "subtitle": "Hören Sie auf, Geld auf dem Tisch zu lassen. Automatisieren Sie, was wichtig ist, und konzentrieren Sie sich auf das, was Restaurants großartig macht.",
+      "benefit1": {
+        "stat": "100%",
+        "title": "Kennen Sie Ihre wahren Kosten",
+        "description": "Stoppen Sie die Schätzung der Zutatenkosten. Jede Rechnung wird in Sekunden analysiert. Keine Überraschungen bei Margen mehr.",
+        "point1": "Echtzeit-Kostenverfolgung",
+        "point2": "Automatische Rechnungs-OCR",
+        "point3": "Kostenabweichungswarnungen"
+      },
+      "benefit2": {
+        "stat": "15%",
+        "title": "Erkennen Sie Trends vor der Konkurrenz",
+        "description": "Unsere KI beobachtet Marktbewegungen für Sie. Wenn Zutaten teuer werden, pivotieren Sie zu dem, was rentabel ist.",
+        "point1": "KI-gestützte Trennerkennung",
+        "point2": "Prognose für Zutatenpreise",
+        "point3": "Wöchentliche Markteinblicke"
+      },
+      "benefit3": {
+        "stat": "3x",
+        "title": "Bewegen Sie sich schneller als je zuvor",
+        "description": "Eliminieren Sie Tabellenkalkulationen und manuelle Einträge. Was Stunden dauerte, dauert jetzt Minuten.",
+        "point1": "Papierlose Rechnungsstellung",
+        "point2": "One-Click-Menü-Updates",
+        "point3": "Automatisierte Berichte"
+      }
+    },
+    "stats": {
+      "stat1": {
+        "value": "500+",
+        "label": "Restaurants nutzen suChef"
+      },
+      "stat2": {
+        "value": "15%",
+        "label": "Durchschnittliche Margensteigerung"
+      },
+      "stat3": {
+        "value": "10M+",
+        "label": "Analysierte Rechnungen"
+      },
+      "stat4": {
+        "value": "98%",
+        "label": "Kundenzufriedenheit"
+      }
+    },
+    "finalCta": {
+      "title": "Bereit, Ihre Margen zurückzugewinnen?",
+      "subtitle": "Starten Sie mit einer kostenlosen 14-Tage-Testversion. Keine Kreditkarte, keine Verpflichtung. Nur echtes Gewinnwachstum.",
+      "button": "Starten Sie noch heute Ihre kostenlose Testversion",
+      "note": "Durchschnittliche Einrichtungszeit: 5 Minuten. Erste Gewinnverbesserung: 30 Tage."
+    },
+    "footer": {
+      "company": "suChef",
+      "tagline": "Restaurant-Profit-Intelligence für Köche, die mehr wollen.",
+      "product": "Produkt",
+      "productDesc": "Entwickelt speziell für Restaurantrentabilität und Menüoptimierung.",
+      "contact": "Kontakt",
+      "contactEmail": "fragen@suchef.com",
+      "copyright": "© 2026 suChef. Alle Rechte vorbehalten.",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "termsOfService": "Nutzungsbedingungen"
+    }
+  },
+  "pricing": {
+    "title": "Einfache, transparente Preisgestaltung",
+    "subtitle": "Wählen Sie den perfekten Plan für Ihr Restaurant. Alle Pläne beinhalten eine 14-Tage-Kostenlos-Testversion.",
+    "starter": {
+      "name": "Starter",
+      "subtitle": "Perfekt für kleine Restaurants",
+      "price": "€29",
+      "period": "/Monat",
+      "button": "Los geht's"
+    },
+    "professional": {
+      "name": "Professional",
+      "subtitle": "Am besten für wachsende Restaurants",
+      "price": "€79",
+      "period": "/Monat",
+      "button": "Los geht's",
+      "badge": "Am beliebtesten"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "subtitle": "Für Restaurantgruppen",
+      "price": "€199",
+      "period": "/Monat",
+      "button": "Kontaktieren Sie den Vertrieb"
+    },
+    "features": {
+      "documents": "Dokumente/Monat",
+      "analytics": "Erweiterte Analytik",
+      "profit": "Benutzerdefinierte Gewinnberechnungen",
+      "reports": "Monatliche Leistungsberichte",
+      "support": "Vorrangiger E-Mail-Support",
+      "multiUser": "Multi-User-Konten",
+      "dataSync": "Echtzeit-Datensynchronisierung",
+      "export": "Berichte als PDF exportieren",
+      "unlimited": "Unbegrenzte Dokumente",
+      "fullAnalytics": "Vollständige erweiterte Analytik",
+      "multiLocation": "Multi-Standort-Unterstützung",
+      "integrations": "Benutzerdefinierte Integrationen",
+      "accountManager": "Dedizierter Account Manager",
+      "phoneSupport": "24/7-Telefonunterstützung",
+      "apiAccess": "Vollständiger API-Zugriff"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Kann ich jederzeit kündigen?",
+      "a1": "Ja! Kündigen Sie Ihr Abonnement jederzeit ohne Fragen. Keine langfristigen Verträge.",
+      "q2": "Bieten Sie Rabatte an?",
+      "a2": "Ja! Jahresabonnements erhalten 20% Rabatt. Kontaktieren Sie unser Vertriebsteam für Mengenrabatte.",
+      "q3": "Welche Zahlungsmethoden akzeptieren Sie?",
+      "a3": "Wir akzeptieren alle gängigen Kreditkarten, PayPal und Banküberweisung für Enterprise-Pläne.",
+      "q4": "Gibt es eine kostenlose Testversion?",
+      "a4": "Ja! Alle Pläne beinhalten eine 14-Tage-Kostenlos-Testversion. Keine Kreditkarte erforderlich."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "setup": {
+      "title": "Bevor wir beginnen,",
+      "subtitle": "nennen Sie Ihre Küche.",
+      "placeholder": "z.B. Die Goldene Platte",
+      "initialize": "Initialisierung",
+      "unlock": "Einblicke freischalten",
+      "disclaimer": "Ihr Dashboard, Ihre Metriken und Erkenntnisse sind nativ auf diesen Betrieb ausgerichtet. Sie können dies später in den Einstellungen ändern."
+    },
+    "welcome": "Willkommen zurück",
+    "liveSync": "Live-Synchronisierung",
+    "totalRevenue": "Gesamtumsatz",
+    "totalExpenses": "Gesamtausgaben",
+    "totalOrders": "Gesamtbestellungen",
+    "profitMargin": "Gewinnspanne",
+    "averageOrderValue": "Durchschnittlicher Bestellwert",
+    "documentsUploaded": "Hochgeladene Dokumente",
+    "netProfit": "Nettogewinn",
+    "performanceTracking": "Leistungsverfolgung",
+    "revenueBreakdown": "Umsatzaufschlüsselung",
+    "topDishAnalytics": "Top-Gericht-Analysen",
+    "costAnalysis": "Kostenanalyse",
+    "outstandingPerformance": "Hervorragende Leistung",
+    "thisMonth": "diesen Monat",
+    "fromLastMonth": "vom letzten Monat",
+    "saved": "gespart",
+    "kgPrevented": "kg verhindert",
+    "bestOrder": "Beste Bestellung",
+    "highestNetMonth": "Bester Nettomonat",
+    "marginOptimization": "Margenoptimierung",
+    "qualityTracking": "Qualitätsverfolgung",
+    "costOptimization": "Kostenoptimierung",
+    "wasteReduction": "Abfallreduzierung",
+    "stockWasteImprovement": "Lagerbestandsverbesserung",
+    "bills": "Rechnungen",
+    "orders": "Bestellungen",
+    "startTracking": "Tracking starten",
+    "startTrackingDesc": "Laden Sie Ihre Rechnungen und Bestellungen hoch, um genaue Restaurantkennzahlen zu generieren.",
+    "goToDocuments": "Gehe zu Dokumenten",
+    "loadingData": "Daten werden geladen...",
+    "loadingExperience": "Erlebnis wird geladen..."
+  },
+  "auth": {
+    "login": {
+      "title": "Anmelden bei suChef",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "emailPlaceholder": "E-Mail eingeben",
+      "passwordPlaceholder": "Passwort eingeben",
+      "submit": "Anmelden",
+      "or": "Oder",
+      "continueAsGuest": "Als Gast fortfahren",
+      "noAccount": "Noch kein Konto?",
+      "registerLink": "Hier registrieren",
+      "success": "Anmeldung erfolgreich",
+      "failed": "Anmeldung fehlgeschlagen"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "restaurantName": "Nennen Sie Ihre Küche",
+      "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "namePlaceholder": "Vollständigen Namen eingeben",
+      "emailPlaceholder": "E-Mail eingeben",
+      "restaurantPlaceholder": "z.B. Die Goldene Platte",
+      "passwordPlaceholder": "Passwort wählen",
+      "confirmPlaceholder": "Passwort bestätigen",
+      "submit": "Registrieren",
+      "haveAccount": "Bereits ein Konto?",
+      "loginLink": "Hier anmelden",
+      "success": "Registrierung erfolgreich",
+      "failed": "Registrierung fehlgeschlagen",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "minLength": "Mindestens 6 Zeichen erforderlich"
+    }
+  },
+  "documents": {
+    "title": "Dokumentverwaltung",
+    "subtitle": "Verwalten Sie Ihren Küchenbetrieb durch optimierte Dokumentenspeicherung und sicheren Abruf",
+    "historyTitle": "Dokumentenverlauf",
+    "files": "Dateien",
+    "fileName": "Datei",
+    "status": "Status",
+    "statuses": {
+      "RECEIVED": "Empfangen",
+      "PROCESSING": "Verarbeitung",
+      "COMPLETED": "Abgeschlossen",
+      "FAILED": "Fehlgeschlagen"
+    },
+    "actions": "Aktionen",
+    "download": "Herunterladen",
+    "delete": "Löschen",
+    "noDocuments": "Noch keine Dokumente gespeichert.",
+    "uploadNew": "Neu hochladen",
+    "uploadDesc": "Fügen Sie Dokumente zu Ihrem Repository für spätere Referenz hinzu",
+    "dropOrBrowse": "Datei ablegen oder durchsuchen",
+    "browse": "durchsuchen",
+    "supportedFormats": "PDF, JPG, PNG oder DOC (Max 10MB)",
+    "changeFile": "Datei ändern",
+    "confirmUpload": "Bestätigen & Hochladen",
+    "deleteConfirm": "Sind Sie sicher, dass Sie dieses Dokument löschen möchten?"
+  },
+  "chat": {
+    "title": "KI-Chat-Assistent",
+    "placeholder": "Frag mich alles über deine Restaurantkennzahlen...",
+    "send": "Senden",
+    "noMessages": "Starten Sie ein Gespräch mit unserem KI-Assistenten",
+    "noMessagesHint": "Stellen Sie Fragen zu Ihren Geschäftskennzahlen, Empfehlungen und mehr",
+    "greeting": "👋 Hallo! Ich bin dein SuChef KI-Assistent. Ich kann dir helfen, deine Restaurantkennzahlen zu analysieren, Fragen zur Rentabilität zu beantworten und Empfehlungen zur Verbesserung deines Geschäfts zu geben. Was möchtest du wissen?",
+    "response": {
+      "profit": "📊 Um deine Gewinnmargen zu verbessern, empfehle ich: 1) Überprüfe regelmäßig deine Zutatenkosten, 2) Analysiere Ladenhüter, 3) Optimiere die Portionsgrößen, 4) Überwache die Personalkosten im Verhältnis zum Umsatz. Möchtest du, dass ich auf einen dieser Punkte näher eingehe?",
+      "expense": "💰 Deine Ausgaben sind ein wichtiger Bereich, den du verfolgen solltest. Ich stelle fest, dass deine Uploads häufig unterschiedliche Kosten aufweisen. Ich empfehle: 1) Verhandle bessere Preise mit Lieferanten, 2) Reduziere Lebensmittelabfälle, 3) Verfolge die täglichen Ausgaben konsequent, 4) Vergleiche die Kosten von Monat zu Monat. Welche spezifischen Ausgaben bereiten dir am meisten Sorgen?",
+      "order": "📈 Die Auftragsverfolgung ist entscheidend! Um das Auftragsvolumen zu erhöhen: 1) Analysiere die Stoßzeiten und die Personalbesetzung, 2) Optimiere deine Menüpreise, 3) Identifiziere deine Bestseller, 4) Bewerbe Artikel mit hoher Marge. Hast du aufgrund deiner Daten saisonale Muster bemerkt?",
+      "help": "🎯 Ich bin hier, um zu helfen! Du kannst mich fragen nach: • Strategien zur Gewinnoptimierung • Tipps zur Kostensenkung • Ideen zur Umsatzsteigerung • Dokumentenanalyse • Geschäftsempfehlungen • Erklärung von Restaurantkennzahlen. Was möchtest du erkunden?",
+      "thanks": "😊 Gern geschehen! Frag mich ruhig alles andere über dein Restaurantgeschäft. Ich bin immer hier, um dir zu helfen, bessere Entscheidungen zu treffen!",
+      "default": "💡 Das ist eine großartige Frage! Basierend auf deinen Restaurantdaten kann ich spezifischere Einblicke geben. Könntest du klären, ob es um Umsatz, Ausgaben, Betrieb oder etwas anderes geht? Oder frag einfach nach Kennzahlen, die du besser verstehen möchtest."
+    }
+  },
+  "subscription": {
+    "title": "Abonnementstatus",
+    "guestMode": "Sie befinden sich im Gasmodus",
+    "guestModeDesc": "Sie verwenden SuChef derzeit als Gast. Erstellen Sie ein Konto oder führen Sie ein Upgrade durch, um unbegrenzte Funktionen freizuschalten und Ihre Daten gespeichert zu halten.",
+    "createAccount": "Konto erstellen",
+    "currentPlan": "Plan",
+    "status": "Status",
+    "monthlyPrice": "Monatlicher Preis",
+    "planPeriod": "Planungszeitraum",
+    "daysRemaining": "Verbleibende Tage",
+    "documentUsage": "Dokumentverwendung",
+    "documentsUploaded": "Hochgeladene Dokumente",
+    "uploadsRemaining": "Uploads verbleibend in diesem Monat",
+    "includedFeatures": "Enthaltene Funktionen",
+    "changePlan": "Plan ändern",
+    "cancelSubscription": "Abonnement kündigen",
+    "active": "Aktiv",
+    "trial": "Testversion",
+    "expired": "Abgelaufen",
+    "chatsUsage": "AI-Chats",
+    "insightsUsage": "AI-Einblicke",
+    "used": "Genutzt",
+    "limit": "Limit"
+  },
+  "profile": {
+    "title": "Profil",
+    "bio": "Bio",
+    "editProfile": "Profil bearbeiten"
+  }
+}

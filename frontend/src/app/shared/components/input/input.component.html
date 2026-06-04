@@ -1,0 +1,35 @@
+<div class="space-y-1">
+  <label
+    *ngIf="label"
+    [for]="id"
+    class="block text-sm font-medium"
+    style="color: #78716b;"
+  >
+    {{ label }}
+  </label>
+  <div class="relative">
+    <input
+      [id]="id"
+      [type]="type"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (blur)="onTouched()"
+      [disabled]="disabled"
+      class="block w-full rounded-lg py-2 px-3 transition-all"
+      style="border: 2px solid rgba(212, 208, 201, 0.5); color: #1c1917;"
+      [ngClass]="{
+        'pr-10': type === 'password',
+        'border-red-300 text-red-900 placeholder-red-300': error
+      }"
+      (focus)="$event.target.style.borderColor='var(--primary-600)'"
+      (blur)="$event.target.style.borderColor='rgba(212, 208, 201, 0.5)'"
+    />
+    <div
+      *ngIf="error"
+      class="mt-1 text-sm"
+      style="color: #ef4444;"
+    >
+      {{ error }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<button
+  [ngClass]="[
+    'inline-flex items-center justify-center rounded-md font-medium transition-colors',
+    variantClasses,
+    sizeClasses,
+    disabled ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-90'
+  ]"
+  [disabled]="disabled"
+  [type]="type">
+  <ng-content></ng-content>
+</button>

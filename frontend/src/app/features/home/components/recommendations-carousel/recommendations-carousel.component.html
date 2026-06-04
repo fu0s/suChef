@@ -1,0 +1,32 @@
+<section data-recommendations-section id="recommendations-section" class="recommendations-section">
+  <div class="recommendations-container">
+    <h2 class="recommendations-heading">{{ 'landing.recommendations.title' | translate }}</h2>
+    <p class="recommendations-subtitle">{{ 'landing.recommendations.sectionSubtitle' | translate }}</p>
+
+    <div class="carousel-wrapper">
+      <div data-carousel-container class="carousel-container">
+        <div *ngFor="let testimonial of displayTestimonials" class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" [style.background-color]="testimonial.avatarColor">
+                {{ testimonial.initials }}
+              </div>
+
+              <div class="testimonial-author">
+                <h3 class="author-name">{{ testimonial.nameKey | translate }}</h3>
+                <p class="author-role">{{ testimonial.roleKey | translate }}</p>
+                <p class="restaurant-name">{{ testimonial.restaurantKey | translate }}</p>
+              </div>
+            </div>
+
+            <p class="testimonial-quote">{{ testimonial.quoteKey | translate }}</p>
+
+            <div class="testimonial-rating">
+              <span *ngFor="let i of [1,2,3,4,5]" class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

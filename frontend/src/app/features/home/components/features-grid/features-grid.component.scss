@@ -1,0 +1,129 @@
+@use "../../../../../styles/landing-design-system" as design;
+
+.features-section {
+  padding: 120px 24px;
+  background-color: #fafaf9; // stone-50
+  border-top: 1px solid #e7e5e4; // stone-200
+
+  .features-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .features-heading {
+    font-family: design.$font-family-heading;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 16px 0;
+    color: #1c1917; // stone-900
+    letter-spacing: -0.02em;
+
+    @media (max-width: design.$breakpoint-md) {
+      font-size: 36px;
+    }
+  }
+
+  .features-subtitle {
+     text-align: center;
+     color: #78716b; // stone-500
+     font-size: 18px;
+     max-width: 600px;
+     margin: 0 auto 80px auto;
+     line-height: 1.6;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+
+    @media (min-width: design.$breakpoint-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .feature-card {
+    background: #ffffff;
+    border: 1px solid #e7e5e4;
+    border-radius: 12px; // sharp-ish
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background-color: var(--feature-color);
+      transition: height 0.4s ease;
+    }
+
+    .feature-card-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .feature-title {
+      font-family: design.$font-family-heading;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      color: #1c1917;
+    }
+
+    .feature-description {
+      font-size: 15px;
+      color: #57534e; // stone-600
+      margin: 0 0 24px 0;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .feature-benefits {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid #f5f5f4;
+      padding-top: 20px;
+
+      .benefit-item {
+        font-size: 13px;
+        font-weight: 500;
+        color: #44403c;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: var(--feature-color);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(28, 25, 23, 0.08);
+      border-color: #d6d3d1;
+
+      &::before {
+        height: 100%;
+      }
+    }
+  }
+}

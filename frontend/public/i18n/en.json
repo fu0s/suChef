@@ -1,0 +1,494 @@
+{
+  "common": {
+    "appName": "SuChef",
+    "menu": "Menu",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "home": "Home",
+    "pricing": "Pricing",
+    "dashboard": "Dashboard",
+    "signUp": "Sign Up",
+    "continueAsGuest": "Continue as Guest",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "noResults": "No results found"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "documents": "Upload Documents",
+    "chat": "AI Chat Assistant",
+    "subscription": "Subscription",
+    "profile": "Profile"
+  },
+  "header": {
+    "title": "SuChef - Restaurant Management Made Simple"
+  },
+  "landing": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "ai": "AI",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Your Indispensable AI Kitchen Assistant",
+      "subheadline": "Revolutionize Restaurant Management with AI-powered insights for stock, profits, recipes, trends, and margins",
+      "startFreeTrial": "Start Free Trial",
+      "watchDemo": "Watch Demo"
+    },
+    "features": {
+      "title": "Powerful Features Built for Success",
+      "sectionTitle": "Powerful Features Built for Success",
+      "sectionSubtitle": "Everything you need to optimize your restaurant operations",
+      "stockSummary": {
+        "title": "Stock Summary & Alerts",
+        "description": "Real-time inventory tracking with intelligent low-stock alerts and automatic reorder suggestions to prevent stockouts",
+        "benefit1": "Real-time tracking",
+        "benefit2": "Smart low-stock alerts",
+        "benefit3": "Auto-reorder suggestions"
+      },
+      "profitMetrics": {
+        "title": "Profit Metrics Dashboard",
+        "description": "Comprehensive revenue breakdown, cost analysis, and profitability metrics at a glance",
+        "benefit1": "Revenue breakdown",
+        "benefit2": "Cost analysis",
+        "benefit3": "Profit metrics"
+      },
+      "recipeOptimization": {
+        "title": "Recipe Optimization",
+        "description": "Optimize recipes for cost and quality, track ingredient usage, and reduce food waste",
+        "benefit1": "Cost optimization",
+        "benefit2": "Waste reduction",
+        "benefit3": "Quality tracking"
+      },
+      "trendNotifications": {
+        "title": "Trend Notifications",
+        "description": "Stay informed with real-time notifications about trending dishes, seasonal patterns, and market opportunities",
+        "benefit1": "Real-time alerts",
+        "benefit2": "Trend analysis",
+        "benefit3": "Market insights"
+      },
+      "marginBoost": {
+        "title": "Margin Boost Offers",
+        "description": "AI-generated recommendations for pricing adjustments and promotional offers to maximize margins",
+        "benefit1": "Smart pricing",
+        "benefit2": "Offer recommendations",
+        "benefit3": "Margin optimization"
+      },
+      "bestsellerInsights": {
+        "title": "Best-Seller Insights",
+        "description": "Identify and leverage your top-performing dishes with detailed analytics and recommendations",
+        "benefit1": "Performance tracking",
+        "benefit2": "Top dish analytics",
+        "benefit3": "Growth recommendations"
+      },
+      "aiChat": {
+        "title": "AI Chat Assistant",
+        "description": "24/7 AI-powered assistant for instant answers to stock, pricing, and operational questions",
+        "benefit1": "Instant answers",
+        "benefit2": "24/7 availability",
+        "benefit3": "Smart suggestions"
+      },
+      "advancedAnalytics": {
+        "title": "Advanced Analytics",
+        "description": "Deep dive into your restaurant metrics with powerful reporting and predictive analytics",
+        "benefit1": "Custom reports",
+        "benefit2": "Predictive insights",
+        "benefit3": "Export capabilities"
+      }
+    },
+    "aiSection": {
+      "title": "AI That's Indispensable in 2026",
+      "subtitle": "Your Restaurant's Secret Weapon",
+      "stat1": "30% Margin Increase",
+      "stat1Description": "Average increase in profit margins",
+      "stat2": "Zero Stockouts",
+      "stat2Description": "No more missed sales opportunities",
+      "stat3": "50% Less Food Waste",
+      "stat3Description": "Smarter inventory management",
+      "stat4": "24/7 AI Insights",
+      "stat4Description": "Always-on intelligence",
+      "stat5": "10x Efficiency",
+      "stat5Description": "Faster decision making",
+      "stat6": "100% Data-Driven",
+      "stat6Description": "Guaranteed accuracy"
+    },
+    "recommendations": {
+      "title": "Recommended by Industry Leaders",
+      "sectionTitle": "Trusted by Restaurant Owners Worldwide",
+      "sectionSubtitle": "See what successful restaurants say about suChef",
+      "chef1": {
+        "name": "Chef Marco Rossi",
+        "restaurant": "The Golden Fork",
+        "role": "Head Chef & Owner",
+        "quote": "suChef transformed my margins overnight. The AI suggestions are incredibly accurate and have helped me optimize our menu pricing perfectly."
+      },
+      "owner1": {
+        "name": "Lisa Chen",
+        "restaurant": "Urban Eats Co.",
+        "role": "Restaurant Owner",
+        "quote": "Finally have time to focus on cuisine instead of spreadsheets. The automated inventory alerts saved us thousands in food waste."
+      },
+      "chef2": {
+        "name": "Chef David Thompson",
+        "restaurant": "Coastal Fine Dining",
+        "role": "Executive Chef",
+        "quote": "Stock alerts alone have saved us from countless stockouts. The system is intuitive and genuinely helpful for daily operations."
+      },
+      "owner2": {
+        "name": "Priya Patel",
+        "restaurant": "Spice Route",
+        "role": "Restaurant Founder",
+        "quote": "The AI insights I'm getting are incredible. We've never had this level of actionable intelligence about our business before."
+      },
+      "chef3": {
+        "name": "Chef Thomas Anderson",
+        "restaurant": "Farm to Table",
+        "role": "Chef & Co-founder",
+        "quote": "Game changer for our kitchen operations. The recipe optimization feature has helped us maintain quality while reducing costs."
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "sectionTitle": "Simple, Transparent Pricing",
+      "sectionSubtitle": "Choose the plan that's right for your restaurant",
+      "billingToggle": "Bill annually and save 10%",
+      "annualDiscount": "Save 10% with annual billing",
+      "perMonth": "/month",
+      "perYear": "/year",
+      "free": {
+        "name": "Free",
+        "description": "Perfect for getting started",
+        "price": "Free",
+        "cta": "Get Started"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Most popular for growing restaurants",
+        "price": "$99/month",
+        "annualPrice": "$990/year",
+        "cta": "Start Free Trial",
+        "badge": "Most Popular"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large, multi-location operations",
+        "price": "$299/month",
+        "annualPrice": "$2,990/year",
+        "cta": "Contact Sales"
+      },
+      "features": {
+        "inventoryBasic": "Basic inventory tracking",
+        "dashboard": "Restaurant dashboard",
+        "reports": "Advanced reports & analytics",
+        "aiChat": "AI Chat Assistant",
+        "trendAnalysis": "Trend analysis & notifications",
+        "locations": "Up to 10 locations",
+        "support24": "24/7 priority support",
+        "customIntegrations": "Custom integrations"
+      }
+    },
+    "contact": {
+      "title": "Ready to Optimize Your Restaurant?",
+      "subtitle": "Start Today",
+      "sectionTitle": "Ready to Optimize Your Restaurant?",
+      "sectionSubtitle": "Join hundreds of successful restaurants using suChef",
+      "labels": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "restaurantName": "Restaurant Name",
+        "restaurantType": "Restaurant Type",
+        "selectType": "Select a restaurant type",
+        "numberOfLocations": "Number of Locations",
+        "message": "Message (Optional)",
+        "optional": "optional",
+        "agreeToTerms": "I agree to the terms and privacy policy"
+      },
+      "submit": "Schedule Demo",
+      "success": "Thank you! We'll be in touch.",
+      "error": "Something went wrong. Please try again.",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "nameTooShort": "Name must be at least 2 characters",
+        "emailRequired": "Please enter your email",
+        "emailInvalid": "Please enter a valid email address",
+        "restaurantRequired": "Please enter your restaurant name",
+        "restaurantNameTooShort": "Restaurant name must be at least 2 characters",
+        "typeRequired": "Please select a restaurant type",
+        "locationsRequired": "Number of locations must be between 1 and 1000",
+        "messageTooLong": "Message must not exceed 2000 characters",
+        "termsRequired": "You must agree to the terms"
+      },
+      "formLabels": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "restaurantName": "Restaurant Name",
+        "restaurantType": "Restaurant Type",
+        "numberOfLocations": "Number of Locations",
+        "message": "Tell us about your restaurant",
+        "agreeToTerms": "I agree to the terms and privacy policy"
+      },
+      "restaurantTypes": [
+        "Fine Dining",
+        "Casual Dining",
+        "Fast Casual",
+        "Fast Food",
+        "Bakery",
+        "Café",
+        "Food Truck",
+        "Catering",
+        "Cloud Kitchen",
+        "Other"
+      ],
+      "submitButton": "Schedule Free Demo",
+      "submitting": "Sending...",
+      "successTitle": "Demo Scheduled!",
+      "errorTitle": "Oops!",
+      "validationErrors": {
+        "nameRequired": "Please enter your name",
+        "nameTooShort": "Name must be at least 2 characters",
+        "emailRequired": "Please enter your email",
+        "emailInvalid": "Please enter a valid email address",
+        "restaurantNameRequired": "Please enter your restaurant name",
+        "restaurantNameTooShort": "Restaurant name must be at least 2 characters",
+        "restaurantTypeRequired": "Please select a restaurant type",
+        "locationsInvalid": "Number of locations must be between 1 and 1000",
+        "messageTooLong": "Message must not exceed 2000 characters",
+        "termsRequired": "You must agree to the terms"
+      }
+    },
+    "footer": {
+      "company": "suChef",
+      "tagline": "AI-Powered Restaurant Management",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "followUs": "Follow Us",
+      "copyright": "© 2026 suChef. All rights reserved."
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your restaurant. All plans include a 14-day free trial.",
+    "starter": {
+      "name": "Starter",
+      "subtitle": "Perfect for small restaurants",
+      "price": "$29",
+      "period": "/month",
+      "button": "Get Started"
+    },
+    "professional": {
+      "name": "Professional",
+      "subtitle": "Best for growing restaurants",
+      "price": "$79",
+      "period": "/month",
+      "button": "Get Started",
+      "badge": "Most Popular"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "subtitle": "For restaurant groups",
+      "price": "$199",
+      "period": "/month",
+      "button": "Contact Sales"
+    },
+    "features": {
+      "documents": "documents/month",
+      "analytics": "Advanced analytics",
+      "profit": "Custom profit calculations",
+      "reports": "Monthly performance reports",
+      "support": "Priority email support",
+      "multiUser": "Multi-user accounts",
+      "dataSync": "Real-time data sync",
+      "export": "Export reports to PDF",
+      "unlimited": "Unlimited documents",
+      "fullAnalytics": "Full advanced analytics",
+      "multiLocation": "Multi-location support",
+      "integrations": "Custom integrations",
+      "accountManager": "Dedicated account manager",
+      "phoneSupport": "24/7 phone support",
+      "apiAccess": "Full API access"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Can I cancel anytime?",
+      "a1": "Yes! Cancel your subscription anytime with no questions asked. No long-term contracts.",
+      "q2": "Do you offer discounts?",
+      "a2": "Yes! Annual subscriptions get 20% off. Contact our sales team for bulk discounts.",
+      "q3": "What payment methods do you accept?",
+      "a3": "We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.",
+      "q4": "Is there a free trial?",
+      "a4": "Yes! All plans include a 14-day free trial. No credit card required to start."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "setup": {
+      "title": "Before we begin,",
+      "subtitle": "name your kitchen.",
+      "placeholder": "e.g. The Golden Platter",
+      "initialize": "Initializing",
+      "unlock": "Unlock Insight",
+      "disclaimer": "Your dashboard, metrics, and insights will be natively scoped to this establishment. You can change this later in settings."
+    },
+    "welcome": "Welcome back",
+    "liveSync": "Live Sync",
+    "totalRevenue": "Total Revenue",
+    "totalExpenses": "Total Expenses",
+    "totalOrders": "Total Orders",
+    "profitMargin": "Profit Margin",
+    "averageOrderValue": "Average Order Value",
+    "documentsUploaded": "Documents Uploaded",
+    "netProfit": "Net Profit",
+    "performanceTracking": "Performance Tracking",
+    "revenueBreakdown": "Revenue Breakdown",
+    "topDishAnalytics": "Top Dish Analytics",
+    "costAnalysis": "Cost Analysis",
+    "outstandingPerformance": "Outstanding Performance",
+    "thisMonth": "this month",
+    "fromLastMonth": "from last month",
+    "saved": "saved",
+    "kgPrevented": "kg prevented",
+    "bestOrder": "Best Order",
+    "highestNetMonth": "Highest Net Month",
+    "marginOptimization": "Margin Optimization",
+    "qualityTracking": "Quality Tracking",
+    "costOptimization": "Cost Optimization",
+    "wasteReduction": "Waste Reduction",
+    "stockWasteImprovement": "Stock Waste Improv.",
+    "bills": "Bills",
+    "orders": "Orders",
+    "startTracking": "Start Tracking",
+    "startTrackingDesc": "Upload your bills and orders to generate accurate restaurant metrics.",
+    "goToDocuments": "Go to Documents",
+    "loadingData": "Loading data...",
+    "loadingExperience": "Loading Experience..."
+  },
+  "auth": {
+    "login": {
+      "title": "Login to suChef",
+      "email": "Email",
+      "password": "Password",
+      "emailPlaceholder": "Enter your email",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Login",
+      "or": "Or",
+      "continueAsGuest": "Continue as Guest",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register here",
+      "success": "Login successful",
+      "failed": "Login failed"
+    },
+    "register": {
+      "title": "Create an Account",
+      "fullName": "Full Name",
+      "email": "Email",
+      "restaurantName": "Name your kitchen",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "namePlaceholder": "Enter your full name",
+      "emailPlaceholder": "Enter your email",
+      "restaurantPlaceholder": "e.g. The Golden Platter",
+      "passwordPlaceholder": "Choose a password",
+      "confirmPlaceholder": "Confirm your password",
+      "submit": "Register",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Login here",
+      "success": "Registration successful",
+      "failed": "Registration failed",
+      "passwordMismatch": "Passwords do not match",
+      "minLength": "Minimum 6 characters required"
+    }
+  },
+
+  "documents": {
+    "title": "Document Management",
+    "subtitle": "Manage your kitchen operations through streamlined document storage and secure retrieval",
+    "historyTitle": "Document History",
+    "files": "Files",
+    "fileName": "File",
+    "status": "Status",
+    "statuses": {
+      "RECEIVED": "Received",
+      "PROCESSING": "Processing",
+      "COMPLETED": "Completed",
+      "FAILED": "Failed"
+    },
+    "actions": "Actions",
+    "download": "Download",
+    "delete": "Delete",
+    "noDocuments": "No documents stored yet.",
+    "uploadNew": "Upload New",
+    "uploadDesc": "Add documents to your repository for later reference",
+    "dropOrBrowse": "Drop file or browse",
+    "browse": "browse",
+    "supportedFormats": "PDF, JPG, PNG or DOC (Max 10MB)",
+    "changeFile": "Change file",
+    "confirmUpload": "Confirm & Upload",
+    "deleteConfirm": "Are you sure you want to delete this document?"
+  },
+  "chat": {
+    "title": "AI Chat Assistant",
+    "placeholder": "Ask me anything about your restaurant metrics...",
+    "send": "Send",
+    "noMessages": "Start a conversation with our AI assistant",
+    "noMessagesHint": "Ask questions about your business metrics, recommendations, and more",
+    "greeting": "👋 Hello! I'm your SuChef AI Assistant. I can help you analyze your restaurant metrics, answer questions about profitability, and provide recommendations to improve your business. What would you like to know?",
+    "response": {
+      "profit": "📊 To improve your profit margins, I recommend: 1) Review your ingredient costs regularly, 2) Analyze slow-moving items, 3) Optimize portion sizes, 4) Monitor labor costs against revenue. Would you like me to dive deeper into any of these?",
+      "expense": "💰 Your expenses are a key area to track. I notice from your uploads that varying costs are common. I recommend: 1) Negotiate better rates with suppliers, 2) Reduce food waste, 3) Track daily expenses consistently, 4) Compare costs month-over-month. What specific expense concerns you most?",
+      "order": "📈 Order tracking is crucial! To increase order volume: 1) Analyze peak hours and staffing, 2) Optimize your menu pricing, 3) Identify your best-sellers, 4) Promote high-margin items. Based on your data, have you noticed any seasonal patterns?",
+      "help": "🎯 I'm here to help! You can ask me about: • Profit optimization strategies • Expense reduction tips • Revenue improvement ideas • Document analysis • Business recommendations • Restaurant metrics explanation. What would you like to explore?",
+      "thanks": "😊 You're welcome! Feel free to ask me anything else about your restaurant business. I'm always here to help you make better decisions!",
+      "default": "💡 That's a great question! Based on your restaurant data, I can provide more specific insights. Could you clarify if this is about revenue, expenses, operations, or something else? Or feel free to ask about any metrics you'd like to understand better."
+    }
+  },
+  "subscription": {
+    "title": "Subscription Status",
+    "guestMode": "You're in Guest Mode",
+    "guestModeDesc": "You're currently using SuChef as a guest. Create an account or upgrade to unlock unlimited features and keep your data saved.",
+    "createAccount": "Create Account",
+    "currentPlan": "Plan",
+    "status": "Status",
+    "monthlyPrice": "Monthly Price",
+    "planPeriod": "Plan Period",
+    "daysRemaining": "Days Remaining",
+    "documentUsage": "Document Usage",
+    "documentsUploaded": "Documents Uploaded",
+    "uploadsRemaining": "uploads remaining this month",
+    "includedFeatures": "Included Features",
+    "changePlan": "Change Plan",
+    "cancelSubscription": "Cancel Subscription",
+    "active": "Active",
+    "trial": "Trial",
+    "expired": "Expired",
+    "chatsUsage": "AI Chats",
+    "insightsUsage": "AI Insights",
+    "used": "Used",
+    "limit": "Limit"
+  },
+  "profile": {
+    "title": "Profile",
+    "bio": "Bio",
+    "editProfile": "Edit Profile"
+  }
+}

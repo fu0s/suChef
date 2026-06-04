@@ -1,0 +1,50 @@
+<div class="min-h-screen flex items-center justify-center bg-stone-50">
+  <div class="p-8 rounded-xl shadow-sm w-full max-w-md bg-white border border-stone-200">
+    <h2 class="text-2xl font-bold mb-6 text-center text-stone-900">{{ 'auth.register.title' | translate }}</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-stone-500">{{ 'auth.register.fullName' | translate }}</label>
+        <input type="text" id="name" formControlName="name" class="mt-1 block w-full rounded-lg px-3 py-2 border border-stone-200 text-stone-900 focus:border-amber-600 focus:ring-0 outline-none transition-all"
+          [placeholder]="'auth.register.namePlaceholder' | translate" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-stone-500">{{ 'auth.register.email' | translate }}</label>
+        <input type="email" id="email" formControlName="email" class="mt-1 block w-full rounded-lg px-3 py-2 border border-stone-200 text-stone-900 focus:border-amber-600 focus:ring-0 outline-none transition-all"
+          [placeholder]="'auth.register.emailPlaceholder' | translate" />
+      </div>
+
+      <div>
+        <label for="restaurantName" class="block text-sm font-medium text-stone-500">{{ 'auth.register.restaurantName' | translate }}</label>
+        <input type="text" id="restaurantName" formControlName="restaurantName"
+          class="mt-1 block w-full rounded-lg px-3 py-2 border border-stone-200 text-stone-900 focus:border-amber-600 focus:ring-0 outline-none transition-all"
+          [placeholder]="'auth.register.restaurantPlaceholder' | translate" />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-stone-500">{{ 'auth.register.password' | translate }}</label>
+        <input type="password" id="password" formControlName="password" class="mt-1 block w-full rounded-lg px-3 py-2 border border-stone-200 text-stone-900 focus:border-amber-600 focus:ring-0 outline-none transition-all"
+          [placeholder]="'auth.register.passwordPlaceholder' | translate" />
+      </div>
+
+      <div>
+        <label for="confirmPassword" class="block text-sm font-medium text-stone-500">{{ 'auth.register.confirmPassword' | translate }}</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword"
+          class="mt-1 block w-full rounded-lg px-3 py-2 border border-stone-200 text-stone-900 focus:border-amber-600 focus:ring-0 outline-none transition-all" [placeholder]="'auth.register.confirmPlaceholder' | translate" />
+      </div>
+
+      <button type="submit" [disabled]="!registerForm.valid"
+        class="w-full py-2 px-4 rounded-lg text-sm font-medium text-white transition-all bg-amber-600 hover:bg-amber-700 disabled:opacity-50">
+        {{ 'auth.register.submit' | translate }}
+      </button>
+    </form>
+
+    <div class="mt-4 text-center">
+      <p class="text-sm text-stone-500">
+        {{ 'auth.register.haveAccount' | translate }}
+        <a routerLink="/login" class="font-semibold text-amber-700 hover:text-amber-800">{{ 'auth.register.loginLink' | translate }}</a>
+      </p>
+    </div>
+  </div>
+</div>

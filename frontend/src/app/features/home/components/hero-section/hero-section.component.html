@@ -1,0 +1,35 @@
+<section data-hero-section id="hero-section" class="hero-section">
+  <!-- Loading overlay -->
+  <div class="loading-overlay" *ngIf="isLoading" [class.fading]="isFadingOut">
+    <div class="loading-content">
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width.%]="loadingProgress"></div>
+      </div>
+      <p class="loading-text">{{ 'common.loadingExperience' | translate }} {{ loadingProgress | number:'1.0-0' }}%</p>
+    </div>
+  </div>
+
+  <div class="sticky-container">
+    <div #canvasContainer class="canvas-container" [class.visible]="!isLoading && !isFadingOut"></div>
+    <div class="dark-overlay" [class.visible]="!isLoading && !isFadingOut"></div>
+
+    <div class="hero-content">
+      <h1 data-hero-headline class="hero-headline">
+        {{ 'landing.hero.title' | translate }}
+      </h1>
+
+      <p class="hero-subheadline">
+        {{ 'landing.hero.subheadline' | translate }}
+      </p>
+
+      <div class="hero-buttons">
+        <button data-hero-button class="btn-primary">
+          {{ 'landing.hero.startFreeTrial' | translate }}
+        </button>
+        <button data-hero-button class="btn-secondary">
+          {{ 'landing.hero.watchDemo' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

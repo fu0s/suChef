@@ -1,0 +1,69 @@
+<nav #navEl class="sticky w-full z-50 top-0 relative" appContrast style="background: var(--gradient-primary); backdrop-filter: blur(10px);">
+  <div class="container mx-auto max-w-7xl px-4 relative">
+    <!-- Main Header -->
+    <div class="flex justify-between items-center py-3">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a routerLink="/" class="flex items-center group">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg" style="background: orange; backdrop-filter: blur(10px);">S</div>
+          <span class="ml-3 text-2xl font-bold gradient-text group-hover:opacity-90 transition logo-text">suChef</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex space-x-4">
+        <a href="#features" class="nav-link-header px-4 py-2 text-white transition">Features</a>
+        <a href="#demo" class="nav-link-header px-4 py-2 text-white transition">Demo</a>
+        <a href="/#pricing-section" class="nav-link-header px-4 py-2 text-white transition">Pricing</a>
+        <a href="#" class="nav-link-header px-4 py-2 text-white transition">Blog</a>
+      </div>
+
+      <!-- Auth Buttons -->
+      <div class="hidden lg:flex space-x-4 items-center">
+        @if (authService.isAuthenticated()) {
+          <a routerLink="/dashboard" class="text-white font-medium transition px-4 py-2">Dashboard</a>
+          <button (click)="logout()" class="logout-btn px-4 py-2 rounded-lg border-2 transition font-medium text-white" style="border-color: rgba(255, 255, 255, 0.5); background: transparent;">Logout</button>
+        } @else {
+          <a routerLink="/login" class="text-white font-medium transition px-4 py-2">Sign In</a>
+          <a routerLink="/register" class="cta-btn px-5 py-2 text-primary-600 rounded-lg font-medium transition" style="background: white;">Get Started</a>
+        }
+      </div>
+
+      <!-- Previously the language switcher lived here for desktop, but we want it flush to the viewport right edge. -->
+
+      <!-- Mobile Language Switcher next to mobile menu button -->
+      <div class="flex lg:hidden items-center mr-2">
+        <app-language-switcher></app-language-switcher>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button #mobileMenuBtn class="lg:hidden p-2 rounded-lg transition" style="background: orange;" (click)="toggleMobileMenu()">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div [class.hidden]="!isMobileMenuOpen" class="lg:hidden pb-4" style="border-top: 1px solid rgba(255, 255, 255, 0.15);">
+      <div class="flex justify-end items-center px-4 py-2">
+        <app-language-switcher></app-language-switcher>
+      </div>
+      <a href="#features" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Features</a>
+      <a href="#demo" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Demo</a>
+      <a href="/#pricing-section" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Pricing</a>
+      <a href="#" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Blog</a>
+      @if (authService.isAuthenticated()) {
+        <a routerLink="/dashboard" class="block px-4 py-3 text-white font-medium transition" style="color: rgba(255, 255, 255, 0.9);">Dashboard</a>
+        <button (click)="logout()" class="logout-btn w-full mt-2 mx-4 px-4 py-2 rounded-lg border-2 transition font-medium text-white" style="border-color: rgba(255, 255, 255, 0.5); background: transparent;">Logout</button>
+      } @else {
+        <a routerLink="/login" class="block px-4 py-3 text-white font-medium transition" style="color: rgba(255, 255, 255, 0.9);">Sign In</a>
+        <a routerLink="/register" class="cta-btn block w-auto mx-4 mt-2 px-4 py-2 text-center text-primary-600 rounded-lg font-medium transition" style="background: white;">Get Started</a>
+      }
+    </div>
+    <!-- Absolute positioned language switcher flush to the viewport right edge (desktop only) -->
+    <div class="absolute right-0 top-0 h-full pr-4 lg:pr-8 hidden lg:flex items-center z-50">
+      <app-language-switcher></app-language-switcher>
+    </div>
+  </div>
+</nav>

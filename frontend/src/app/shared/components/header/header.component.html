@@ -1,0 +1,42 @@
+<!-- Authenticated Header: Minimal, Clean -->
+@if (isAuthenticated) {
+<nav class="navbar header-container navbar-dark bg-dark flex w-full items-center px-6 h-20 sticky top-0 z-30">
+  <div class="language-switcher-wrapper ml-auto">
+    <app-language-switcher></app-language-switcher>
+  </div>
+</nav>
+}
+
+<!-- Unauthenticated Header: Bold, Modern Landing Page Header -->
+@if (!isAuthenticated) {
+<header class="sticky-header" [class.scrolled]="isScrolled">
+  <div class="header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <a routerLink="/" class="logo-link">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">suChef</span>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a class="nav-link" (click)="scrollTo('hero-section')">{{ 'landing.nav.home' | translate }}</a></li>
+        <li><a class="nav-link" (click)="scrollTo('features-section')">{{ 'landing.nav.features' | translate }}</a></li>
+        <li><a class="nav-link" (click)="scrollTo('ai-section')">{{ 'landing.nav.ai' | translate }}</a></li>
+        <li><a class="nav-link" (click)="scrollTo('pricing-section')">{{ 'landing.nav.pricing' | translate }}</a></li>
+        <li><a class="nav-link" (click)="scrollTo('contact-section')">{{ 'landing.nav.contact' | translate }}</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="actions-group flex items-center gap-4">
+      <app-language-switcher></app-language-switcher>
+      <a routerLink="/login" class="sign-in-btn">
+        Sign In
+      </a>
+    </div>
+  </div>
+</header>
+}

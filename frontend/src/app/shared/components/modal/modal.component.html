@@ -1,0 +1,48 @@
+<div
+  *ngIf="isOpen"
+  class="fixed inset-0 z-50 overflow-auto flex items-center justify-center"
+  style="background: rgba(0, 0, 0, 0.5);"
+  (click)="closeOnBackdrop && onClose.emit()"
+>
+  <div
+    class="rounded-2xl shadow-xl max-w-md w-full mx-4 transform transition-all"
+    style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(212, 208, 201, 0.3);"
+    [class.animate-modal-in]="isOpen"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="px-6 py-4 flex justify-between items-center" style="border-bottom: 1px solid rgba(212, 208, 201, 0.3);">
+      <h3 class="text-lg font-semibold" style="color: #1c1917;">{{ title }}</h3>
+      <button
+        *ngIf="showCloseButton"
+        (click)="onClose.emit()"
+        aria-label="Close modal"
+        style="color: #78716b;"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="px-6 py-4">
+      <ng-content></ng-content>
+    </div>
+
+    <div *ngIf="showFooter" class="px-6 py-4 flex justify-end space-x-3" style="background: rgba(250, 250, 249, 0.8); border-top: 1px solid rgba(212, 208, 201, 0.3);">
+      <app-button
+        *ngIf="showCancelButton"
+        variant="outline"
+        (click)="onClose.emit()"
+      >
+        {{ cancelText }}
+      </app-button>
+      <app-button
+        *ngIf="showConfirmButton"
+        [variant]="confirmButtonVariant"
+        (click)="onConfirm.emit()"
+      >
+        {{ confirmText }}
+      </app-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+@use "../../../../styles/landing-design-system" as design;
+
+.header-container {
+  height: 80px;
+  background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, box-shadow 0.3s ease, padding 0.3s ease;
+
+  &.scrolled {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+
+    .logo-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .logo-icon {
+        height: 32px;
+        width: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        background: linear-gradient(135deg, #d4af37 0%, #a88220 100%);
+      }
+
+      .logo-text {
+        font-family: design.$font-family-heading;
+        font-size: 24px;
+        font-weight: 700;
+        color: design.$color-warm-brown;
+      }
+    }
+  }
+
+  .nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+
+      .nav-link {
+        cursor: pointer;
+        color: design.$color-charcoal;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: design.$transition-base;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: design.$color-gold-primary;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover, &.active-link {
+          color: design.$color-gold-primary;
+
+          &::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+
+  .actions-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+
+    .sign-in-btn {
+      padding: 8px 16px;
+      border-radius: design.$border-radius-lg;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(135deg, #d4af37 0%, #a88220 100%);
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      }
+    }
+  }
+
+  .language-toggle {
+    display: flex;
+    gap: 8px;
+
+    .lang-btn {
+      padding: 8px 16px;
+      border: 1px solid design.$color-gold-light;
+      background: transparent;
+      color: design.$color-warm-brown;
+      border-radius: design.$border-radius-lg;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: design.$transition-base;
+
+      &:hover {
+        background: rgba(212, 175, 55, 0.1);
+      }
+
+      &.active {
+        @include design.glass-effect(8px, 0.15);
+        background: rgba(212, 175, 55, 0.15);
+        color: design.$color-warm-brown;
+      }
+    }
+  }
+
+  @media (max-width: design.$breakpoint-lg) {
+    .header-content {
+      padding: 0 16px;
+    }
+
+    .nav-menu {
+      margin: 0 20px;
+
+      .nav-list {
+        gap: 20px;
+
+        .nav-link {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: design.$breakpoint-md) {
+    .nav-menu {
+      display: none;
+    }
+
+    .logo .logo-text {
+      font-size: 20px;
+    }
+  }
+}

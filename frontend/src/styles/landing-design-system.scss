@@ -1,0 +1,486 @@
+// ==========================================
+// LANDING PAGE DESIGN SYSTEM
+// Warm Gastronomy Palette & Components
+// ==========================================
+
+// ==========================================
+// PRIMARY WARM TONES (Restaurant/Culinary)
+// ==========================================
+
+$color-cream: #FDF9F3; // Creamy white, primary background
+$color-gold-light: #F5D76E; // Soft gold, highlights
+$color-gold-primary: #D4AF37; // Rich gold, accent & CTAs
+$color-gold-dark: #AA8C2C; // Deep gold, hover states
+
+// ==========================================
+// SECONDARY EARTHY TONES
+// ==========================================
+
+$color-warm-brown: #8B4513; // Saddle brown, trustworthy buttons
+$color-sepia: #704214; // Deep sepia, deep tones
+$color-clay: #C17F4B; // Warm clay, soft accents
+
+// ==========================================
+// ACCENT COLORS (Fresh, Vibrant)
+// ==========================================
+
+$color-sage-green: #6B8E71; // Soft sage, natural & fresh
+$color-emerald: #2D5016; // Deep emerald, rich & sophisticated
+$color-soft-red: #D64045; // Warm red, tomato-inspired
+$color-burnt-orange: #D2691E; // Burnt orange, spice-inspired
+
+// ==========================================
+// NEUTRAL SUPPORTING COLORS
+// ==========================================
+
+$color-warm-gray: #55483d; // Darker warm gray for better contrast
+$color-taupe: #B8860B; // Goldenrod, subtle contrast
+$color-charcoal: #2A2420; // Warm charcoal, text
+$color-white: #FFFFFF; // Pure white
+$color-black: #000000; // Pure black
+
+// ==========================================
+// SEMANTIC COLORS
+// ==========================================
+
+$color-success: $color-sage-green;
+$color-error: $color-soft-red;
+$color-warning: $color-burnt-orange;
+$color-info: $color-gold-light;
+
+// ==========================================
+// FEATURE-SPECIFIC COLORS
+// ==========================================
+
+$feature-colors: (
+  'stock': #E8944A,
+  // Warm orange
+  'profit': #8BC34A,
+  // Lime green
+  'recipe': #D4A574,
+  // Tan
+  'trend': #AD8E4A,
+  // Khaki
+  'margin': #C1692E,
+  // Burnt sienna
+  'bestseller': #F4D78E,
+  // Light gold
+  'ai': #8E7CC3 // Soft purple
+);
+
+// ==========================================
+// GRADIENTS
+// ==========================================
+
+$gradient-warm-hero: linear-gradient(135deg, #D4AF37 0%, #8B4513 50%, #6B8E71 100%);
+$gradient-golden: linear-gradient(135deg, #F5D76E 0%, #D4AF37 100%);
+$gradient-earthy: linear-gradient(135deg, #C17F4B 0%, #8B4513 100%);
+$gradient-fresh: linear-gradient(135deg, #6B8E71 0%, #2D5016 100%);
+
+// ==========================================
+// GLASSMORPHISM UTILITIES
+// ==========================================
+
+$glass-gold: rgba(244, 215, 110, 0.1);
+$glass-green: rgba(107, 142, 113, 0.1);
+$glass-warm: rgba(197, 127, 75, 0.1);
+$glass-white: rgba(255, 255, 255, 0.1);
+
+@mixin glass-effect($blur-amount: 12px, $opacity: 0.1) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur($blur-amount);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+@mixin glass-card {
+  @include glass-effect(8px, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+// ==========================================
+// SHADOWS & DEPTH
+// ==========================================
+
+$shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-large: 0 16px 40px rgba(0, 0, 0, 0.16);
+$shadow-extra-large: 0 24px 56px rgba(0, 0, 0, 0.2);
+
+$shadow-gold-glow: 0 0 24px rgba(212, 175, 55, 0.3);
+$shadow-gold-glow-large: 0 0 48px rgba(212, 175, 55, 0.4);
+
+// ==========================================
+// TYPOGRAPHY
+// ==========================================
+
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-accent: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+// Heading Styles
+$heading-xl: (
+  'font-size': 56px,
+  'line-height': 1.2,
+  'font-weight': 700,
+  'letter-spacing': -1px
+);
+
+$heading-lg: (
+  'font-size': 42px,
+  'line-height': 1.3,
+  'font-weight': 700,
+  'letter-spacing': -0.5px
+);
+
+$heading-md: (
+  'font-size': 32px,
+  'line-height': 1.4,
+  'font-weight': 600,
+  'letter-spacing': 0px
+);
+
+$heading-sm: (
+  'font-size': 24px,
+  'line-height': 1.5,
+  'font-weight': 600,
+  'letter-spacing': 0px
+);
+
+$heading-xs: (
+  'font-size': 18px,
+  'line-height': 1.6,
+  'font-weight': 600,
+  'letter-spacing': 0px
+);
+
+// Body Styles
+$body-lg: (
+  'font-size': 18px,
+  'line-height': 1.6,
+  'font-weight': 400,
+  'letter-spacing': 0px
+);
+
+$body-base: (
+  'font-size': 16px,
+  'line-height': 1.6,
+  'font-weight': 400,
+  'letter-spacing': 0px
+);
+
+$body-sm: (
+  'font-size': 14px,
+  'line-height': 1.5,
+  'font-weight': 400,
+  'letter-spacing': 0px
+);
+
+// ==========================================
+// SPACING SCALE
+// ==========================================
+
+$spacing: (
+  'xs': 4px,
+  'sm': 8px,
+  'md': 16px,
+  'lg': 24px,
+  'xl': 32px,
+  'xxl': 48px,
+  'xxxl': 64px,
+  'jumbo': 96px,
+  'super': 128px
+);
+
+// ==========================================
+// BORDER RADIUS
+// ==========================================
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-xxl: 24px;
+$border-radius-full: 9999px;
+
+// ==========================================
+// TRANSITIONS & ANIMATIONS
+// ==========================================
+
+$transition-fast: all 0.2s ease-out;
+$transition-base: all 0.3s ease-out;
+$transition-smooth: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// Custom scroll-triggered animations (used by GSAP)
+@mixin animation-scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+
+  &.reveal-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ==========================================
+// Z-INDEX SCALE
+// ==========================================
+
+$z-index: (
+  'dropdown': 100,
+  'sticky': 200,
+  'fixed': 300,
+  'modal-backdrop': 400,
+  'modal': 500,
+  'popover': 600,
+  'tooltip': 700
+);
+
+// ==========================================
+// RESPONSIVE BREAKPOINTS
+// ==========================================
+
+$breakpoint-xs: 0px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;
+
+// ==========================================
+// MIXINS - RESPONSIVE DESIGN
+// ==========================================
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint =='sm' {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='md' {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='lg' {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='xl' {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='xxl' {
+    @media (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
+}
+
+// ==========================================
+// MIXINS - TEXT UTILITIES
+// ==========================================
+
+@mixin text-gradient($color-1, $color-2) {
+  background: linear-gradient(135deg, $color-1 0%, $color-2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin text-glow($color, $size: 4px) {
+  text-shadow: 0 0 $size $color,
+  0 0 #{$size * 1.5} $color;
+}
+
+// ==========================================
+// MIXINS - BUTTON STYLES
+// ==========================================
+
+@mixin button-primary {
+  background: linear-gradient(135deg, $color-warm-brown 0%, $color-clay 100%);
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-xl;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: $transition-base;
+  box-shadow: $shadow-medium;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-large;
+    box-shadow: 0 0 24px rgba(139, 69, 19, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+@mixin button-secondary {
+  background: transparent;
+  color: $color-warm-brown;
+  border: 2px solid $color-warm-brown;
+  border-radius: $border-radius-xl;
+  padding: 12px 26px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    background: rgba(139, 69, 19, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// ==========================================
+// MIXINS - CARD STYLES
+// ==========================================
+
+@mixin card-glass {
+  @include glass-card;
+  transition: $transition-smooth;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-gold-glow;
+  }
+}
+
+// ==========================================
+// UTILITY CLASSES
+// ==========================================
+
+.text-gradient-warm {
+  @include text-gradient($color-gold-primary, $color-sage-green);
+}
+
+.text-gradient-gold {
+  @include text-gradient($color-gold-light, $color-gold-primary);
+}
+
+.glass-effect {
+  @include glass-effect;
+}
+
+.glass-card {
+  @include glass-card;
+}
+
+.shadow-subtle {
+  box-shadow: $shadow-subtle;
+}
+
+.shadow-medium {
+  box-shadow: $shadow-medium;
+}
+
+.shadow-large {
+  box-shadow: $shadow-large;
+}
+
+.shadow-gold-glow {
+  box-shadow: $shadow-gold-glow;
+}
+
+.shadow-gold-glow-large {
+  box-shadow: $shadow-gold-glow-large;
+}
+
+.transition-base {
+  transition: $transition-base;
+}
+
+.transition-smooth {
+  transition: $transition-smooth;
+}
+
+// ==========================================
+// CUSTOM SCROLLBAR STYLING
+// ==========================================
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gold-primary;
+  border-radius: $border-radius-full;
+  transition: $transition-base;
+
+  &:hover {
+    background: $color-warm-brown;
+  }
+}
+
+// ==========================================
+// FOCUS STYLES
+// ==========================================
+
+:focus-visible {
+  outline: 2px solid $color-gold-primary;
+  outline-offset: 2px;
+}
+
+// ==========================================
+// FORM STYLES
+// ==========================================
+
+input,
+textarea,
+select {
+  font-family: $font-family-base;
+  font-size: 16px; // Prevents zoom on iOS
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: $color-gold-primary;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+// ==========================================
+// SELECTION STYLES
+// ==========================================
+
+::selection {
+  background-color: $color-gold-primary;
+  color: $color-white;
+}
+
+::-moz-selection {
+  background-color: $color-gold-primary;
+  color: $color-white;
+}

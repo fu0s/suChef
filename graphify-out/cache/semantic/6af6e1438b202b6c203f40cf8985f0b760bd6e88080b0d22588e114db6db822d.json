@@ -1,0 +1,1 @@
+{"nodes": [{"id": "auth_interceptor", "label": "AuthInterceptor", "file_type": "code", "source_file": "suchef/src/app/core/interceptors/auth.interceptor.ts", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

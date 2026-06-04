@@ -1,0 +1,56 @@
+<section data-pricing-section id="pricing-section" class="pricing-section">
+  <div class="pricing-container">
+    <div class="pricing-header">
+      <h2 class="pricing-title">{{ 'landing.pricing.title' | translate }}</h2>
+      <p class="pricing-subtitle">{{ 'landing.pricing.sectionSubtitle' | translate }}</p>
+
+      <div class="billing-toggle">
+        <button
+          [class.active]="!isAnnualBilling"
+          (click)="toggleBilling()"
+          class="toggle-btn">
+          {{ 'landing.pricing.monthly' | translate }}
+        </button>
+        <button
+          [class.active]="isAnnualBilling"
+          (click)="toggleBilling()"
+          class="toggle-btn">
+          {{ 'landing.pricing.annual' | translate }}
+        </button>
+      </div>
+
+      <p class="billing-discount" *ngIf="isAnnualBilling">
+        {{ 'landing.pricing.annualDiscount' | translate }}
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <div
+        *ngFor="let tier of pricingTiers"
+        [attr.data-pricing-card]="tier.id"
+        [class.highlighted]="tier.highlighted"
+        class="pricing-card">
+        <div class="tier-badge" *ngIf="tier.highlighted">MOST POPULAR</div>
+        <h3 class="tier-name">{{ tier.nameKey | translate }}</h3>
+
+        <div class="tier-price">
+          <span class="price-amount">${{ getPrice(tier) }}</span>
+          <span class="price-period">{{ isAnnualBilling ? ('landing.pricing.perYear' | translate) : ('landing.pricing.perMonth' | translate) }}</span>
+        </div>
+
+        <p class="tier-description">{{ tier.descriptionKey | translate }}</p>
+
+        <button class="tier-cta" [class.btn-primary]="tier.highlighted" [class.btn-secondary]="!tier.highlighted">
+          {{ tier.ctaKey | translate }}
+        </button>
+
+        <ul class="features-list">
+          <li *ngFor="let feature of tier.features" class="feature-item">
+            <span class="feature-check">✓</span>
+            {{ feature | translate }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

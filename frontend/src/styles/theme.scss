@@ -1,0 +1,349 @@
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;800&family=Poppins:wght@400;600;700;800&display=swap');
+
+// Color Palette — Warm Culinary Kitchen (matched to landing page animation)
+// Inspired by: warm copper pots, butcher block wood, amber candlelight, cream chef hat
+
+$color-primary: #B87333;       // Copper — the signature copper pot color
+$color-primary-600: #A0632A;   // Deep Copper — hover/active state
+$color-secondary: #8B5E3C;     // Warm Wood Brown — butcher block table
+$color-accent: #D4AF37;        // Antique Gold — warm window light glow
+
+// Warm Stone Scale (Warm grays with earthy undertones from kitchen cabinets)
+$color-stone-50:  #FDF9F3;     // Cream — chef hat / warm ivory
+$color-stone-100: #F5F0E8;     // Warm Off-White
+$color-stone-200: #E8DDD0;     // Light Linen
+$color-stone-300: #D4C4B0;     // Warm Sand
+$color-stone-400: #B09880;     // Taupe
+$color-stone-500: #8C7565;     // Warm Tan
+$color-stone-600: #6B5748;     // Warm Umber
+$color-stone-700: #4A3C30;     // Dark Umber
+$color-stone-800: #2E2218;     // Espresso — deep warm dark
+$color-stone-900: #1C1410;     // Charcoal Brown — deepest text
+
+// Support Colors
+$color-success: #6B8E71;       // Sage Green — fresh herbs
+$color-warning: #E8A045;       // Amber — warm kitchen light
+$color-error: #C0392B;         // Deep Red — tomato
+$color-info: #B87333;          // Copper (reuse primary)
+
+// Gradient Combinations — drawn directly from the animation palette
+$gradient-primary:   linear-gradient(135deg, #B87333 0%, #D4AF37 100%);   // Copper → Gold
+$gradient-secondary: linear-gradient(135deg, #8B5E3C 0%, #B87333 100%);   // Wood → Copper
+$gradient-accent:    linear-gradient(135deg, #D4AF37 0%, #E8A045 100%);   // Gold → Amber
+$gradient-hero:      linear-gradient(135deg, #2E2218 0%, #8B5E3C 40%, #B87333 100%); // Dark Wood → Copper
+$gradient-iridescent: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 20%, #6bcb77 40%, #4d96ff 60%, #c77dff 80%, #ff6b6b 100%); // Rainbow glow from hat rim
+
+// ==========================================
+// TYPOGRAPHY
+// ==========================================
+
+// Font Family
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-personality: 'Outfit', sans-serif;
+$font-family-heading: 'Poppins', $font-family-base;
+
+// Font Sizes
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+$font-size-5xl: 3rem; // 48px
+$font-size-6xl: 3.75rem; // 60px
+$font-size-7xl: 4.5rem; // 72px
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
+$line-height-loose: 1.75;
+
+// ==========================================
+// SPACING
+// ==========================================
+
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
+$spacing-3xl: 4rem; // 64px
+$spacing-4xl: 6rem; // 96px
+
+// ==========================================
+// BORDER RADIUS
+// ==========================================
+
+$radius-sm: 0.375rem; // 6px
+$radius-md: 0.5rem; // 8px
+$radius-lg: 0.75rem; // 12px
+$radius-xl: 1rem; // 16px
+$radius-2xl: 1.5rem; // 24px
+$radius-full: 9999px; // Full
+
+// ==========================================
+// SHADOWS
+// ==========================================
+
+// Shadows with a warm earthy tint matching the animation's kitchen depth
+$shadow-sm: 0 1px 2px 0 rgba(46, 34, 24, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(46, 34, 24, 0.12);
+$shadow-lg: 0 10px 15px -3px rgba(46, 34, 24, 0.12);
+$shadow-xl: 0 20px 25px -5px rgba(46, 34, 24, 0.14);
+$shadow-2xl: 0 25px 50px -12px rgba(46, 34, 24, 0.28);
+
+$shadow-primary: 0 10px 25px rgba($color-primary, 0.3);   // Copper glow
+$shadow-glow: 0 20px 40px rgba($color-accent, 0.25);      // Gold ambient glow
+
+// ==========================================
+// TRANSITIONS
+// ==========================================
+
+$transition-fast: 0.15s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// ==========================================
+// ANIMATIONS
+// ==========================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba($color-primary, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba($color-primary, 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ==========================================
+// ANIMATION UTILITY CLASSES
+// ==========================================
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+// ==========================================
+// COMPONENT TOKENS
+// ==========================================
+
+// Card Styling — warm ivory backgrounds like the kitchen environment
+$card-bg: $color-stone-50;         // Creamy ivory, matching chef hat
+$card-border: 1px solid $color-stone-200;
+$card-shadow: $shadow-md;
+$card-radius: $radius-2xl;
+$card-padding: $spacing-xl;
+
+// Button Base
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-radius: $radius-lg;
+$btn-font-weight: $font-weight-semibold;
+$btn-transition: all $transition-base;
+
+// Input Styling
+$input-bg: $color-stone-50;         // Warm ivory input backgrounds
+$input-border: 1px solid $color-stone-300;
+$input-radius: $radius-md;
+$input-padding: 0.75rem 1rem;
+$input-focus-border: $color-primary; // Copper focus ring
+$input-focus-ring: 0 0 0 3px rgba($color-primary, 0.12);
+
+// ==========================================
+// MIXINS
+// ==========================================
+
+// Flex Center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Gradient Text
+@mixin gradient-text($gradient: $gradient-primary) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Hover Lift
+@mixin hover-lift($distance: -5px) {
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Glass Effect (Updated tint to be slightly blue)
+@mixin glass-panel {
+  background: rgba(248, 250, 252, 0.8); // Slate-50 tint
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+// Focus Ring
+@mixin focus-ring {
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Truncate Text
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Multiline Truncate
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ==========================================
+// SEMANTIC COLORS
+// ==========================================
+
+// Semantic colors mapped to warm culinary palette
+$color-text-primary: $color-stone-900;    // Deep charcoal brown — readable on light
+$color-text-secondary: $color-stone-700;  // Warm umber — body text
+$color-text-tertiary: $color-primary;     // Copper — accented labels
+$color-text-inverse: $color-stone-50;     // Cream white — text on dark
+
+$color-bg-primary: $color-primary;        // Copper
+$color-bg-secondary: $color-secondary;    // Warm Wood
+$color-bg-tertiary: $color-accent;        // Antique Gold
+$color-bg-quaternary: #F5D76E;            // Soft Gold
+$color-bg-quinary: #E8C4A0;              // Light Clay
+
+$color-border-light: $color-stone-200;
+$color-border-base: $color-stone-300;
+$color-border-dark: $color-stone-400;
+
+// ==========================================
+// BREAKPOINTS (for responsive design)
+// ==========================================
+
+$breakpoint-xs: 320px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// ==========================================
+// Z-INDEX SCALE
+// ==========================================
+
+$z-index-hide: -1;
+$z-index-base: 0;
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;

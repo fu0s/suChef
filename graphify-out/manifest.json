@@ -1,0 +1,2052 @@
+{
+  "/Users/hou_wa/Documents/dev/suChef/insert_dashboard_data.sql": {
+    "mtime": 1774488777.0110214,
+    "ast_hash": "2e9853f49c8479580f1e16e74c2175b7",
+    "semantic_hash": "2e9853f49c8479580f1e16e74c2175b7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/tailwind.config.js": {
+    "mtime": 1773107554.6888387,
+    "ast_hash": "9fd0b16cbb94df10f92516f5e1dc49f8",
+    "semantic_hash": "9fd0b16cbb94df10f92516f5e1dc49f8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/tsconfig.app.json": {
+    "mtime": 1761080938.0531433,
+    "ast_hash": "67a3f20f3c9369570c8dc70e3d5bb7ce",
+    "semantic_hash": "67a3f20f3c9369570c8dc70e3d5bb7ce"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/angular.json": {
+    "mtime": 1780147117.9108179,
+    "ast_hash": "0aff2fd664533e3bf06a0a154dcb9544",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/package.json": {
+    "mtime": 1774488706.266825,
+    "ast_hash": "87576c3a9507be077455724b5fe55129",
+    "semantic_hash": "87576c3a9507be077455724b5fe55129"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/tsconfig.json": {
+    "mtime": 1761080938.0527978,
+    "ast_hash": "c46d4d2cca83a20c5b6fba7db3c83ee5",
+    "semantic_hash": "c46d4d2cca83a20c5b6fba7db3c83ee5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/postcss.config.js": {
+    "mtime": 1761154073.6479583,
+    "ast_hash": "1e4c7cb9d755d644b3762e1ffbd52b30",
+    "semantic_hash": "1e4c7cb9d755d644b3762e1ffbd52b30"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/tsconfig.spec.json": {
+    "mtime": 1761080938.0533326,
+    "ast_hash": "443d78e8bca187cce047f83dd9915ea0",
+    "semantic_hash": "443d78e8bca187cce047f83dd9915ea0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/i18n/de.json": {
+    "mtime": 1776503149.8423517,
+    "ast_hash": "7b2ebab1d9cbf13dd1503e3bba9f0e8d",
+    "semantic_hash": "7b2ebab1d9cbf13dd1503e3bba9f0e8d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/i18n/en.json": {
+    "mtime": 1776503205.1674466,
+    "ast_hash": "7218751b5a00566b14d438f489b4316e",
+    "semantic_hash": "7218751b5a00566b14d438f489b4316e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/main.ts": {
+    "mtime": 1763563153.9041436,
+    "ast_hash": "65cfc16481cb0d3d7dc28903e9926a2b",
+    "semantic_hash": "65cfc16481cb0d3d7dc28903e9926a2b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/aos.d.ts": {
+    "mtime": 1766442565.4888034,
+    "ast_hash": "89ffbf9ed3f6b5952303c7eaf2b821ac",
+    "semantic_hash": "89ffbf9ed3f6b5952303c7eaf2b821ac"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.spec.ts": {
+    "mtime": 1761080938.0548494,
+    "ast_hash": "10fc0f3aa6f6ebfcb50acbf8cbe3e8aa",
+    "semantic_hash": "10fc0f3aa6f6ebfcb50acbf8cbe3e8aa"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.routes.ts": {
+    "mtime": 1763508733.9163685,
+    "ast_hash": "ae076463a2d90c7e9c4cd99d07e0732d",
+    "semantic_hash": "ae076463a2d90c7e9c4cd99d07e0732d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.ts": {
+    "mtime": 1768157172.0480964,
+    "ast_hash": "3d36714b747f01252b3113f458ef4ce9",
+    "semantic_hash": "3d36714b747f01252b3113f458ef4ce9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.component.ts": {
+    "mtime": 1774487614.1650994,
+    "ast_hash": "fc1dc123440c2d87a8b293820ae642d9",
+    "semantic_hash": "fc1dc123440c2d87a8b293820ae642d9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.config.ts": {
+    "mtime": 1767374997.9863503,
+    "ast_hash": "3413ec410c7981995c30cefa58bb2193",
+    "semantic_hash": "3413ec410c7981995c30cefa58bb2193"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/interceptors/auth.interceptor.ts": {
+    "mtime": 1780149530.2756996,
+    "ast_hash": "bf5d347680b843d312e5a851e9fd92b2",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/chat.service.ts": {
+    "mtime": 1780149543.4290252,
+    "ast_hash": "3e5d70bc07c83c9eafe10cc269c03a7d",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/subscription.service.ts": {
+    "mtime": 1780264429.5894396,
+    "ast_hash": "cf8c739af064ea2c5a408071cc69c7e0",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/auth.service.ts": {
+    "mtime": 1780149512.3866003,
+    "ast_hash": "7902ae1d4405b29bfd626b4d9520eb24",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/sidebar.service.ts": {
+    "mtime": 1768157137.5380416,
+    "ast_hash": "baf950a664545d9958814d52d296857c",
+    "semantic_hash": "baf950a664545d9958814d52d296857c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/translation.service.ts": {
+    "mtime": 1763563153.9041116,
+    "ast_hash": "b29148f0d87090d0d4fdde44522a5c50",
+    "semantic_hash": "b29148f0d87090d0d4fdde44522a5c50"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/documents.service.ts": {
+    "mtime": 1780264454.1565769,
+    "ast_hash": "6c41a4faf0c9444eb2764279041c5e00",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/voice.service.ts": {
+    "mtime": 1772314465.0284085,
+    "ast_hash": "85a6cf1dce717e3c76ff0bdddcdfbe99",
+    "semantic_hash": "85a6cf1dce717e3c76ff0bdddcdfbe99"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/home.routes.ts": {
+    "mtime": 1773108507.9112518,
+    "ast_hash": "1e2640265e53f8ab000dba7cfffbe781",
+    "semantic_hash": "1e2640265e53f8ab000dba7cfffbe781"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/home.component.ts": {
+    "mtime": 1763554902.659014,
+    "ast_hash": "8edd99d9ab9784c68de4bb89c07f2355",
+    "semantic_hash": "8edd99d9ab9784c68de4bb89c07f2355"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/models/testimonial.model.ts": {
+    "mtime": 1773180272.7955425,
+    "ast_hash": "bfec7bd4b0067b7afb3983feffe8fdc5",
+    "semantic_hash": "bfec7bd4b0067b7afb3983feffe8fdc5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/models/feature.model.ts": {
+    "mtime": 1773107463.5054297,
+    "ast_hash": "5f6d24a0c3874d9b3f93c0aeae3ed3f5",
+    "semantic_hash": "5f6d24a0c3874d9b3f93c0aeae3ed3f5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/models/pricing-tier.model.ts": {
+    "mtime": 1773107757.0973907,
+    "ast_hash": "78cda5b764b1b64c69009b7a06bae36f",
+    "semantic_hash": "78cda5b764b1b64c69009b7a06bae36f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/landing-new.component.ts": {
+    "mtime": 1773109981.0135157,
+    "ast_hash": "fe693a7b3c2c4b65cf644bf81e26a3b1",
+    "semantic_hash": "fe693a7b3c2c4b65cf644bf81e26a3b1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/features-grid/features-grid.component.ts": {
+    "mtime": 1773175494.840871,
+    "ast_hash": "2a6fe39bbdcf390d33f733cc4db7c3a3",
+    "semantic_hash": "2a6fe39bbdcf390d33f733cc4db7c3a3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/contact-form/contact-form.component.ts": {
+    "mtime": 1773107666.426423,
+    "ast_hash": "4317f6ef4cf56b01cd057d8aee15981e",
+    "semantic_hash": "4317f6ef4cf56b01cd057d8aee15981e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/recommendations-carousel/recommendations-carousel.component.ts": {
+    "mtime": 1773110256.4048538,
+    "ast_hash": "9ba16519872e5db170342824a4ce97c8",
+    "semantic_hash": "9ba16519872e5db170342824a4ce97c8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/pricing-section/pricing-section.component.ts": {
+    "mtime": 1773179840.3434393,
+    "ast_hash": "8f47caef8cdcc8b84cfefd088a59ea3b",
+    "semantic_hash": "8f47caef8cdcc8b84cfefd088a59ea3b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/hero-section/hero-section.component.ts": {
+    "mtime": 1774487758.388527,
+    "ast_hash": "5aace3efeddf3230d8fb7889e7296115",
+    "semantic_hash": "5aace3efeddf3230d8fb7889e7296115"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/ai-section/ai-section.component.ts": {
+    "mtime": 1774487959.0373147,
+    "ast_hash": "234658be2eecb9c9163a839fac836f16",
+    "semantic_hash": "234658be2eecb9c9163a839fac836f16"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/services/landing-animation.service.ts": {
+    "mtime": 1773108040.1253035,
+    "ast_hash": "1edb7b1351cdb5ea5773502f94f27398",
+    "semantic_hash": "1edb7b1351cdb5ea5773502f94f27398"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/services/features.service.ts": {
+    "mtime": 1773107385.556258,
+    "ast_hash": "13362317f521327f637b5aa12131831e",
+    "semantic_hash": "13362317f521327f637b5aa12131831e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/services/pricing.service.ts": {
+    "mtime": 1773107757.108846,
+    "ast_hash": "c4dde3a1e3149deef21b44839c40fc80",
+    "semantic_hash": "c4dde3a1e3149deef21b44839c40fc80"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/services/contact-form.service.ts": {
+    "mtime": 1773107786.587097,
+    "ast_hash": "6845da00b4d0bc966e1e1dabc34aea3c",
+    "semantic_hash": "6845da00b4d0bc966e1e1dabc34aea3c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/services/testimonials.service.ts": {
+    "mtime": 1773107389.2425406,
+    "ast_hash": "b8a3d6dff527ea989bbbfb0cb12dabe0",
+    "semantic_hash": "b8a3d6dff527ea989bbbfb0cb12dabe0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/chat/chat.routes.ts": {
+    "mtime": 1763763365.3574498,
+    "ast_hash": "5e481bb6060704c4dd2aeeb578a6fc52",
+    "semantic_hash": "5e481bb6060704c4dd2aeeb578a6fc52"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/chat/components/chat.component.ts": {
+    "mtime": 1776502685.252997,
+    "ast_hash": "69cb23b01a5c762e5002e47dabb060ea",
+    "semantic_hash": "69cb23b01a5c762e5002e47dabb060ea"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/auth/auth.routes.ts": {
+    "mtime": 1763763365.3574255,
+    "ast_hash": "27f4e8af33d62221a014d1803d221a8f",
+    "semantic_hash": "27f4e8af33d62221a014d1803d221a8f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/auth/components/login.component.ts": {
+    "mtime": 1779711759.9479628,
+    "ast_hash": "86ff8650d96b0483e909daba122687ab",
+    "semantic_hash": "86ff8650d96b0483e909daba122687ab"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/auth/components/register.component.ts": {
+    "mtime": 1779711764.0550148,
+    "ast_hash": "bc9ce0024375b8e1a576b7b636b9be07",
+    "semantic_hash": "bc9ce0024375b8e1a576b7b636b9be07"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/subscription/subscription.routes.ts": {
+    "mtime": 1763763365.357521,
+    "ast_hash": "76871e69a1e78e37bfb065d89281e292",
+    "semantic_hash": "76871e69a1e78e37bfb065d89281e292"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/subscription/components/subscription.component.ts": {
+    "mtime": 1774485467.1888855,
+    "ast_hash": "614e242f5d07fc8b91a7a035f693d74c",
+    "semantic_hash": "614e242f5d07fc8b91a7a035f693d74c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/dashboard/dashboard.routes.ts": {
+    "mtime": 1761083414.1149979,
+    "ast_hash": "51493a8ee7108afa58833e2328c6aa0a",
+    "semantic_hash": "51493a8ee7108afa58833e2328c6aa0a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/dashboard/components/dashboard.component.ts": {
+    "mtime": 1776502642.0374517,
+    "ast_hash": "4fbbe8677139fb21fc2b490992251d45",
+    "semantic_hash": "4fbbe8677139fb21fc2b490992251d45"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/profile/profile.routes.ts": {
+    "mtime": 1761083414.4185314,
+    "ast_hash": "34ed76f2a73f3e9c2ddd5f064e825186",
+    "semantic_hash": "34ed76f2a73f3e9c2ddd5f064e825186"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/profile/components/profile.component.ts": {
+    "mtime": 1779914557.3244486,
+    "ast_hash": "bd5dd9acf10a7bbf0036fa1f4c9a8e54",
+    "semantic_hash": "bd5dd9acf10a7bbf0036fa1f4c9a8e54"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/documents/documents.routes.ts": {
+    "mtime": 1763763365.3573976,
+    "ast_hash": "756a1885f097ce5cf4f791ed3b34eefc",
+    "semantic_hash": "756a1885f097ce5cf4f791ed3b34eefc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/documents/components/documents-upload.component.ts": {
+    "mtime": 1767396631.2718332,
+    "ast_hash": "7317100567a186e1668afed6fdec923d",
+    "semantic_hash": "7317100567a186e1668afed6fdec923d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/directives/click-outside.directive.ts": {
+    "mtime": 1764370259.3548934,
+    "ast_hash": "f552d621bbb4e0906487802e4218d027",
+    "semantic_hash": "f552d621bbb4e0906487802e4218d027"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/pipes/translate.pipe.ts": {
+    "mtime": 1763752968.8927593,
+    "ast_hash": "8842194b1a65fd57467432bffada159c",
+    "semantic_hash": "8842194b1a65fd57467432bffada159c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/sidebar/sidebar.component.ts": {
+    "mtime": 1768157146.6930878,
+    "ast_hash": "101d1d8c94fe9bb5b21727d8c1111afb",
+    "semantic_hash": "101d1d8c94fe9bb5b21727d8c1111afb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/navbar/navbar.component.ts": {
+    "mtime": 1764344017.914589,
+    "ast_hash": "fb11ddfd747e36baaf7904f88d816d0d",
+    "semantic_hash": "fb11ddfd747e36baaf7904f88d816d0d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/language-switcher/language-switcher.component.ts": {
+    "mtime": 1764344017.9168844,
+    "ast_hash": "4776976102fc067eeb97e2000f03749c",
+    "semantic_hash": "4776976102fc067eeb97e2000f03749c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/card/card.component.ts": {
+    "mtime": 1764344017.911336,
+    "ast_hash": "d867f494d61f06743eece209e37cdfb1",
+    "semantic_hash": "d867f494d61f06743eece209e37cdfb1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/testimonials/testimonials.component.ts": {
+    "mtime": 1764344261.281879,
+    "ast_hash": "fad50e4485a29d047d264b81962dd12c",
+    "semantic_hash": "fad50e4485a29d047d264b81962dd12c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/input/input.component.ts": {
+    "mtime": 1764344017.914265,
+    "ast_hash": "848efd6af32483d7562fa8428d5e2e88",
+    "semantic_hash": "848efd6af32483d7562fa8428d5e2e88"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/features/features.component.ts": {
+    "mtime": 1764344261.2745566,
+    "ast_hash": "c302ef4d9ff70f534cdc3192e4b52b15",
+    "semantic_hash": "c302ef4d9ff70f534cdc3192e4b52b15"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/spinner/spinner.component.ts": {
+    "mtime": 1764344017.9145837,
+    "ast_hash": "2bde17293233ab125557d6360b89c3ba",
+    "semantic_hash": "2bde17293233ab125557d6360b89c3ba"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/button/button.component.ts": {
+    "mtime": 1764344017.9057536,
+    "ast_hash": "68c0da60b271490face8580be9c2f6ba",
+    "semantic_hash": "68c0da60b271490face8580be9c2f6ba"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/modal/modal.component.ts": {
+    "mtime": 1764344017.9145646,
+    "ast_hash": "965e98020d977bd1a05310f78a6620b0",
+    "semantic_hash": "965e98020d977bd1a05310f78a6620b0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/header/header.component.ts": {
+    "mtime": 1774487994.4643135,
+    "ast_hash": "6aa477ba953fbbb12862e8a1dc36a2d9",
+    "semantic_hash": "6aa477ba953fbbb12862e8a1dc36a2d9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.antigravitycli/22f2ecf6-f64d-4269-a18a-94244db4c263.json": {
+    "mtime": 1779720290.2583141,
+    "ast_hash": "4d5f149792edbeac376af6890ceb18ff",
+    "semantic_hash": "4d5f149792edbeac376af6890ceb18ff"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/mvnw": {
+    "mtime": 1765020029.0,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/SuChefServiceApplicationTests.java": {
+    "mtime": 1765997178.6853225,
+    "ast_hash": "da59ddf12133574cf156d7f5c3da8adc",
+    "semantic_hash": "da59ddf12133574cf156d7f5c3da8adc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/controller/AuthControllerTest.java": {
+    "mtime": 1779914542.4684026,
+    "ast_hash": "85b856be019589f21ec3cbccecab6729",
+    "semantic_hash": "85b856be019589f21ec3cbccecab6729"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/controller/SubscriptionControllerTest.java": {
+    "mtime": 1773093527.4351113,
+    "ast_hash": "494865bc5ad31375c008779f5c903d77",
+    "semantic_hash": "494865bc5ad31375c008779f5c903d77"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/controller/HelloWorldControllerTests.java": {
+    "mtime": 1765997698.9386778,
+    "ast_hash": "5ece4a072f04128e5a934bb668229cd4",
+    "semantic_hash": "5ece4a072f04128e5a934bb668229cd4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/service/HelloWorldServiceTests.java": {
+    "mtime": 1765997698.938703,
+    "ast_hash": "1fd318d865794ca4770e6d1c3d8d64e8",
+    "semantic_hash": "1fd318d865794ca4770e6d1c3d8d64e8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/sql/initdb.sql": {
+    "mtime": 1767380297.5098336,
+    "ast_hash": "4a3205ea954e7ae3679c32a0f39980a4",
+    "semantic_hash": "4a3205ea954e7ae3679c32a0f39980a4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/SuChefServiceApplication.java": {
+    "mtime": 1767398910.2584474,
+    "ast_hash": "541903353960705dc3601d8fa84c9288",
+    "semantic_hash": "541903353960705dc3601d8fa84c9288"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/RestaurantSubscriptionResponse.java": {
+    "mtime": 1780134480.4607713,
+    "ast_hash": "adcf14965fe6730b9abae94192b99dc2",
+    "semantic_hash": "adcf14965fe6730b9abae94192b99dc2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/RegisterRequest.java": {
+    "mtime": 1780135351.7150657,
+    "ast_hash": "c4465acfc21f873a6d4acb0beab22718",
+    "semantic_hash": "c4465acfc21f873a6d4acb0beab22718"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/DocumentResponse.java": {
+    "mtime": 1780134476.9493814,
+    "ast_hash": "7927d340de2fe22407fd03646f3e5a30",
+    "semantic_hash": "7927d340de2fe22407fd03646f3e5a30"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/SubscriptionPlanResponse.java": {
+    "mtime": 1780134478.4447408,
+    "ast_hash": "7a5e3c48ec53bf39fdfc3eda7f1fc3c0",
+    "semantic_hash": "7a5e3c48ec53bf39fdfc3eda7f1fc3c0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/ExtractedDocumentData.java": {
+    "mtime": 1767531347.6055083,
+    "ast_hash": "6578dfe870c7a91f84f35acdefeadc4d",
+    "semantic_hash": "6578dfe870c7a91f84f35acdefeadc4d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/AuthResponse.java": {
+    "mtime": 1772316410.5226748,
+    "ast_hash": "7fabc114d8b3b2bb527ffc70bebac098",
+    "semantic_hash": "7fabc114d8b3b2bb527ffc70bebac098"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/DashboardMetricsResponse.java": {
+    "mtime": 1774488794.8021472,
+    "ast_hash": "5fd0a986dba8127cc73165a4d2e60827",
+    "semantic_hash": "5fd0a986dba8127cc73165a4d2e60827"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/AuthRequest.java": {
+    "mtime": 1780135352.9303606,
+    "ast_hash": "3e549406500a734dd094ba811ebbe8dc",
+    "semantic_hash": "3e549406500a734dd094ba811ebbe8dc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/SubscriptionUsageResponse.java": {
+    "mtime": 1780134479.4355483,
+    "ast_hash": "10ec0a13a344e238e7d9c4c605987b99",
+    "semantic_hash": "10ec0a13a344e238e7d9c4c605987b99"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/SetRestaurantRequest.java": {
+    "mtime": 1780135353.8013895,
+    "ast_hash": "8660fc81952ede9c5be662381762c5fc",
+    "semantic_hash": "8660fc81952ede9c5be662381762c5fc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/dto/HelloResponse.java": {
+    "mtime": 1765997698.938564,
+    "ast_hash": "387239743c6e3087b0c79e45602d6675",
+    "semantic_hash": "387239743c6e3087b0c79e45602d6675"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/OrderRepository.java": {
+    "mtime": 1780244206.3605354,
+    "ast_hash": "b6af27461e5b5069510a0e6780c125a0",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/DocumentRepository.java": {
+    "mtime": 1780220643.379298,
+    "ast_hash": "b164741e7ff22f62a93538237ab516cb",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/RestaurantRepository.java": {
+    "mtime": 1779914514.0395267,
+    "ast_hash": "41bb78dcafa0fae2d43b152cca676fed",
+    "semantic_hash": "41bb78dcafa0fae2d43b152cca676fed"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/RestaurantSubscriptionRepository.java": {
+    "mtime": 1772324603.2164218,
+    "ast_hash": "a6ab5979afe1e0eeb862009a344ed1ab",
+    "semantic_hash": "a6ab5979afe1e0eeb862009a344ed1ab"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/RestaurantMetricRepository.java": {
+    "mtime": 1767398873.8911095,
+    "ast_hash": "df2cc0ae335a987c4a38ad800d38a92a",
+    "semantic_hash": "df2cc0ae335a987c4a38ad800d38a92a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/SubscriptionPlanRepository.java": {
+    "mtime": 1772324601.1866527,
+    "ast_hash": "49cf6f25c21ff653970c3081a34592fa",
+    "semantic_hash": "49cf6f25c21ff653970c3081a34592fa"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/InventoryItemRepository.java": {
+    "mtime": 1780240038.6762905,
+    "ast_hash": "8fcde5748521b7d43b4003b1c0bd23ac",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/SubscriptionUsageRepository.java": {
+    "mtime": 1772324605.2248685,
+    "ast_hash": "2a3a3fe6bc8254cae4e666b8dc9dbc24",
+    "semantic_hash": "2a3a3fe6bc8254cae4e666b8dc9dbc24"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/UserRepository.java": {
+    "mtime": 1772324671.3004358,
+    "ast_hash": "78a1fef9605c151cf5b7dd43d0cff82d",
+    "semantic_hash": "78a1fef9605c151cf5b7dd43d0cff82d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/VendorRepository.java": {
+    "mtime": 1780238901.4135487,
+    "ast_hash": "b4a92ace49db92d7b71f6e752341e367",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/StockTransactionRepository.java": {
+    "mtime": 1767398871.9502916,
+    "ast_hash": "afb6250e5a46db5cebcc4600d6bb2540",
+    "semantic_hash": "afb6250e5a46db5cebcc4600d6bb2540"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/repository/MenuItemRepository.java": {
+    "mtime": 1780244882.9636183,
+    "ast_hash": "2c97e1f1887513deb77c80f38a462c20",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/config/ApplicationConfig.java": {
+    "mtime": 1767310462.3643086,
+    "ast_hash": "581ff579919b1a2b99cf22efcd61912f",
+    "semantic_hash": "581ff579919b1a2b99cf22efcd61912f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/config/SecurityConfig.java": {
+    "mtime": 1780259655.597924,
+    "ast_hash": "f65b56a49d56ba7852bcfca56c25e747",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/config/WebConfig.java": {
+    "mtime": 1767380296.0928988,
+    "ast_hash": "85051c97e13c4c6e6365c1c453227ce9",
+    "semantic_hash": "85051c97e13c4c6e6365c1c453227ce9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/config/AiConfig.java": {
+    "mtime": 1772322557.7026017,
+    "ast_hash": "61584942a8220586dc3d5390544557df",
+    "semantic_hash": "61584942a8220586dc3d5390544557df"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/security/JwtUtil.java": {
+    "mtime": 1780135838.441239,
+    "ast_hash": "c840d6e15fa70f00fb75cde1e5306f3e",
+    "semantic_hash": "c840d6e15fa70f00fb75cde1e5306f3e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/security/JwtAuthenticationFilter.java": {
+    "mtime": 1780149412.5481336,
+    "ast_hash": "85bfc389b02ccdecc259f371759aa75e",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/DocumentClassification.java": {
+    "mtime": 1767398792.1186903,
+    "ast_hash": "80aa626d8a463853c47fe0853f55e419",
+    "semantic_hash": "80aa626d8a463853c47fe0853f55e419"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/Order.java": {
+    "mtime": 1767398820.9872808,
+    "ast_hash": "2dd890f3cf0df5f4ddd04f82d43cc18b",
+    "semantic_hash": "2dd890f3cf0df5f4ddd04f82d43cc18b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/OrderItem.java": {
+    "mtime": 1767398822.3754082,
+    "ast_hash": "c9eefc44491e064c75b77d0fac6e7808",
+    "semantic_hash": "c9eefc44491e064c75b77d0fac6e7808"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/DocumentStatus.java": {
+    "mtime": 1767489230.0393794,
+    "ast_hash": "05a78b589d6151c68d07e2bf98b250b5",
+    "semantic_hash": "05a78b589d6151c68d07e2bf98b250b5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/StockTransaction.java": {
+    "mtime": 1767398835.9029627,
+    "ast_hash": "d7aaf14d69e05ef91e720b40695a5293",
+    "semantic_hash": "d7aaf14d69e05ef91e720b40695a5293"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/SubscriptionPlan.java": {
+    "mtime": 1773092600.0015168,
+    "ast_hash": "93b86480d54a4c116ba08043fcabee91",
+    "semantic_hash": "93b86480d54a4c116ba08043fcabee91"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/StockTransactionType.java": {
+    "mtime": 1767398833.8934016,
+    "ast_hash": "534a59e7822009397bd7c1b2962e494e",
+    "semantic_hash": "534a59e7822009397bd7c1b2962e494e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/User.java": {
+    "mtime": 1772317197.4650166,
+    "ast_hash": "b311a8799f7ab7810e9adad529565e4d",
+    "semantic_hash": "b311a8799f7ab7810e9adad529565e4d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/Document.java": {
+    "mtime": 1772324588.730749,
+    "ast_hash": "71a7437321a884f2f95a138a29becbe3",
+    "semantic_hash": "71a7437321a884f2f95a138a29becbe3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/SubscriptionUsage.java": {
+    "mtime": 1773092175.5831385,
+    "ast_hash": "a125103e47096c344362086b1f44ccbb",
+    "semantic_hash": "a125103e47096c344362086b1f44ccbb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/MenuItem.java": {
+    "mtime": 1767398814.5249314,
+    "ast_hash": "159b4647a76ed479b08771041fe59997",
+    "semantic_hash": "159b4647a76ed479b08771041fe59997"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/RestaurantSubscription.java": {
+    "mtime": 1773092177.603689,
+    "ast_hash": "98f629461dbd00454184007d777a38c9",
+    "semantic_hash": "98f629461dbd00454184007d777a38c9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/Vendor.java": {
+    "mtime": 1767398809.0116706,
+    "ast_hash": "a0df31590ded771bf2e698855825ff16",
+    "semantic_hash": "a0df31590ded771bf2e698855825ff16"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/Restaurant.java": {
+    "mtime": 1772317175.6575756,
+    "ast_hash": "7b98d4e9241fee723b976130a531fb0f",
+    "semantic_hash": "7b98d4e9241fee723b976130a531fb0f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/RestaurantMetric.java": {
+    "mtime": 1767398842.2864287,
+    "ast_hash": "32f3e865e18f4a1feff502ef1ff47abf",
+    "semantic_hash": "32f3e865e18f4a1feff502ef1ff47abf"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/entity/InventoryItem.java": {
+    "mtime": 1767398827.7696946,
+    "ast_hash": "545e13c6140cc7615c56b77254b5111d",
+    "semantic_hash": "545e13c6140cc7615c56b77254b5111d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/SubscriptionController.java": {
+    "mtime": 1780134615.4860837,
+    "ast_hash": "eeb96635d0f9ba04a55b9473982d6790",
+    "semantic_hash": "eeb96635d0f9ba04a55b9473982d6790"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/VoiceController.java": {
+    "mtime": 1772312322.2906258,
+    "ast_hash": "481ac075ffd21a08ecf79e19239e1bcb",
+    "semantic_hash": "481ac075ffd21a08ecf79e19239e1bcb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/DashboardController.java": {
+    "mtime": 1780130367.5179849,
+    "ast_hash": "f0b90ccc4f2357add9fac12e8caf9825",
+    "semantic_hash": "f0b90ccc4f2357add9fac12e8caf9825"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/DocumentController.java": {
+    "mtime": 1780134617.9682968,
+    "ast_hash": "d1cdbaf4d4e3f5167e2b3651f0826af1",
+    "semantic_hash": "d1cdbaf4d4e3f5167e2b3651f0826af1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/AuthController.java": {
+    "mtime": 1780149702.1459215,
+    "ast_hash": "c721a4a59825bba6bbd46f0180303c97",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/HelloWorldController.java": {
+    "mtime": 1765997698.93868,
+    "ast_hash": "7cb9be0a5c70d950800cf6aaffb07348",
+    "semantic_hash": "7cb9be0a5c70d950800cf6aaffb07348"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/ChatController.java": {
+    "mtime": 1767391373.793117,
+    "ast_hash": "78e2a5f42240eda1da5321d8190f2f58",
+    "semantic_hash": "78e2a5f42240eda1da5321d8190f2f58"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/DocumentAnalysisService.java": {
+    "mtime": 1780142933.438636,
+    "ast_hash": "545064ff740e650ebea937745534ecaf",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/VoiceService.java": {
+    "mtime": 1772312320.354665,
+    "ast_hash": "ab4a02c920321983a292cc88b53829fc",
+    "semantic_hash": "ab4a02c920321983a292cc88b53829fc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/ChatService.java": {
+    "mtime": 1772324638.8298233,
+    "ast_hash": "96b94849385ca1cb84644b384b13ccbe",
+    "semantic_hash": "96b94849385ca1cb84644b384b13ccbe"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/DashboardService.java": {
+    "mtime": 1780146014.8544118,
+    "ast_hash": "fca2a9053928a3393b4bb6d0d3c5bfad",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/DocumentService.java": {
+    "mtime": 1780262638.0824552,
+    "ast_hash": "a514e633ad1b0690dfbf86fdd95e3308",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/AuthService.java": {
+    "mtime": 1780146037.5083401,
+    "ast_hash": "eb1b7134ade368f0aa85f978f1a1bd0b",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/HelloWorldService.java": {
+    "mtime": 1765997698.9385962,
+    "ast_hash": "da8333654d77a6ae6c94587e84d8c70d",
+    "semantic_hash": "da8333654d77a6ae6c94587e84d8c70d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/InventoryService.java": {
+    "mtime": 1767398932.4918041,
+    "ast_hash": "579cc5123dbefedeedd3f7ef36cd01c4",
+    "semantic_hash": "579cc5123dbefedeedd3f7ef36cd01c4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/ImageProcessingService.java": {
+    "mtime": 1767528561.7478304,
+    "ast_hash": "b0611721c7e133063486bc9b4344cda1",
+    "semantic_hash": "b0611721c7e133063486bc9b4344cda1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/SubscriptionService.java": {
+    "mtime": 1780264225.4500248,
+    "ast_hash": "8c5d65d7de42511e966f095c3545bd95",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/service/PdfProcessingService.java": {
+    "mtime": 1767489356.19444,
+    "ast_hash": "1c99df8174ec3e5e0d20e854a05b040d",
+    "semantic_hash": "1c99df8174ec3e5e0d20e854a05b040d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/exception/NoRestaurantException.java": {
+    "mtime": 1776464142.0672328,
+    "ast_hash": "a8300c445392c02b869caa00f0784e3d",
+    "semantic_hash": "a8300c445392c02b869caa00f0784e3d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/exception/GlobalExceptionHandler.java": {
+    "mtime": 1780141209.9723656,
+    "ast_hash": "f563f1912e07a3fdf0cc738b7bd00f8f",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/tool/ChatTools.java": {
+    "mtime": 1780262503.7300103,
+    "ast_hash": "fa720c35a69fd6cfeb06018a139da3be",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.github/modernize/java-upgrade/hooks/scripts/recordToolUse.sh": {
+    "mtime": 1780006890.5913036,
+    "ast_hash": "e25ae501603ce6bf738198f5ce32ba83",
+    "semantic_hash": "e25ae501603ce6bf738198f5ce32ba83"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.github/modernize/java-upgrade/hooks/scripts/recordToolUse.ps1": {
+    "mtime": 1780006890.5915985,
+    "ast_hash": "9ecf230451dfd20ff4e0a2a01e80a4e6",
+    "semantic_hash": "9ecf230451dfd20ff4e0a2a01e80a4e6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.github/java-upgrade/hooks/scripts/recordToolUse.sh": {
+    "mtime": 1779735245.26814,
+    "ast_hash": "392b480c0ee4898af9652e8fc429f7cd",
+    "semantic_hash": "392b480c0ee4898af9652e8fc429f7cd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.github/java-upgrade/hooks/scripts/recordToolUse.ps1": {
+    "mtime": 1779735245.268427,
+    "ast_hash": "a76b05925b01d5e7a642eda1824e8fa7",
+    "semantic_hash": "a76b05925b01d5e7a642eda1824e8fa7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/index.html": {
+    "mtime": 1776467587.0835516,
+    "ast_hash": "f4618455e0b60b296662d8ed8a9a80d1",
+    "semantic_hash": "f4618455e0b60b296662d8ed8a9a80d1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.component.html": {
+    "mtime": 1773109526.7639081,
+    "ast_hash": "a178360f75d98cae6eaded46c5fe860f",
+    "semantic_hash": "a178360f75d98cae6eaded46c5fe860f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/app.html": {
+    "mtime": 1768158042.824236,
+    "ast_hash": "aebef2281a409dc2f04398c6e6d5ce1d",
+    "semantic_hash": "aebef2281a409dc2f04398c6e6d5ce1d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/home.component.html": {
+    "mtime": 1763554940.9215834,
+    "ast_hash": "269dabf9b37eae240fe93eab9c131bdd",
+    "semantic_hash": "269dabf9b37eae240fe93eab9c131bdd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/landing-new.component.html": {
+    "mtime": 1774487915.2201653,
+    "ast_hash": "c44632fee03390819694d9b2cc60f5a3",
+    "semantic_hash": "c44632fee03390819694d9b2cc60f5a3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/features-grid/features-grid.component.html": {
+    "mtime": 1776502892.5141897,
+    "ast_hash": "74c4e5ef5d02abbbba54d77013bbb203",
+    "semantic_hash": "74c4e5ef5d02abbbba54d77013bbb203"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/contact-form/contact-form.component.html": {
+    "mtime": 1773107757.0973282,
+    "ast_hash": "aaf1d6d4890a841e50872bec796b6104",
+    "semantic_hash": "aaf1d6d4890a841e50872bec796b6104"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/recommendations-carousel/recommendations-carousel.component.html": {
+    "mtime": 1776503022.4640057,
+    "ast_hash": "4482347dd7490130829c214d35e35732",
+    "semantic_hash": "4482347dd7490130829c214d35e35732"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/pricing-section/pricing-section.component.html": {
+    "mtime": 1776502964.0968516,
+    "ast_hash": "b928e061f5fa34a9fcacf806ae9f178c",
+    "semantic_hash": "b928e061f5fa34a9fcacf806ae9f178c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/hero-section/hero-section.component.html": {
+    "mtime": 1776503224.5482352,
+    "ast_hash": "56e81bca3f4871146c4c1fbde818e7b5",
+    "semantic_hash": "56e81bca3f4871146c4c1fbde818e7b5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/home/components/ai-section/ai-section.component.html": {
+    "mtime": 1774487530.8350897,
+    "ast_hash": "c60bf41efdbb1cfe91d0c28e72b4f157",
+    "semantic_hash": "c60bf41efdbb1cfe91d0c28e72b4f157"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/chat/components/chat.component.html": {
+    "mtime": 1776502666.475443,
+    "ast_hash": "dc3c0cfaca036a2054f07b6deeedddae",
+    "semantic_hash": "dc3c0cfaca036a2054f07b6deeedddae"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/auth/components/register.component.html": {
+    "mtime": 1780146565.7105887,
+    "ast_hash": "351ca8f0da1509e33e31ec26522610a2",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/auth/components/login.component.html": {
+    "mtime": 1776503162.0303845,
+    "ast_hash": "0aed75c1b46056be9635d25765b4451f",
+    "semantic_hash": "0aed75c1b46056be9635d25765b4451f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/subscription/components/subscription.component.html": {
+    "mtime": 1776467587.1463878,
+    "ast_hash": "690b079d8c562f808125ee83487f1aa6",
+    "semantic_hash": "690b079d8c562f808125ee83487f1aa6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/dashboard/components/dashboard.component.html": {
+    "mtime": 1776502861.328764,
+    "ast_hash": "8d2d72de3dcee2bd14c016103d21ca32",
+    "semantic_hash": "8d2d72de3dcee2bd14c016103d21ca32"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/profile/components/profile.component.html": {
+    "mtime": 1779914565.877422,
+    "ast_hash": "a3ea5560a7c48ad802846073ef9f757b",
+    "semantic_hash": "a3ea5560a7c48ad802846073ef9f757b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/features/documents/components/documents-upload.component.html": {
+    "mtime": 1776502701.5275037,
+    "ast_hash": "d184dda30a1c86b0ec61b5f05552d86d",
+    "semantic_hash": "d184dda30a1c86b0ec61b5f05552d86d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/sidebar/sidebar.component.html": {
+    "mtime": 1776468170.8995497,
+    "ast_hash": "c6d9466636a662205c9a13b24f254723",
+    "semantic_hash": "c6d9466636a662205c9a13b24f254723"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/navbar/navbar.component.html": {
+    "mtime": 1773108507.9112139,
+    "ast_hash": "ddd6d07a633a393647e13b23aab1ad2a",
+    "semantic_hash": "ddd6d07a633a393647e13b23aab1ad2a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/language-switcher/language-switcher.component.html": {
+    "mtime": 1764343876.6823497,
+    "ast_hash": "ed054cbedebb30dc6ae5a862d801b228",
+    "semantic_hash": "ed054cbedebb30dc6ae5a862d801b228"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/card/card.component.html": {
+    "mtime": 1764343876.6763694,
+    "ast_hash": "2b5e269ce8fb19b3e8e731283efb673a",
+    "semantic_hash": "2b5e269ce8fb19b3e8e731283efb673a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/testimonials/testimonials.component.html": {
+    "mtime": 1764343876.6826055,
+    "ast_hash": "a71cfc1f3bca729cedc46f3575683f67",
+    "semantic_hash": "a71cfc1f3bca729cedc46f3575683f67"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/input/input.component.html": {
+    "mtime": 1764343876.6823196,
+    "ast_hash": "c34c3b4d15b4594eeab77530bd0651e1",
+    "semantic_hash": "c34c3b4d15b4594eeab77530bd0651e1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/features/features.component.html": {
+    "mtime": 1764343876.6823485,
+    "ast_hash": "1d0569853d94786febb779f0801d5581",
+    "semantic_hash": "1d0569853d94786febb779f0801d5581"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/spinner/spinner.component.html": {
+    "mtime": 1764343876.6823003,
+    "ast_hash": "7d8f421637888d28c37f3b6ad9124851",
+    "semantic_hash": "7d8f421637888d28c37f3b6ad9124851"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/button/button.component.html": {
+    "mtime": 1764343876.6718183,
+    "ast_hash": "97c6808ca1a84415b7746f3e4728e121",
+    "semantic_hash": "97c6808ca1a84415b7746f3e4728e121"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/modal/modal.component.html": {
+    "mtime": 1764343876.682003,
+    "ast_hash": "ee3fe60d99a8c864129a4ed32d8bde89",
+    "semantic_hash": "ee3fe60d99a8c864129a4ed32d8bde89"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/shared/components/header/header.component.html": {
+    "mtime": 1773109965.8437853,
+    "ast_hash": "02184d5005a9cfd9ee0051bddd38189b",
+    "semantic_hash": "02184d5005a9cfd9ee0051bddd38189b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.agents/agents.md": {
+    "mtime": 1780264676.3094008,
+    "ast_hash": "f725ea111657fc13e959bcb7840689fa",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.agents/skills/frontend-design/SKILL.md": {
+    "mtime": 1776465820.6025476,
+    "ast_hash": "6a10ba5b26e58ff6c6b40c982f564bba",
+    "semantic_hash": "6a10ba5b26e58ff6c6b40c982f564bba"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/README.md": {
+    "mtime": 1766017358.4113326,
+    "ast_hash": "b5e3180f52823cf19aa438855666beb9",
+    "semantic_hash": "b5e3180f52823cf19aa438855666beb9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/db/changelog/db.changelog-1.4.yaml": {
+    "mtime": 1774489829.6007423,
+    "ast_hash": "30e3f7aa569d14d54c10a73139b27bf1",
+    "semantic_hash": "30e3f7aa569d14d54c10a73139b27bf1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/db/changelog/db.changelog-1.2.yaml": {
+    "mtime": 1772316335.7764122,
+    "ast_hash": "867454d70ffff79cabc84d2fb74d6e3e",
+    "semantic_hash": "867454d70ffff79cabc84d2fb74d6e3e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/db/changelog/db.changelog-1.3.yaml": {
+    "mtime": 1772324577.0238085,
+    "ast_hash": "3b0058c8dcc511a0db4c968ff87295bc",
+    "semantic_hash": "3b0058c8dcc511a0db4c968ff87295bc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/db/changelog/db.changelog-1.1.yaml": {
+    "mtime": 1767398777.445812,
+    "ast_hash": "21abca8a78faad600d7fe1ef1fc183d0",
+    "semantic_hash": "21abca8a78faad600d7fe1ef1fc183d0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/resources/db/changelog/db.changelog-master.yaml": {
+    "mtime": 1774489831.6237216,
+    "ast_hash": "915fcf39d02767aac91399267ff34d0f",
+    "semantic_hash": "915fcf39d02767aac91399267ff34d0f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/feature-designs.md": {
+    "mtime": 1779716021.6475036,
+    "ast_hash": "3241912d9f5b98189b0a8bdece687826",
+    "semantic_hash": "3241912d9f5b98189b0a8bdece687826"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/architecture.md": {
+    "mtime": 1779716567.6042244,
+    "ast_hash": "c9ca4450999c047aa4ab05021c4ce91c",
+    "semantic_hash": "c9ca4450999c047aa4ab05021c4ce91c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/todo-handover.md": {
+    "mtime": 1780264645.324142,
+    "ast_hash": "76fa3231caeb302c7b6758b2df108263",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/known-issues.md": {
+    "mtime": 1780149878.7171829,
+    "ast_hash": "871f8e1c6c8a012c6692fb7b5211ba83",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/.github/agents/customAgent.agent.md": {
+    "mtime": 1764099297.0601788,
+    "ast_hash": "3919984c8dc26a4873395ec243e65597",
+    "semantic_hash": "3919984c8dc26a4873395ec243e65597"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/logo.svg": {
+    "mtime": 1763759272.6308432,
+    "ast_hash": "884a37d2ebccd28ad5e7d2c833141f96",
+    "semantic_hash": "884a37d2ebccd28ad5e7d2c833141f96"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/restaurant_dashboard_tablet_1773089331023.png": {
+    "mtime": 1773089453.7211788,
+    "ast_hash": "019b7d659043ffb1c059a4de34f6c4a9",
+    "semantic_hash": "019b7d659043ffb1c059a4de34f6c4a9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/fine_dining_interior_1773089345954.png": {
+    "mtime": 1773089453.7190332,
+    "ast_hash": "1f9e4bae9094ba92a0ca7f42048475c3",
+    "semantic_hash": "1f9e4bae9094ba92a0ca7f42048475c3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/chef_plating_dish_1773089244438.png": {
+    "mtime": 1773089453.71819,
+    "ast_hash": "bd7b4961a730866b7ec9bc8c123c2677",
+    "semantic_hash": "bd7b4961a730866b7ec9bc8c123c2677"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/fresh_ingredients_kitchen_1773089360300.png": {
+    "mtime": 1773089453.719848,
+    "ast_hash": "6b5d0ff555161b41286b5103c172de11",
+    "semantic_hash": "6b5d0ff555161b41286b5103c172de11"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0028.jpg": {
+    "mtime": 1774486406.7086709,
+    "ast_hash": "79edb97bce9f19697a1d43f5586a2e32",
+    "semantic_hash": "79edb97bce9f19697a1d43f5586a2e32"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0014.jpg": {
+    "mtime": 1774486406.7851486,
+    "ast_hash": "be1a5a38d5d90132630bc47cab1ef92d",
+    "semantic_hash": "be1a5a38d5d90132630bc47cab1ef92d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0148.jpg": {
+    "mtime": 1774486406.068191,
+    "ast_hash": "e4b486eec96559d0f323a999f702ad7f",
+    "semantic_hash": "e4b486eec96559d0f323a999f702ad7f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0160.jpg": {
+    "mtime": 1774486406.0089836,
+    "ast_hash": "5795695eedd4bfd1b4fac66a0c29642e",
+    "semantic_hash": "5795695eedd4bfd1b4fac66a0c29642e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0174.jpg": {
+    "mtime": 1774486405.949853,
+    "ast_hash": "b09bb12e0b771ef12294ebb8e2193a9f",
+    "semantic_hash": "b09bb12e0b771ef12294ebb8e2193a9f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0175.jpg": {
+    "mtime": 1774486405.9434516,
+    "ast_hash": "dc2a221ea2c8403eb2ec488741a75950",
+    "semantic_hash": "dc2a221ea2c8403eb2ec488741a75950"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0161.jpg": {
+    "mtime": 1774486406.0065908,
+    "ast_hash": "986ee6cc8fc40abd20fa8fca00f0404f",
+    "semantic_hash": "986ee6cc8fc40abd20fa8fca00f0404f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0149.jpg": {
+    "mtime": 1774486406.065526,
+    "ast_hash": "5ab5c96f83e9f8c3691ac445c890a2ff",
+    "semantic_hash": "5ab5c96f83e9f8c3691ac445c890a2ff"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0001.jpg": {
+    "mtime": 1774486406.8575435,
+    "ast_hash": "c6525f9c1f99ac449ed0eac0c15d5942",
+    "semantic_hash": "c6525f9c1f99ac449ed0eac0c15d5942"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0015.jpg": {
+    "mtime": 1774486406.7827044,
+    "ast_hash": "1e762d2d396e4fd792be98e1d66ec676",
+    "semantic_hash": "1e762d2d396e4fd792be98e1d66ec676"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0029.jpg": {
+    "mtime": 1774486406.7013526,
+    "ast_hash": "6146660c81f430f8850e677d388d0968",
+    "semantic_hash": "6146660c81f430f8850e677d388d0968"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0003.jpg": {
+    "mtime": 1774486406.8479524,
+    "ast_hash": "5f68e69d1806d9c663a550ce57233aa0",
+    "semantic_hash": "5f68e69d1806d9c663a550ce57233aa0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0017.jpg": {
+    "mtime": 1774486406.7783134,
+    "ast_hash": "e163e615b7eb14f2cdf187323cedccca",
+    "semantic_hash": "e163e615b7eb14f2cdf187323cedccca"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0188.jpg": {
+    "mtime": 1774486405.8933234,
+    "ast_hash": "2317b7535bb6c68e56693772bd833c35",
+    "semantic_hash": "2317b7535bb6c68e56693772bd833c35"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0177.jpg": {
+    "mtime": 1774486405.9352505,
+    "ast_hash": "065153ae2e4bedd8b8b2e34bbe49f61a",
+    "semantic_hash": "065153ae2e4bedd8b8b2e34bbe49f61a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0163.jpg": {
+    "mtime": 1774486405.9986064,
+    "ast_hash": "937a452fca731e340aa2ade8ba412159",
+    "semantic_hash": "937a452fca731e340aa2ade8ba412159"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0162.jpg": {
+    "mtime": 1774486406.0006132,
+    "ast_hash": "9568db8a7b768a9c006f08d37d139333",
+    "semantic_hash": "9568db8a7b768a9c006f08d37d139333"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0176.jpg": {
+    "mtime": 1774486405.941544,
+    "ast_hash": "f41c04d6df3a9ef4746aae80f182601c",
+    "semantic_hash": "f41c04d6df3a9ef4746aae80f182601c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0189.jpg": {
+    "mtime": 1774486405.8877885,
+    "ast_hash": "d3dfef2a8acf77bb56e0f192e867efc0",
+    "semantic_hash": "d3dfef2a8acf77bb56e0f192e867efc0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0016.jpg": {
+    "mtime": 1774486406.7804596,
+    "ast_hash": "f5cc1f4a4278e78338a8a43e24d13e8a",
+    "semantic_hash": "f5cc1f4a4278e78338a8a43e24d13e8a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0002.jpg": {
+    "mtime": 1774486406.8506703,
+    "ast_hash": "28b072e793bfda3835304bd13d46dd4f",
+    "semantic_hash": "28b072e793bfda3835304bd13d46dd4f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0006.jpg": {
+    "mtime": 1774486406.8252764,
+    "ast_hash": "44ddb2a078c82df2ba258437f78c6ef7",
+    "semantic_hash": "44ddb2a078c82df2ba258437f78c6ef7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0012.jpg": {
+    "mtime": 1774486406.797953,
+    "ast_hash": "55cff3b4a543b424eb023acb0ae95bcf",
+    "semantic_hash": "55cff3b4a543b424eb023acb0ae95bcf"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0172.jpg": {
+    "mtime": 1774486405.9579637,
+    "ast_hash": "4300d4f8012245949899d372e6dc1594",
+    "semantic_hash": "4300d4f8012245949899d372e6dc1594"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0166.jpg": {
+    "mtime": 1774486405.9834173,
+    "ast_hash": "be61f8d2a2d88cd7600166199a26dee2",
+    "semantic_hash": "be61f8d2a2d88cd7600166199a26dee2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0167.jpg": {
+    "mtime": 1774486405.9771585,
+    "ast_hash": "0c08bf0349e0bd7c1f81cb81ac3d73c7",
+    "semantic_hash": "0c08bf0349e0bd7c1f81cb81ac3d73c7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0173.jpg": {
+    "mtime": 1774486405.9519303,
+    "ast_hash": "736e9d573af920d9b6228d6c6d0934ce",
+    "semantic_hash": "736e9d573af920d9b6228d6c6d0934ce"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0013.jpg": {
+    "mtime": 1774486406.791358,
+    "ast_hash": "e4bdacaf8592995c75c666b9571e41a7",
+    "semantic_hash": "e4bdacaf8592995c75c666b9571e41a7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0007.jpg": {
+    "mtime": 1774486406.8180785,
+    "ast_hash": "dc5020bfd17aad43960c0107f03d0aba",
+    "semantic_hash": "dc5020bfd17aad43960c0107f03d0aba"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0011.jpg": {
+    "mtime": 1774486406.8003623,
+    "ast_hash": "7dcc513839014cf9a6408157f5f0541f",
+    "semantic_hash": "7dcc513839014cf9a6408157f5f0541f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0005.jpg": {
+    "mtime": 1774486406.8323808,
+    "ast_hash": "43afb8aa093f4c896c308574c5360f31",
+    "semantic_hash": "43afb8aa093f4c896c308574c5360f31"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0039.jpg": {
+    "mtime": 1774486406.6506646,
+    "ast_hash": "e14bf850060e3e5e146d2468e26d75f6",
+    "semantic_hash": "e14bf850060e3e5e146d2468e26d75f6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0165.jpg": {
+    "mtime": 1774486405.9854717,
+    "ast_hash": "60e81b368ded5f6ac826eca1ab9cd4a7",
+    "semantic_hash": "60e81b368ded5f6ac826eca1ab9cd4a7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0171.jpg": {
+    "mtime": 1774486405.9600008,
+    "ast_hash": "9d032c6b3440533202176ecfc294b0ab",
+    "semantic_hash": "9d032c6b3440533202176ecfc294b0ab"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0159.jpg": {
+    "mtime": 1774486406.0151522,
+    "ast_hash": "cc1d875b0073de968c69f67a2377ee26",
+    "semantic_hash": "cc1d875b0073de968c69f67a2377ee26"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0158.jpg": {
+    "mtime": 1774486406.0171082,
+    "ast_hash": "6c574521b2024e48a334545da8d716ac",
+    "semantic_hash": "6c574521b2024e48a334545da8d716ac"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0170.jpg": {
+    "mtime": 1774486405.9665284,
+    "ast_hash": "6a5b6ae238f2a8566d74b70f009027de",
+    "semantic_hash": "6a5b6ae238f2a8566d74b70f009027de"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0164.jpg": {
+    "mtime": 1774486405.9915614,
+    "ast_hash": "692ad51d46362f007ee50bffd979b5ad",
+    "semantic_hash": "692ad51d46362f007ee50bffd979b5ad"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0038.jpg": {
+    "mtime": 1774486406.65715,
+    "ast_hash": "634d9e1d81eb910adceb50649627adf7",
+    "semantic_hash": "634d9e1d81eb910adceb50649627adf7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0004.jpg": {
+    "mtime": 1774486406.8403955,
+    "ast_hash": "7b704fb8d8481f2c8b5944ea47612e50",
+    "semantic_hash": "7b704fb8d8481f2c8b5944ea47612e50"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0010.jpg": {
+    "mtime": 1774486406.8066702,
+    "ast_hash": "9f24aedb9ae9175bf9d978a345e5bbb2",
+    "semantic_hash": "9f24aedb9ae9175bf9d978a345e5bbb2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0088.jpg": {
+    "mtime": 1774486406.3896904,
+    "ast_hash": "f893b13d1d1e843cb22313646c3188b9",
+    "semantic_hash": "f893b13d1d1e843cb22313646c3188b9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0077.jpg": {
+    "mtime": 1774486406.4515905,
+    "ast_hash": "35c4feb3285b5469ac489e918672e98e",
+    "semantic_hash": "35c4feb3285b5469ac489e918672e98e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0063.jpg": {
+    "mtime": 1774486406.5231922,
+    "ast_hash": "ec0a48bc022005c8a642c0b222c096a0",
+    "semantic_hash": "ec0a48bc022005c8a642c0b222c096a0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0103.jpg": {
+    "mtime": 1774486406.3001165,
+    "ast_hash": "d18459bb086cc2231154c439255c5fda",
+    "semantic_hash": "d18459bb086cc2231154c439255c5fda"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0117.jpg": {
+    "mtime": 1774486406.2316437,
+    "ast_hash": "c81b09c108d6bb09e71183e8fdbb67a6",
+    "semantic_hash": "c81b09c108d6bb09e71183e8fdbb67a6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0116.jpg": {
+    "mtime": 1774486406.2341316,
+    "ast_hash": "81fa8751c85583a7a8c82aa8c6dfbd09",
+    "semantic_hash": "81fa8751c85583a7a8c82aa8c6dfbd09"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0102.jpg": {
+    "mtime": 1774486406.3071609,
+    "ast_hash": "9106d16d94ce1ab807e018c3ee1903e7",
+    "semantic_hash": "9106d16d94ce1ab807e018c3ee1903e7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0062.jpg": {
+    "mtime": 1774486406.5252376,
+    "ast_hash": "a785e8f0748d4713a42bec695a78fefc",
+    "semantic_hash": "a785e8f0748d4713a42bec695a78fefc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0076.jpg": {
+    "mtime": 1774486406.4584293,
+    "ast_hash": "4a47680fc3812815e2916d7bb7e656c7",
+    "semantic_hash": "4a47680fc3812815e2916d7bb7e656c7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0089.jpg": {
+    "mtime": 1774486406.3830621,
+    "ast_hash": "9cc487be03499af24ccfaffb6b461dfe",
+    "semantic_hash": "9cc487be03499af24ccfaffb6b461dfe"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0048.jpg": {
+    "mtime": 1774486406.6067348,
+    "ast_hash": "9af246c793163012639180ab5ccb70e3",
+    "semantic_hash": "9af246c793163012639180ab5ccb70e3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0060.jpg": {
+    "mtime": 1774486406.5397205,
+    "ast_hash": "ff455585672be636f213f3c36e7cc9e5",
+    "semantic_hash": "ff455585672be636f213f3c36e7cc9e5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0074.jpg": {
+    "mtime": 1774486406.4683864,
+    "ast_hash": "3289329d877df3a5479cd18ead50940e",
+    "semantic_hash": "3289329d877df3a5479cd18ead50940e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0128.jpg": {
+    "mtime": 1774486406.175924,
+    "ast_hash": "92c83263f0583e543c185203d36f5bb0",
+    "semantic_hash": "92c83263f0583e543c185203d36f5bb0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0114.jpg": {
+    "mtime": 1774486406.2485442,
+    "ast_hash": "f9142a61a98f05d1db2ff50a0ad94298",
+    "semantic_hash": "f9142a61a98f05d1db2ff50a0ad94298"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0100.jpg": {
+    "mtime": 1774486406.316982,
+    "ast_hash": "fdf5ba5643ccde3c84e70c0daf75ceda",
+    "semantic_hash": "fdf5ba5643ccde3c84e70c0daf75ceda"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0101.jpg": {
+    "mtime": 1774486406.309838,
+    "ast_hash": "c2e98d787c0b864a721547e30280d9f2",
+    "semantic_hash": "c2e98d787c0b864a721547e30280d9f2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0115.jpg": {
+    "mtime": 1774486406.2414985,
+    "ast_hash": "b08c0e55585043ea99515c008c550344",
+    "semantic_hash": "b08c0e55585043ea99515c008c550344"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0129.jpg": {
+    "mtime": 1774486406.1738048,
+    "ast_hash": "8a1175b4aa494b6ddd9413627d2e393d",
+    "semantic_hash": "8a1175b4aa494b6ddd9413627d2e393d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0075.jpg": {
+    "mtime": 1774486406.4658942,
+    "ast_hash": "cdf53dfe5cc262450495bc2ef4f2a30a",
+    "semantic_hash": "cdf53dfe5cc262450495bc2ef4f2a30a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0061.jpg": {
+    "mtime": 1774486406.5324957,
+    "ast_hash": "8c22fb843585dee943501c2e249c4902",
+    "semantic_hash": "8c22fb843585dee943501c2e249c4902"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0049.jpg": {
+    "mtime": 1774486406.5992646,
+    "ast_hash": "0c30f7263fee9b517dbae071c610b6cb",
+    "semantic_hash": "0c30f7263fee9b517dbae071c610b6cb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0065.jpg": {
+    "mtime": 1774486406.515003,
+    "ast_hash": "41181fb91488cfe9ebc8ff76b4a3f61e",
+    "semantic_hash": "41181fb91488cfe9ebc8ff76b4a3f61e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0071.jpg": {
+    "mtime": 1774486406.491025,
+    "ast_hash": "ce79be464c8312f2a739fa622b4e61c7",
+    "semantic_hash": "ce79be464c8312f2a739fa622b4e61c7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0059.jpg": {
+    "mtime": 1774486406.5419898,
+    "ast_hash": "3b20cc5b7a18ce8241c4d83b706f9855",
+    "semantic_hash": "3b20cc5b7a18ce8241c4d83b706f9855"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0111.jpg": {
+    "mtime": 1774486406.2647412,
+    "ast_hash": "53284a4d9225ac3955f2b2e9fadeecc7",
+    "semantic_hash": "53284a4d9225ac3955f2b2e9fadeecc7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0105.jpg": {
+    "mtime": 1774486406.2919397,
+    "ast_hash": "8ace2d8fdca217d151749701da0bfb31",
+    "semantic_hash": "8ace2d8fdca217d151749701da0bfb31"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0139.jpg": {
+    "mtime": 1774486406.117939,
+    "ast_hash": "6c80f301a1191ff6a549a7bd1648f30b",
+    "semantic_hash": "6c80f301a1191ff6a549a7bd1648f30b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0138.jpg": {
+    "mtime": 1774486406.1238809,
+    "ast_hash": "09f22ed44d27ac6d4a7c58d669d4d458",
+    "semantic_hash": "09f22ed44d27ac6d4a7c58d669d4d458"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0104.jpg": {
+    "mtime": 1774486406.2977703,
+    "ast_hash": "7a16a6faf05747ebf89ba9c046f7811a",
+    "semantic_hash": "7a16a6faf05747ebf89ba9c046f7811a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0110.jpg": {
+    "mtime": 1774486406.2670019,
+    "ast_hash": "68d274d7ed8a867abeb8773245c284aa",
+    "semantic_hash": "68d274d7ed8a867abeb8773245c284aa"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0058.jpg": {
+    "mtime": 1774486406.5487592,
+    "ast_hash": "46204e945eb0a301e47e4ec536a38a6c",
+    "semantic_hash": "46204e945eb0a301e47e4ec536a38a6c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0070.jpg": {
+    "mtime": 1774486406.4980686,
+    "ast_hash": "0dfcd794852b73590813ff43fa28b22d",
+    "semantic_hash": "0dfcd794852b73590813ff43fa28b22d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0064.jpg": {
+    "mtime": 1774486406.5167065,
+    "ast_hash": "7e955b85b9de62e18867a52a240434f3",
+    "semantic_hash": "7e955b85b9de62e18867a52a240434f3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0099.jpg": {
+    "mtime": 1774486406.3238573,
+    "ast_hash": "0ad095f5d49472389a28c2b181d21eae",
+    "semantic_hash": "0ad095f5d49472389a28c2b181d21eae"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0072.jpg": {
+    "mtime": 1774486406.4820125,
+    "ast_hash": "4dd3f6d7e00a68799ff71ce2dfa91014",
+    "semantic_hash": "4dd3f6d7e00a68799ff71ce2dfa91014"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0066.jpg": {
+    "mtime": 1774486406.5134408,
+    "ast_hash": "0ecfbeff88aad0bc8ac82d6393bd2021",
+    "semantic_hash": "0ecfbeff88aad0bc8ac82d6393bd2021"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0106.jpg": {
+    "mtime": 1774486406.2893376,
+    "ast_hash": "3fd3003b556908be91ed5db1256386b1",
+    "semantic_hash": "3fd3003b556908be91ed5db1256386b1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0112.jpg": {
+    "mtime": 1774486406.2581577,
+    "ast_hash": "17ea12a928ebab783813f8b322b5eb9b",
+    "semantic_hash": "17ea12a928ebab783813f8b322b5eb9b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0113.jpg": {
+    "mtime": 1774486406.2509575,
+    "ast_hash": "75e6e1e49e1f068489a4296a9751650b",
+    "semantic_hash": "75e6e1e49e1f068489a4296a9751650b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0107.jpg": {
+    "mtime": 1774486406.2832377,
+    "ast_hash": "383e913c6de95f5df511224ca88990dd",
+    "semantic_hash": "383e913c6de95f5df511224ca88990dd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0067.jpg": {
+    "mtime": 1774486406.5117285,
+    "ast_hash": "383b6e35a1782383ca74da5fd47b85dd",
+    "semantic_hash": "383b6e35a1782383ca74da5fd47b85dd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0073.jpg": {
+    "mtime": 1774486406.4746482,
+    "ast_hash": "97cc17cd81f530be5a1e7275f1ec1803",
+    "semantic_hash": "97cc17cd81f530be5a1e7275f1ec1803"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0098.jpg": {
+    "mtime": 1774486406.3265982,
+    "ast_hash": "6b29a5b39788422a6f2b3b4e53f7d81a",
+    "semantic_hash": "6b29a5b39788422a6f2b3b4e53f7d81a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0095.jpg": {
+    "mtime": 1774486406.3491604,
+    "ast_hash": "f131cf94ca4766799dc3ef9317063259",
+    "semantic_hash": "f131cf94ca4766799dc3ef9317063259"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0081.jpg": {
+    "mtime": 1774486406.4265523,
+    "ast_hash": "af290dc8ebba420a9b837f2828f7029e",
+    "semantic_hash": "af290dc8ebba420a9b837f2828f7029e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0056.jpg": {
+    "mtime": 1774486406.5589802,
+    "ast_hash": "51981a1d8f7363b5bb1d37427f474d83",
+    "semantic_hash": "51981a1d8f7363b5bb1d37427f474d83"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0042.jpg": {
+    "mtime": 1774486406.634724,
+    "ast_hash": "e7312523ebf2ee4335b05c01fac298fd",
+    "semantic_hash": "e7312523ebf2ee4335b05c01fac298fd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0122.jpg": {
+    "mtime": 1774486406.2065833,
+    "ast_hash": "b5a59aeea9c4517568778ec3a094fe73",
+    "semantic_hash": "b5a59aeea9c4517568778ec3a094fe73"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0136.jpg": {
+    "mtime": 1774486406.1335418,
+    "ast_hash": "7b86ca700a2d81ccafef7562d5a19c0f",
+    "semantic_hash": "7b86ca700a2d81ccafef7562d5a19c0f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0137.jpg": {
+    "mtime": 1774486406.1261055,
+    "ast_hash": "18e360334b436d3d604f9aa996d62285",
+    "semantic_hash": "18e360334b436d3d604f9aa996d62285"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0123.jpg": {
+    "mtime": 1774486406.199607,
+    "ast_hash": "1bd1805111fb45eafd41c8a13bde8b17",
+    "semantic_hash": "1bd1805111fb45eafd41c8a13bde8b17"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0043.jpg": {
+    "mtime": 1774486406.6318765,
+    "ast_hash": "61dbc68032b5b49433e8e3a38e1e6d7e",
+    "semantic_hash": "61dbc68032b5b49433e8e3a38e1e6d7e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0057.jpg": {
+    "mtime": 1774486406.5515718,
+    "ast_hash": "be971aa83b33160926f6de064468798e",
+    "semantic_hash": "be971aa83b33160926f6de064468798e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0080.jpg": {
+    "mtime": 1774486406.4341636,
+    "ast_hash": "c6a53338c11ef48e11010ae50992a363",
+    "semantic_hash": "c6a53338c11ef48e11010ae50992a363"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0094.jpg": {
+    "mtime": 1774486406.3569324,
+    "ast_hash": "fc27e96616f13398a99d5e35b3837385",
+    "semantic_hash": "fc27e96616f13398a99d5e35b3837385"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0082.jpg": {
+    "mtime": 1774486406.423973,
+    "ast_hash": "67c6df41194969f02ff8f3025f569d27",
+    "semantic_hash": "67c6df41194969f02ff8f3025f569d27"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0096.jpg": {
+    "mtime": 1774486406.3417692,
+    "ast_hash": "dae277017334983368e00aecbfcb5b17",
+    "semantic_hash": "dae277017334983368e00aecbfcb5b17"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0069.jpg": {
+    "mtime": 1774486406.5004933,
+    "ast_hash": "db2d37a8f6d5fc0915f85cc3f4cc03e8",
+    "semantic_hash": "db2d37a8f6d5fc0915f85cc3f4cc03e8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0041.jpg": {
+    "mtime": 1774486406.6414921,
+    "ast_hash": "8697f785683e9db248bde0d67d5b2cb2",
+    "semantic_hash": "8697f785683e9db248bde0d67d5b2cb2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0055.jpg": {
+    "mtime": 1774486406.5661104,
+    "ast_hash": "50c6c012b91fe1a243de4ba101d698a4",
+    "semantic_hash": "50c6c012b91fe1a243de4ba101d698a4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0109.jpg": {
+    "mtime": 1774486406.2739587,
+    "ast_hash": "0ddcb0bbb983d98a64e1a8844afa4a83",
+    "semantic_hash": "0ddcb0bbb983d98a64e1a8844afa4a83"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0135.jpg": {
+    "mtime": 1774486406.141237,
+    "ast_hash": "33b8ef0044c0d28e3bb8a53a6dd8602c",
+    "semantic_hash": "33b8ef0044c0d28e3bb8a53a6dd8602c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0121.jpg": {
+    "mtime": 1774486406.208839,
+    "ast_hash": "c2ed2d00edc06fd2c7df7b5785d8e9f0",
+    "semantic_hash": "c2ed2d00edc06fd2c7df7b5785d8e9f0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0120.jpg": {
+    "mtime": 1774486406.2162201,
+    "ast_hash": "cd60c82bb35eea77cf841f40e6555e81",
+    "semantic_hash": "cd60c82bb35eea77cf841f40e6555e81"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0134.jpg": {
+    "mtime": 1774486406.1485329,
+    "ast_hash": "8923627c47f7f2feb3c3466fc3bf4dd2",
+    "semantic_hash": "8923627c47f7f2feb3c3466fc3bf4dd2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0108.jpg": {
+    "mtime": 1774486406.2765806,
+    "ast_hash": "b8f1b6287698ad1b2cbe020fc88a1508",
+    "semantic_hash": "b8f1b6287698ad1b2cbe020fc88a1508"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0054.jpg": {
+    "mtime": 1774486406.5683918,
+    "ast_hash": "9a5db76c7e9da662ebb9db08402b342f",
+    "semantic_hash": "9a5db76c7e9da662ebb9db08402b342f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0040.jpg": {
+    "mtime": 1774486406.6481197,
+    "ast_hash": "3c38ed8004c15ac2ceca3ccdd42ad550",
+    "semantic_hash": "3c38ed8004c15ac2ceca3ccdd42ad550"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0068.jpg": {
+    "mtime": 1774486406.5071743,
+    "ast_hash": "15e3699f3812cf8846ced206d22e6c92",
+    "semantic_hash": "15e3699f3812cf8846ced206d22e6c92"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0097.jpg": {
+    "mtime": 1774486406.3336844,
+    "ast_hash": "fb75246d139f7c995ba5e515496e4ec2",
+    "semantic_hash": "fb75246d139f7c995ba5e515496e4ec2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0083.jpg": {
+    "mtime": 1774486406.4168499,
+    "ast_hash": "a737e5838e97fad2ac0aa88507067f0e",
+    "semantic_hash": "a737e5838e97fad2ac0aa88507067f0e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0087.jpg": {
+    "mtime": 1774486406.392404,
+    "ast_hash": "0fd974a1395b9a111cc1a87a053a9629",
+    "semantic_hash": "0fd974a1395b9a111cc1a87a053a9629"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0093.jpg": {
+    "mtime": 1774486406.3593376,
+    "ast_hash": "024dcf98340f710fe883742ed36d0326",
+    "semantic_hash": "024dcf98340f710fe883742ed36d0326"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0044.jpg": {
+    "mtime": 1774486406.6250277,
+    "ast_hash": "1fb01524be2af86b5ae893e2725bdec4",
+    "semantic_hash": "1fb01524be2af86b5ae893e2725bdec4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0050.jpg": {
+    "mtime": 1774486406.5917106,
+    "ast_hash": "20183fb8d663269f8762daeeff624a46",
+    "semantic_hash": "20183fb8d663269f8762daeeff624a46"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0078.jpg": {
+    "mtime": 1774486406.4487119,
+    "ast_hash": "5118a182a3a3f51d314cb178606395b0",
+    "semantic_hash": "5118a182a3a3f51d314cb178606395b0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0130.jpg": {
+    "mtime": 1774486406.1671262,
+    "ast_hash": "2975899afb130e5e60ee0ed73127ed1f",
+    "semantic_hash": "2975899afb130e5e60ee0ed73127ed1f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0124.jpg": {
+    "mtime": 1774486406.1927369,
+    "ast_hash": "8c90b36a223ef3188dc187ca20264304",
+    "semantic_hash": "8c90b36a223ef3188dc187ca20264304"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0118.jpg": {
+    "mtime": 1774486406.2248106,
+    "ast_hash": "b64ad9c38f66edc022732f35366da2ce",
+    "semantic_hash": "b64ad9c38f66edc022732f35366da2ce"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0119.jpg": {
+    "mtime": 1774486406.2185917,
+    "ast_hash": "3212dec242f25ba2fd0606e0637486e6",
+    "semantic_hash": "3212dec242f25ba2fd0606e0637486e6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0125.jpg": {
+    "mtime": 1774486406.1908915,
+    "ast_hash": "0772773a0fefd2e0c956d0d552125846",
+    "semantic_hash": "0772773a0fefd2e0c956d0d552125846"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0131.jpg": {
+    "mtime": 1774486406.1648674,
+    "ast_hash": "ab95055680bce30f043c033ea0a54b87",
+    "semantic_hash": "ab95055680bce30f043c033ea0a54b87"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0079.jpg": {
+    "mtime": 1774486406.4417596,
+    "ast_hash": "7f4a8110e3835f699d074ff2ed2dc77f",
+    "semantic_hash": "7f4a8110e3835f699d074ff2ed2dc77f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0051.jpg": {
+    "mtime": 1774486406.5893662,
+    "ast_hash": "9c8ffb7d385bc9b93bd841605a6ee3c4",
+    "semantic_hash": "9c8ffb7d385bc9b93bd841605a6ee3c4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0045.jpg": {
+    "mtime": 1774486406.6182468,
+    "ast_hash": "430f010f34e038f9744f7b7a1ff3935c",
+    "semantic_hash": "430f010f34e038f9744f7b7a1ff3935c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0092.jpg": {
+    "mtime": 1774486406.3669503,
+    "ast_hash": "3a33fbb06a1c0b0f1dfbe58bf5dfedec",
+    "semantic_hash": "3a33fbb06a1c0b0f1dfbe58bf5dfedec"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0086.jpg": {
+    "mtime": 1774486406.3996015,
+    "ast_hash": "9dd30c4b8655ad101d65802d53416ff3",
+    "semantic_hash": "9dd30c4b8655ad101d65802d53416ff3"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0090.jpg": {
+    "mtime": 1774486406.3766296,
+    "ast_hash": "40cd77fba49258a1e08c6203ba066b5c",
+    "semantic_hash": "40cd77fba49258a1e08c6203ba066b5c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0084.jpg": {
+    "mtime": 1774486406.409497,
+    "ast_hash": "ec3e22f30d0e80643ee6f10ea19f525c",
+    "semantic_hash": "ec3e22f30d0e80643ee6f10ea19f525c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0053.jpg": {
+    "mtime": 1774486406.574943,
+    "ast_hash": "447186fdc7e8f0abe80e067d2d8c3296",
+    "semantic_hash": "447186fdc7e8f0abe80e067d2d8c3296"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0047.jpg": {
+    "mtime": 1774486406.6092165,
+    "ast_hash": "644597d496c1907a0602117c2f09fdd4",
+    "semantic_hash": "644597d496c1907a0602117c2f09fdd4"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0127.jpg": {
+    "mtime": 1774486406.1820686,
+    "ast_hash": "ef970afe61963921acc63b3aaded66a6",
+    "semantic_hash": "ef970afe61963921acc63b3aaded66a6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0133.jpg": {
+    "mtime": 1774486406.1509123,
+    "ast_hash": "544493ab2034dcb675e9235a0fb644ee",
+    "semantic_hash": "544493ab2034dcb675e9235a0fb644ee"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0132.jpg": {
+    "mtime": 1774486406.1580558,
+    "ast_hash": "78171bed53e680b410819c77835d6dba",
+    "semantic_hash": "78171bed53e680b410819c77835d6dba"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0126.jpg": {
+    "mtime": 1774486406.184721,
+    "ast_hash": "ab053c75e0e8b52c5bbdb494c8630a89",
+    "semantic_hash": "ab053c75e0e8b52c5bbdb494c8630a89"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0046.jpg": {
+    "mtime": 1774486406.6159258,
+    "ast_hash": "98e8fd40963eafb380c9b08f13c33469",
+    "semantic_hash": "98e8fd40963eafb380c9b08f13c33469"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0052.jpg": {
+    "mtime": 1774486406.5821571,
+    "ast_hash": "46875eb810856aa03b82a27b36b9825f",
+    "semantic_hash": "46875eb810856aa03b82a27b36b9825f"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0085.jpg": {
+    "mtime": 1774486406.4065132,
+    "ast_hash": "3ed620a59ee95e28c635c1c66bfa9e1d",
+    "semantic_hash": "3ed620a59ee95e28c635c1c66bfa9e1d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0091.jpg": {
+    "mtime": 1774486406.3742526,
+    "ast_hash": "33c55f1b9163371d9067f475b81674e7",
+    "semantic_hash": "33c55f1b9163371d9067f475b81674e7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0009.jpg": {
+    "mtime": 1774486406.8089454,
+    "ast_hash": "9ba019e77cb6e102ce52bedc445879e6",
+    "semantic_hash": "9ba019e77cb6e102ce52bedc445879e6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0035.jpg": {
+    "mtime": 1774486406.6682618,
+    "ast_hash": "0009e3c0bc7a58b0b219b665d9ccd063",
+    "semantic_hash": "0009e3c0bc7a58b0b219b665d9ccd063"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0021.jpg": {
+    "mtime": 1774486406.7575316,
+    "ast_hash": "2735a3aed39f4c7a595202dcd19373a7",
+    "semantic_hash": "2735a3aed39f4c7a595202dcd19373a7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0182.jpg": {
+    "mtime": 1774486405.917407,
+    "ast_hash": "2d723d286a6a0ee764e2b4cd6f63a855",
+    "semantic_hash": "2d723d286a6a0ee764e2b4cd6f63a855"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0169.jpg": {
+    "mtime": 1774486405.9726028,
+    "ast_hash": "4aefabaf4226b512906607333953d4b9",
+    "semantic_hash": "4aefabaf4226b512906607333953d4b9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0141.jpg": {
+    "mtime": 1774486406.1138475,
+    "ast_hash": "edc52c1ee8f1c47d6e0b5b12744aacaa",
+    "semantic_hash": "edc52c1ee8f1c47d6e0b5b12744aacaa"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0155.jpg": {
+    "mtime": 1774486406.0328984,
+    "ast_hash": "569296bf0b9df4c97cb0b2dd49f2085e",
+    "semantic_hash": "569296bf0b9df4c97cb0b2dd49f2085e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0154.jpg": {
+    "mtime": 1774486406.0350177,
+    "ast_hash": "4ae17cf00ce646897229e3b457afeba0",
+    "semantic_hash": "4ae17cf00ce646897229e3b457afeba0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0140.jpg": {
+    "mtime": 1774486406.1161363,
+    "ast_hash": "e8f74e522c8dacf5e324f7fc0cb87ae1",
+    "semantic_hash": "e8f74e522c8dacf5e324f7fc0cb87ae1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0168.jpg": {
+    "mtime": 1774486405.975091,
+    "ast_hash": "f7fe7067cbcaa05c73c3307043d5602b",
+    "semantic_hash": "f7fe7067cbcaa05c73c3307043d5602b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0183.jpg": {
+    "mtime": 1774486405.91142,
+    "ast_hash": "ff875c925f85d478e8265fcdc3a88e9c",
+    "semantic_hash": "ff875c925f85d478e8265fcdc3a88e9c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0020.jpg": {
+    "mtime": 1774486406.7647924,
+    "ast_hash": "f38834c27b020c6499312bf8f5257930",
+    "semantic_hash": "f38834c27b020c6499312bf8f5257930"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0034.jpg": {
+    "mtime": 1774486406.6751516,
+    "ast_hash": "ae84d487c7d96648f83b8f8d005c747e",
+    "semantic_hash": "ae84d487c7d96648f83b8f8d005c747e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0008.jpg": {
+    "mtime": 1774486406.8153486,
+    "ast_hash": "07b39ffbfb7608b37174e6a073fc79a8",
+    "semantic_hash": "07b39ffbfb7608b37174e6a073fc79a8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0022.jpg": {
+    "mtime": 1774486406.7487931,
+    "ast_hash": "9d0cb7f1c7e8f4bb5a4ea484ea9c38af",
+    "semantic_hash": "9d0cb7f1c7e8f4bb5a4ea484ea9c38af"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0036.jpg": {
+    "mtime": 1774486406.6659636,
+    "ast_hash": "b1796feca57cfcb55cc75f8e9bee3654",
+    "semantic_hash": "b1796feca57cfcb55cc75f8e9bee3654"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0181.jpg": {
+    "mtime": 1774486405.9193916,
+    "ast_hash": "133434495a9a40336abba123efac1ebc",
+    "semantic_hash": "133434495a9a40336abba123efac1ebc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0156.jpg": {
+    "mtime": 1774486406.026199,
+    "ast_hash": "f7a60651e7866fc4eff3951357c35e2c",
+    "semantic_hash": "f7a60651e7866fc4eff3951357c35e2c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0142.jpg": {
+    "mtime": 1774486406.1074393,
+    "ast_hash": "0784cad3b3e1c2f7608ccc2a9e23cf1b",
+    "semantic_hash": "0784cad3b3e1c2f7608ccc2a9e23cf1b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0143.jpg": {
+    "mtime": 1774486406.100941,
+    "ast_hash": "0045472273f2b51c59f1aced99009a2c",
+    "semantic_hash": "0045472273f2b51c59f1aced99009a2c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0157.jpg": {
+    "mtime": 1774486406.0234694,
+    "ast_hash": "4b8ecaffce79661f6831ab2ca690c175",
+    "semantic_hash": "4b8ecaffce79661f6831ab2ca690c175"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0180.jpg": {
+    "mtime": 1774486405.921451,
+    "ast_hash": "bae770830cf85c90763ae78e263a1dc2",
+    "semantic_hash": "bae770830cf85c90763ae78e263a1dc2"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0037.jpg": {
+    "mtime": 1774486406.6593556,
+    "ast_hash": "7ad648ff89c251377758099fb8d0bee0",
+    "semantic_hash": "7ad648ff89c251377758099fb8d0bee0"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0023.jpg": {
+    "mtime": 1774486406.7409399,
+    "ast_hash": "d513cc4bedcc76b31bf1f80778195dc6",
+    "semantic_hash": "d513cc4bedcc76b31bf1f80778195dc6"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0027.jpg": {
+    "mtime": 1774486406.7155988,
+    "ast_hash": "60618daa2b2837aa2ff8fdd94c3fb60c",
+    "semantic_hash": "60618daa2b2837aa2ff8fdd94c3fb60c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0033.jpg": {
+    "mtime": 1774486406.6817236,
+    "ast_hash": "8e573d11878e68d805549fea0461c553",
+    "semantic_hash": "8e573d11878e68d805549fea0461c553"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0190.jpg": {
+    "mtime": 1774486405.8860571,
+    "ast_hash": "1fc4e9ac3d8a67bc4f9322ff8aea85d1",
+    "semantic_hash": "1fc4e9ac3d8a67bc4f9322ff8aea85d1"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0184.jpg": {
+    "mtime": 1774486405.9059675,
+    "ast_hash": "c0a6f1bd7a3afe29cf382cdd3ab3ca36",
+    "semantic_hash": "c0a6f1bd7a3afe29cf382cdd3ab3ca36"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0153.jpg": {
+    "mtime": 1774486406.0409806,
+    "ast_hash": "159758329677d2dc86a6e2887eb3c9ec",
+    "semantic_hash": "159758329677d2dc86a6e2887eb3c9ec"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0147.jpg": {
+    "mtime": 1774486406.0832045,
+    "ast_hash": "14ade9a9a598f6c87cd812bbbdd83d8a",
+    "semantic_hash": "14ade9a9a598f6c87cd812bbbdd83d8a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0146.jpg": {
+    "mtime": 1774486406.0900161,
+    "ast_hash": "3bfce3cffae8d7c03882de0768d302e9",
+    "semantic_hash": "3bfce3cffae8d7c03882de0768d302e9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0152.jpg": {
+    "mtime": 1774486406.0431418,
+    "ast_hash": "04eb133890f25701a8e5eb337c5e9bfb",
+    "semantic_hash": "04eb133890f25701a8e5eb337c5e9bfb"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0185.jpg": {
+    "mtime": 1774486405.90383,
+    "ast_hash": "246e13dcb53b52717bce7f9c8d86cdd5",
+    "semantic_hash": "246e13dcb53b52717bce7f9c8d86cdd5"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0191.jpg": {
+    "mtime": 1774486405.884198,
+    "ast_hash": "64b388b38cb2389a43fc5d405be30d0a",
+    "semantic_hash": "64b388b38cb2389a43fc5d405be30d0a"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0032.jpg": {
+    "mtime": 1774486406.6843894,
+    "ast_hash": "7a5999c72c5a023caf0c0c4c8af35bce",
+    "semantic_hash": "7a5999c72c5a023caf0c0c4c8af35bce"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0026.jpg": {
+    "mtime": 1774486406.7180667,
+    "ast_hash": "b5f56b756cb6779704af057b81f3dc0b",
+    "semantic_hash": "b5f56b756cb6779704af057b81f3dc0b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0030.jpg": {
+    "mtime": 1774486406.6986704,
+    "ast_hash": "46ad8e265f7847be461a16677bce66e7",
+    "semantic_hash": "46ad8e265f7847be461a16677bce66e7"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0024.jpg": {
+    "mtime": 1774486406.7337978,
+    "ast_hash": "83226bf563e2710bc6ea4d898f1eba4c",
+    "semantic_hash": "83226bf563e2710bc6ea4d898f1eba4c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0018.jpg": {
+    "mtime": 1774486406.7751796,
+    "ast_hash": "a51b25cb9d0f01b3756bbb7eda59fa85",
+    "semantic_hash": "a51b25cb9d0f01b3756bbb7eda59fa85"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0187.jpg": {
+    "mtime": 1774486405.8957229,
+    "ast_hash": "6291d6ba3f1825e0326fb436fdb350bd",
+    "semantic_hash": "6291d6ba3f1825e0326fb436fdb350bd"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0144.jpg": {
+    "mtime": 1774486406.0990405,
+    "ast_hash": "9bd75b90a811741781c840236330468b",
+    "semantic_hash": "9bd75b90a811741781c840236330468b"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0150.jpg": {
+    "mtime": 1774486406.0514827,
+    "ast_hash": "e910822f1b5490aa0a539ad685e82f59",
+    "semantic_hash": "e910822f1b5490aa0a539ad685e82f59"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0178.jpg": {
+    "mtime": 1774486405.9323092,
+    "ast_hash": "34b7738757621e9af7b3bf304eec2f97",
+    "semantic_hash": "34b7738757621e9af7b3bf304eec2f97"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0179.jpg": {
+    "mtime": 1774486405.9264522,
+    "ast_hash": "670f6cb9110c5f47aff99264dfa0e0fe",
+    "semantic_hash": "670f6cb9110c5f47aff99264dfa0e0fe"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0151.jpg": {
+    "mtime": 1774486406.0494328,
+    "ast_hash": "8cac16554adc07a9d75e7c04c0b0858e",
+    "semantic_hash": "8cac16554adc07a9d75e7c04c0b0858e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0145.jpg": {
+    "mtime": 1774486406.0925663,
+    "ast_hash": "87c1a7ae1cc0bfddb8290342ebb51e51",
+    "semantic_hash": "87c1a7ae1cc0bfddb8290342ebb51e51"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0192.jpg": {
+    "mtime": 1774486405.8814623,
+    "ast_hash": "642c70bb0e9e1bb8c2418a13b47b0de9",
+    "semantic_hash": "642c70bb0e9e1bb8c2418a13b47b0de9"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0186.jpg": {
+    "mtime": 1774486405.9017076,
+    "ast_hash": "011254e8e6273f5f12661db23335119e",
+    "semantic_hash": "011254e8e6273f5f12661db23335119e"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0019.jpg": {
+    "mtime": 1774486406.767295,
+    "ast_hash": "09c94842aef5ae40586790f6f66c5ebf",
+    "semantic_hash": "09c94842aef5ae40586790f6f66c5ebf"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0025.jpg": {
+    "mtime": 1774486406.7256563,
+    "ast_hash": "a0d6784a6719cbcac064cc65293592dc",
+    "semantic_hash": "a0d6784a6719cbcac064cc65293592dc"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/public/assets/images/landing/animation/frame_0031.jpg": {
+    "mtime": 1774486406.6917264,
+    "ast_hash": "9173b4d0ec1391c326469489e347be4d",
+    "semantic_hash": "9173b4d0ec1391c326469489e347be4d"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/assets/images/logo.svg": {
+    "mtime": 1763758852.9184473,
+    "ast_hash": "884a37d2ebccd28ad5e7d2c833141f96",
+    "semantic_hash": "884a37d2ebccd28ad5e7d2c833141f96"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/uploads/documents/aede3250-a0c6-490e-985d-36603aba485d.png": {
+    "mtime": 1767531709.408026,
+    "ast_hash": "e101d0d67d662ffd76cd9ab2449934f8",
+    "semantic_hash": "e101d0d67d662ffd76cd9ab2449934f8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/uploads/documents/00f6f4db-045b-4539-8ac3-f3af99aad966.png": {
+    "mtime": 1767529127.9030888,
+    "ast_hash": "e101d0d67d662ffd76cd9ab2449934f8",
+    "semantic_hash": "e101d0d67d662ffd76cd9ab2449934f8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/uploads/documents/165d1fe6-cd29-4e4a-8c3b-5b19a8568123.png": {
+    "mtime": 1768152357.5368044,
+    "ast_hash": "9b5538b945465a29aafe86084ffc3c2c",
+    "semantic_hash": "9b5538b945465a29aafe86084ffc3c2c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/ea4ee362-c2d5-451b-a805-0eb996a6e170.png": {
+    "mtime": 1772317370.9846754,
+    "ast_hash": "e101d0d67d662ffd76cd9ab2449934f8",
+    "semantic_hash": "e101d0d67d662ffd76cd9ab2449934f8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/8a7c5a6e-d960-4141-aea8-18423864ba50.png": {
+    "mtime": 1767531487.244594,
+    "ast_hash": "45659fbc6e54f1079e7ebdfa36759371",
+    "semantic_hash": "45659fbc6e54f1079e7ebdfa36759371"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/5ec3155a-1682-416a-83c6-ed35ab9d070e.png": {
+    "mtime": 1767528643.4771981,
+    "ast_hash": "e101d0d67d662ffd76cd9ab2449934f8",
+    "semantic_hash": "e101d0d67d662ffd76cd9ab2449934f8"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/750c48dd-28a5-4756-9d7b-762738e58321.png": {
+    "mtime": 1772317557.8028095,
+    "ast_hash": "45659fbc6e54f1079e7ebdfa36759371",
+    "semantic_hash": "45659fbc6e54f1079e7ebdfa36759371"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/37826bbf-e637-40aa-9354-dc89df4f58b1.png": {
+    "mtime": 1767531414.4220145,
+    "ast_hash": "9b5538b945465a29aafe86084ffc3c2c",
+    "semantic_hash": "9b5538b945465a29aafe86084ffc3c2c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/uploads/documents/14e6548a-e6a9-49d7-97a0-4d60f14718bb.png": {
+    "mtime": 1772317575.9014778,
+    "ast_hash": "9b5538b945465a29aafe86084ffc3c2c",
+    "semantic_hash": "9b5538b945465a29aafe86084ffc3c2c"
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/environments/environment.prod.ts": {
+    "mtime": 1780147090.4448068,
+    "ast_hash": "fb4d5ca3d9e567f0759bc7e3a9c604c1",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/environments/environment.ts": {
+    "mtime": 1780147089.8890612,
+    "ast_hash": "fd163f49c37f6b330390dfd66c47edd4",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/exception/ResourceNotFoundException.java": {
+    "mtime": 1780140898.1391602,
+    "ast_hash": "3e3492376d0a1327f6c92fe04d9c27a7",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/exception/UnauthorizedException.java": {
+    "mtime": 1780140945.9831448,
+    "ast_hash": "948158de051d8588be7cc1dd570386f8",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/exception/SubscriptionLimitExceededException.java": {
+    "mtime": 1780141126.6217117,
+    "ast_hash": "caf31d265abde87605ad5c412318750d",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/suchef/src/app/core/services/mcp.service.ts": {
+    "mtime": 1780264395.5321667,
+    "ast_hash": "b3821b80bbda77efb7ebd57dfdf2e226",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/mcp/McpToolProviderTest.java": {
+    "mtime": 1780251220.8047762,
+    "ast_hash": "2fe4e8d97e13e232d46385bc5e713c0f",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/test/java/com/example/SuChefService/mcp/McpToolProviderErrorHandlingTest.java": {
+    "mtime": 1780250976.520458,
+    "ast_hash": "ddc7a85a39fb2c054b20994ab0b8fc50",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/config/McpRateLimitFilter.java": {
+    "mtime": 1780259628.5771577,
+    "ast_hash": "571b6f22d8e266466ea043077d3cd753",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/mcp/McpToolProvider.java": {
+    "mtime": 1780264373.4959257,
+    "ast_hash": "4d909d0151cc98f8c33eb59de819218f",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/SuChefService/src/main/java/com/example/SuChefService/controller/McpController.java": {
+    "mtime": 1780264151.4798644,
+    "ast_hash": "caa424757612eb40ba9bf84473ba3e46",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/mcp-tool-catalog.md": {
+    "mtime": 1780259796.1135774,
+    "ast_hash": "6776cebd17fbf93be3a98178e655cc3a",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/epic-mcp-database-server.md": {
+    "mtime": 1780150871.0165825,
+    "ast_hash": "437ee5a281624d9a2f2ad5b99f29b9db",
+    "semantic_hash": ""
+  },
+  "/Users/hou_wa/Documents/dev/suChef/docs/ai/mcp-security-audit.md": {
+    "mtime": 1780259180.6562147,
+    "ast_hash": "8d5c951560e06ddbce76ff3f994b4bb7",
+    "semantic_hash": ""
+  }
+}

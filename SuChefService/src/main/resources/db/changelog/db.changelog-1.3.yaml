@@ -1,0 +1,178 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: suchef-bot
+      changes:
+        - addColumn:
+            tableName: documents
+            columns:
+              - column:
+                  name: size
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 4
+      author: suchef-bot
+      changes:
+        - createTable:
+            tableName: subscription_plans
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(36)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL(19, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: max_documents_size_mb
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: max_chats_per_month
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: max_accounts_per_restaurant
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: max_notifications_per_month
+                  type: INT
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 5
+      author: suchef-bot
+      changes:
+        - createTable:
+            tableName: restaurant_subscriptions
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(36)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: restaurant_id
+                  type: VARCHAR(36)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    foreignKeyName: fk_res_sub_restaurant
+                    references: restaurants(id)
+              - column:
+                  name: plan_id
+                  type: VARCHAR(36)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_res_sub_plan
+                    references: subscription_plans(id)
+              - column:
+                  name: start_date
+                  type: DATETIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_date
+                  type: DATETIME
+
+  - changeSet:
+      id: 6
+      author: suchef-bot
+      changes:
+        - createTable:
+            tableName: subscription_usage
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(36)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: restaurant_id
+                  type: VARCHAR(36)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_usage_restaurant
+                    references: restaurants(id)
+              - column:
+                  name: month_year
+                  type: VARCHAR(7) # e.g., "2024-03"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: current_documents_size_bytes
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: chats_count
+                  type: INT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: notifications_count
+                  type: INT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+        - addUniqueConstraint:
+            tableName: subscription_usage
+            columnNames: restaurant_id, month_year
+            constraintName: unique_restaurant_month_usage
+
+  - changeSet:
+      id: 7
+      author: suchef-bot
+      changes:
+        - insert:
+            tableName: subscription_plans
+            columns:
+              - column: { name: id, value: "free-plan-id" }
+              - column: { name: name, value: "Free" }
+              - column: { name: price, value: 0.00 }
+              - column: { name: max_documents_size_mb, value: 50 }
+              - column: { name: max_chats_per_month, value: 100 }
+              - column: { name: max_accounts_per_restaurant, value: 2 }
+              - column: { name: max_notifications_per_month, value: 10 }
+        - insert:
+            tableName: subscription_plans
+            columns:
+              - column: { name: id, value: "pro-plan-id" }
+              - column: { name: name, value: "Pro" }
+              - column: { name: price, value: 29.99 }
+              - column: { name: max_documents_size_mb, value: 500 }
+              - column: { name: max_chats_per_month, value: 1000 }
+              - column: { name: max_accounts_per_restaurant, value: 10 }
+              - column: { name: max_notifications_per_month, value: 100 }
+        - insert:
+            tableName: subscription_plans
+            columns:
+              - column: { name: id, value: "enterprise-plan-id" }
+              - column: { name: name, value: "Enterprise" }
+              - column: { name: price, value: 99.99 }
+              - column: { name: max_documents_size_mb, value: 5000 }
+              - column: { name: max_chats_per_month, value: 10000 }
+              - column: { name: max_accounts_per_restaurant, value: 100 }
+              - column: { name: max_notifications_per_month, value: 1000 }

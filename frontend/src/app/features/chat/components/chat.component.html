@@ -1,0 +1,184 @@
+<!-- Modern Light Chat Interface -->
+<div class="w-full min-h-screen flex flex-col bg-stone-50">
+  <!-- Chat Container -->
+  <div class="flex-1 flex flex-col w-full px-4 md:px-8 py-6 max-w-7xl mx-auto">
+
+    <!-- Messages Area -->
+    <div #messagesContainer class="flex-1 overflow-y-auto space-y-6 pb-6"
+      style="scrollbar-width: thin; scrollbar-color: #d1d5db transparent;">
+
+      @for (message of messages; track message.id) {
+      @if (message.content) {
+      <div class="flex gap-4 animate-fade-in" [class.flex-row-reverse]="message.sender === 'user'">
+
+        <!-- Avatar -->
+        @if (message.sender === 'ai') {
+        <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm bg-white border border-stone-200">
+          <svg class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        } @else {
+        <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm bg-stone-200">
+          <svg class="w-5 h-5 text-stone-600" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </div>
+        }
+
+        <!-- Message Content -->
+        <div class="flex-1 max-w-[80%]" [class.text-right]="message.sender === 'user'">
+          <!-- Sender Label -->
+          <p class="text-xs font-semibold mb-1" [style.color]="message.sender === 'ai' ? '#A0632A' : '#4B5563'">
+            {{ message.sender === 'ai' ? 'SuChef AI' : 'You' }}
+          </p>
+
+          <!-- Message Bubble -->
+          <div class="inline-block px-4 py-3 rounded-2xl shadow-sm border" 
+               [class.rounded-tl-sm]="message.sender === 'ai'"
+               [class.rounded-tr-sm]="message.sender === 'user'" 
+               [style]="message.sender === 'user' 
+                   ? 'background: #ffffff; color: #111827; border-color: #E5E7EB;' 
+                   : 'background: #ffffff; color: #111827; border-color: #A0632A;'">
+            <div class="chat-content text-sm leading-relaxed" [innerHTML]="formatMessage(message.content)"></div>
+            @if (message.isStreaming) {
+              <span class="inline-block w-2 h-4 ml-1 bg-amber-500 animate-pulse rounded-sm"></span>
+            }
+          </div>
+
+          <!-- Timestamp -->
+          <p class="text-xs mt-1" style="color: #9ca3af;">
+            {{ message.timestamp | date: 'shortTime' }}
+          </p>
+        </div>
+      </div>
+      }
+      }
+
+      <!-- Loading indicator when no streaming message yet -->
+      @if (isLoading && messages[messages.length - 1]?.content === '') {
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm bg-white border border-stone-200">
+          <svg class="w-5 h-5 text-amber-600 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke-width="2" opacity="0.25" />
+            <path d="M12 2a10 10 0 0 1 10 10" stroke-width="2" />
+          </svg>
+        </div>
+        <div
+          class="flex items-center gap-1 px-4 py-3 bg-white rounded-2xl rounded-tl-sm shadow-sm border border-gray-100">
+          <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0ms;"></span>
+          <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 150ms;"></span>
+          <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 300ms;"></span>
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Input Area -->
+    <div class="sticky bottom-0 pt-4 pb-4">
+      <div class="relative flex items-center gap-2 p-2 bg-white rounded-2xl shadow-md border border-stone-200">
+        <!-- Voice Toggle Button -->
+        <button (click)="toggleVoice()" [class.animate-pulse]="isVoiceActive"
+          class="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-gray-100"
+          [style.color]="isVoiceActive ? '#ef4444' : '#6b7280'">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            @if (isVoiceActive) {
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+            <path
+              d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+            } @else {
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+            <path
+              d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+            }
+          </svg>
+        </button>
+
+        <!-- Input Field -->
+        <input type="text" [(ngModel)]="messageInput" (keyup.enter)="sendMessage()"
+          [placeholder]="'Ask SuChef AI anything...'" [disabled]="isLoading"
+          class="flex-1 px-4 py-3 bg-transparent outline-none text-gray-800 placeholder-gray-400 disabled:opacity-50" />
+
+        <!-- Send Button -->
+        <button (click)="sendMessage()" [disabled]="!messageInput.trim() || isLoading"
+          class="flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-amber-700 bg-amber-600 text-white">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+          </svg>
+        </button>
+
+        <!-- Auto-Speak Toggle -->
+        <button (click)="toggleAutoSpeak()"
+          class="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-stone-100"
+          [style.color]="isAutoSpeakEnabled ? '#A0632A' : '#9ca3af'"
+          [title]="isAutoSpeakEnabled ? 'Mute AI' : 'Unmute AI'">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            @if (isAutoSpeakEnabled) {
+            <path
+              d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+            } @else {
+            <path
+              d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+            }
+          </svg>
+        </button>
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="text-center text-xs mt-3" style="color: #9ca3af;">
+        SuChef AI can make mistakes. Check important info.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  ::ng-deep .chat-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ::ng-deep .chat-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  ::ng-deep .chat-content th {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  ::ng-deep .chat-content td {
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
+  }
+
+  ::ng-deep .chat-content tr:nth-child(even) {
+    background-color: #f3f4f6;
+  }
+</style>

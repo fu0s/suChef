@@ -1,0 +1,25 @@
+<section data-features-section id="features-section" class="features-section">
+  <div class="features-container">
+    <h2 class="features-heading">{{ 'landing.features.sectionTitle' | translate }}</h2>
+    <p class="features-subtitle">{{ 'landing.features.sectionSubtitle' | translate }}</p>
+
+    <div class="features-grid">
+      <div
+        *ngFor="let feature of features"
+        [attr.data-feature-card]="feature.id"
+        class="feature-card"
+        [style.--feature-color]="feature.color">
+        <div class="feature-card-content">
+          <h3 class="feature-title">{{ feature.titleKey | translate }}</h3>
+          <p class="feature-description">{{ feature.descriptionKey | translate }}</p>
+
+          <ul class="feature-benefits">
+            <li *ngFor="let benefit of feature.benefitsKeys" class="benefit-item">
+              {{ benefit | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

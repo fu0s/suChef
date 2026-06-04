@@ -1,0 +1,854 @@
+# Graph Report - suChef  (2026-05-31)
+
+## Corpus Check
+- 169 files · ~1,235,466 words
+- Verdict: corpus is large enough that graph structure adds value.
+
+## Summary
+- 2612 nodes · 3763 edges · 191 communities (163 shown, 28 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 104 edges (avg confidence: 0.79)
+- Token cost: 0 input · 0 output
+
+## Community Hubs (Navigation)
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
+- [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 110|Community 110]]
+- [[_COMMUNITY_Community 111|Community 111]]
+- [[_COMMUNITY_Community 112|Community 112]]
+- [[_COMMUNITY_Community 113|Community 113]]
+- [[_COMMUNITY_Community 114|Community 114]]
+- [[_COMMUNITY_Community 115|Community 115]]
+- [[_COMMUNITY_Community 116|Community 116]]
+- [[_COMMUNITY_Community 117|Community 117]]
+- [[_COMMUNITY_Community 118|Community 118]]
+- [[_COMMUNITY_Community 119|Community 119]]
+- [[_COMMUNITY_Community 120|Community 120]]
+- [[_COMMUNITY_Community 121|Community 121]]
+- [[_COMMUNITY_Community 122|Community 122]]
+- [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
+- [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 126|Community 126]]
+- [[_COMMUNITY_Community 127|Community 127]]
+- [[_COMMUNITY_Community 128|Community 128]]
+- [[_COMMUNITY_Community 129|Community 129]]
+- [[_COMMUNITY_Community 130|Community 130]]
+- [[_COMMUNITY_Community 131|Community 131]]
+- [[_COMMUNITY_Community 132|Community 132]]
+- [[_COMMUNITY_Community 133|Community 133]]
+- [[_COMMUNITY_Community 134|Community 134]]
+- [[_COMMUNITY_Community 135|Community 135]]
+- [[_COMMUNITY_Community 136|Community 136]]
+- [[_COMMUNITY_Community 137|Community 137]]
+- [[_COMMUNITY_Community 138|Community 138]]
+- [[_COMMUNITY_Community 139|Community 139]]
+- [[_COMMUNITY_Community 140|Community 140]]
+- [[_COMMUNITY_Community 141|Community 141]]
+- [[_COMMUNITY_Community 142|Community 142]]
+- [[_COMMUNITY_Community 143|Community 143]]
+- [[_COMMUNITY_Community 144|Community 144]]
+- [[_COMMUNITY_Community 145|Community 145]]
+- [[_COMMUNITY_Community 146|Community 146]]
+- [[_COMMUNITY_Community 147|Community 147]]
+- [[_COMMUNITY_Community 148|Community 148]]
+- [[_COMMUNITY_Community 149|Community 149]]
+- [[_COMMUNITY_Community 150|Community 150]]
+- [[_COMMUNITY_Community 161|Community 161]]
+- [[_COMMUNITY_Community 162|Community 162]]
+- [[_COMMUNITY_Community 163|Community 163]]
+- [[_COMMUNITY_Community 164|Community 164]]
+- [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
+- [[_COMMUNITY_Community 167|Community 167]]
+- [[_COMMUNITY_Community 168|Community 168]]
+- [[_COMMUNITY_Community 169|Community 169]]
+- [[_COMMUNITY_Community 170|Community 170]]
+- [[_COMMUNITY_Community 171|Community 171]]
+- [[_COMMUNITY_Community 172|Community 172]]
+- [[_COMMUNITY_Community 173|Community 173]]
+- [[_COMMUNITY_Community 174|Community 174]]
+- [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 176|Community 176]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 179|Community 179]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
+- [[_COMMUNITY_Community 184|Community 184]]
+- [[_COMMUNITY_Community 185|Community 185]]
+- [[_COMMUNITY_Community 186|Community 186]]
+- [[_COMMUNITY_Community 187|Community 187]]
+- [[_COMMUNITY_Community 188|Community 188]]
+- [[_COMMUNITY_Community 189|Community 189]]
+- [[_COMMUNITY_Community 190|Community 190]]
+
+## God Nodes (most connected - your core abstractions)
+1. `McpToolProvider` - 51 edges
+2. `McpToolProviderTest` - 50 edges
+3. `Test` - 49 edges
+4. `McpService` - 44 edges
+5. `Object` - 41 edges
+6. `McpController` - 40 edges
+7. `ResponseEntity` - 40 edges
+8. `Tool` - 39 edges
+9. `Object` - 39 edges
+10. `dashboard` - 35 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Spring Boot Backend Service` --conceptually_related_to--> `Angular Frontend Application`  [INFERRED]
+  SuChefService/README.md → suchef/src/app/app.spec.ts
+- `Angular Application Entry Point` --references--> `suChef Application HTML Shell`  [INFERRED]
+  suchef/src/main.ts → suchef/src/index.html
+- `SubscriptionComponent` --calls--> `SubscriptionService`  [EXTRACTED]
+  suchef/src/app/features/subscription/components/subscription.component.ts → SuChefService/src/main/java/com/example/SuChefService/service/ChatService.java
+- `LoginComponent` --semantically_similar_to--> `RegisterComponent`  [INFERRED] [semantically similar]
+  suchef/src/app/features/auth/components/login.component.ts → suchef/src/app/features/auth/components/register.component.ts
+- `DashboardComponent` --references--> `User`  [EXTRACTED]
+  suchef/src/app/features/dashboard/components/dashboard.component.ts → suchef/src/app/core/services/auth.service.ts
+
+## Communities (191 total, 28 thin omitted)
+
+### Community 0 - "Community 0"
+Cohesion: 0.13
+Nodes (8): SubscriptionComponent, SubscriptionInfo, SubscriptionPlanInfo, RestaurantSubscription, SubscriptionPlan, SubscriptionService, SubscriptionUsage, SUBSCRIPTION_ROUTES
+
+### Community 1 - "Community 1"
+Cohesion: 0.08
+Nodes (26): SubscriptionComponent, SubscriptionController, SubscriptionPlanRepository, ChatService, SubscriptionService, Subscription Routes, SubscriptionLimitExceededException, SubscriptionPlan (+18 more)
+
+### Community 2 - "Community 2"
+Cohesion: 0.12
+Nodes (24): Deprecated, DocumentCountResponse, DocumentInfo, DocumentStatus, InventoryItemInfo, OrderInfo, DocumentRepository, RestaurantMetricInfo (+16 more)
+
+### Community 3 - "Community 3"
+Cohesion: 0.04
+Nodes (47): dependencies, @angular/common, @angular/compiler, @angular/core, @angular/forms, @angular/platform-browser, @angular/router, aos (+39 more)
+
+### Community 4 - "Community 4"
+Cohesion: 0.08
+Nodes (22): Async, ChatMemory, ChatTools, AiConfig, ExtractedDocumentData, ResourceNotFoundException, DocumentAnalysisService, ImageProcessingService (+14 more)
+
+### Community 5 - "Community 5"
+Cohesion: 0.04
+Nodes (46): benefit1, benefit2, benefit3, description, title, benefit1, benefit2, benefit3 (+38 more)
+
+### Community 6 - "Community 6"
+Cohesion: 0.04
+Nodes (46): benefit1, benefit2, benefit3, description, title, benefit1, benefit2, benefit3 (+38 more)
+
+### Community 7 - "Community 7"
+Cohesion: 0.05
+Nodes (44): build, extract-i18n, serve, test, builder, configurations, defaultConfiguration, options (+36 more)
+
+### Community 8 - "Community 8"
+Cohesion: 0.05
+Nodes (41): dashboard, averageOrderValue, bestOrder, bills, costAnalysis, costOptimization, documentsUploaded, fromLastMonth (+33 more)
+
+### Community 9 - "Community 9"
+Cohesion: 0.05
+Nodes (41): dashboard, averageOrderValue, bestOrder, bills, costAnalysis, costOptimization, documentsUploaded, fromLastMonth (+33 more)
+
+### Community 10 - "Community 10"
+Cohesion: 0.11
+Nodes (19): HelloWorldController, HelloWorldService, Angular Frontend Application, HelloWorldController, HelloWorldControllerTests, HelloWorldService, HelloWorldServiceTests, Spring Boot Backend Service (+11 more)
+
+### Community 11 - "Community 11"
+Cohesion: 0.09
+Nodes (5): CHAT_ROUTES, ChatComponent, ChatMessage, ChatService, VoiceService
+
+### Community 12 - "Community 12"
+Cohesion: 0.14
+Nodes (14): name, quote, restaurant, role, recommendations, name, quote, restaurant (+6 more)
+
+### Community 13 - "Community 13"
+Cohesion: 0.08
+Nodes (26): common, appName, cancel, collapse, confirmPassword, continueAsGuest, dashboard, delete (+18 more)
+
+### Community 14 - "Community 14"
+Cohesion: 0.08
+Nodes (25): common, appName, cancel, collapse, confirmPassword, continueAsGuest, dashboard, delete (+17 more)
+
+### Community 15 - "Community 15"
+Cohesion: 0.20
+Nodes (10): description, point1, point2, point3, stat, title, benefit1, subtitle (+2 more)
+
+### Community 16 - "Community 16"
+Cohesion: 0.08
+Nodes (24): documents, actions, browse, changeFile, confirmUpload, delete, deleteConfirm, download (+16 more)
+
+### Community 17 - "Community 17"
+Cohesion: 0.08
+Nodes (24): documents, actions, browse, changeFile, confirmUpload, delete, deleteConfirm, download (+16 more)
+
+### Community 18 - "Community 18"
+Cohesion: 0.09
+Nodes (23): subscription, active, cancelSubscription, changePlan, chatsUsage, createAccount, currentPlan, daysRemaining (+15 more)
+
+### Community 19 - "Community 19"
+Cohesion: 0.09
+Nodes (23): subscription, active, cancelSubscription, changePlan, chatsUsage, createAccount, currentPlan, daysRemaining (+15 more)
+
+### Community 20 - "Community 20"
+Cohesion: 0.09
+Nodes (22): accountManager, analytics, apiAccess, customIntegrations, dashboard, dataSync, documents, export (+14 more)
+
+### Community 21 - "Community 21"
+Cohesion: 0.09
+Nodes (22): accountManager, analytics, apiAccess, customIntegrations, dashboard, dataSync, documents, export (+14 more)
+
+### Community 22 - "Community 22"
+Cohesion: 0.11
+Nodes (4): AUTH_ROUTES, LoginComponent, RegisterComponent, AuthService
+
+### Community 23 - "Community 23"
+Cohesion: 0.17
+Nodes (17): AuthService, DashboardComponent, DocumentsService, DocumentsUploadComponent, RestaurantMetrics (Type), AuthController, Dashboard Routes, DOCUMENTS_ROUTES (+9 more)
+
+### Community 24 - "Community 24"
+Cohesion: 0.11
+Nodes (10): Builder, AuthRequest, AuthResponse, RegisterRequest, SetRestaurantRequest, SubscriptionUsageResponse, Restaurant, SubscriptionUsage (+2 more)
+
+### Community 25 - "Community 25"
+Cohesion: 0.11
+Nodes (19): register, confirmPassword, confirmPlaceholder, email, emailPlaceholder, failed, fullName, haveAccount (+11 more)
+
+### Community 26 - "Community 26"
+Cohesion: 0.06
+Nodes (39): AuthenticationConfiguration, AuthenticationManager, Claims, ApplicationConfig, Date, Function, Key, PasswordEncoder (+31 more)
+
+### Community 27 - "Community 27"
+Cohesion: 0.14
+Nodes (4): ContactFormComponent, ContactFormData, ContactFormResponse, ContactFormService
+
+### Community 28 - "Community 28"
+Cohesion: 0.11
+Nodes (19): register, confirmPassword, confirmPlaceholder, email, emailPlaceholder, failed, fullName, haveAccount (+11 more)
+
+### Community 29 - "Community 29"
+Cohesion: 0.15
+Nodes (16): App Component (Root), Application Configuration, App Routes, AuthInterceptor, Auth Routes, AuthService, Chat Routes, Dashboard Routes (+8 more)
+
+### Community 30 - "Community 30"
+Cohesion: 0.30
+Nodes (10): AuthenticationException, BadCredentialsException, Exception, GlobalExceptionHandler, ExceptionHandler, MethodArgumentNotValidException, NoRestaurantException, Map (+2 more)
+
+### Community 31 - "Community 31"
+Cohesion: 0.14
+Nodes (5): calculateAnnualSavings(), PRICING_TIERS, PricingTier, PricingSectionComponent, PricingService
+
+### Community 32 - "Community 32"
+Cohesion: 0.19
+Nodes (12): DocumentController, DeleteMapping, DeleteMapping, DocumentResponse, GetMapping, List, MultipartFile, PostMapping (+4 more)
+
+### Community 33 - "Community 33"
+Cohesion: 0.05
+Nodes (43): 1. Hello World, 1. **Layered Architecture**, 2. Personalized Greeting, 2. **REST Conventions**, 3. **Code Quality**, 3. Health Check, 4. **Testing**, 5. **Dependency Injection** (+35 more)
+
+### Community 34 - "Community 34"
+Cohesion: 0.21
+Nodes (4): Testimonial, TESTIMONIALS, RecommendationsCarouselComponent, TestimonialsService
+
+### Community 35 - "Community 35"
+Cohesion: 0.06
+Nodes (31): 10. Questions to Ask (If Needed), 1. Core Design Mandate, 1. Design Direction Summary, 1. Purpose, 2. Design Feasibility & Impact Index (DFII), 2. Design System Snapshot, 2. Tone (Choose One Dominant Direction), 3. Differentiation Anchor (+23 more)
+
+### Community 36 - "Community 36"
+Cohesion: 0.21
+Nodes (4): FeaturesGridComponent, Feature, FEATURES, FeaturesService
+
+### Community 37 - "Community 37"
+Cohesion: 0.13
+Nodes (15): error, errorMessage, errorTitle, restaurantTypes, sectionSubtitle, sectionTitle, submit, submitButton (+7 more)
+
+### Community 38 - "Community 38"
+Cohesion: 0.13
+Nodes (15): stat1, stat1Description, stat2, stat2Description, stat3, stat3Description, stat4, stat4Description (+7 more)
+
+### Community 39 - "Community 39"
+Cohesion: 0.13
+Nodes (15): stat1, stat1Description, stat2, stat2Description, stat3, stat3Description, stat4, stat4Description (+7 more)
+
+### Community 40 - "Community 40"
+Cohesion: 0.17
+Nodes (9): VoiceController, VoiceService, GetMapping, Map, Object, ResponseEntity, String, String (+1 more)
+
+### Community 41 - "Community 41"
+Cohesion: 0.25
+Nodes (7): auth, header, title, profile, bio, editProfile, title
+
+### Community 44 - "Community 44"
+Cohesion: 0.25
+Nodes (7): auth, header, title, profile, bio, editProfile, title
+
+### Community 45 - "Community 45"
+Cohesion: 0.11
+Nodes (10): BigDecimal, DashboardMetricsResponse, ExtractedDocumentData, ExtractedItem, SubscriptionPlanResponse, InventoryItem, MenuItem, OrderItem (+2 more)
+
+### Community 46 - "Community 46"
+Cohesion: 0.15
+Nodes (13): login, continueAsGuest, email, emailPlaceholder, failed, noAccount, or, password (+5 more)
+
+### Community 47 - "Community 47"
+Cohesion: 0.15
+Nodes (13): stats, label, value, label, value, label, value, label (+5 more)
+
+### Community 48 - "Community 48"
+Cohesion: 0.15
+Nodes (13): error, errorTitle, restaurantTypes, sectionSubtitle, sectionTitle, submit, submitButton, submitting (+5 more)
+
+### Community 50 - "Community 50"
+Cohesion: 0.24
+Nodes (4): CardComponent, ProfileComponent, profileRoutes, User
+
+### Community 51 - "Community 51"
+Cohesion: 0.15
+Nodes (13): login, continueAsGuest, email, emailPlaceholder, failed, noAccount, or, password (+5 more)
+
+### Community 52 - "Community 52"
+Cohesion: 0.17
+Nodes (12): about, blog, careers, company, contact, cookiePolicy, copyright, followUs (+4 more)
+
+### Community 54 - "Community 54"
+Cohesion: 0.26
+Nodes (8): SecurityConfig, CorsConfigurationSource, HttpSecurity, JwtAuthenticationFilter, McpRateLimitFilter, SecurityFilterChain, AuthenticationProvider, Bean
+
+### Community 55 - "Community 55"
+Cohesion: 0.18
+Nodes (11): errors, emailInvalid, emailRequired, locationsRequired, messageTooLong, nameRequired, nameTooShort, restaurantNameTooShort (+3 more)
+
+### Community 56 - "Community 56"
+Cohesion: 0.18
+Nodes (11): validationErrors, emailInvalid, emailRequired, locationsInvalid, messageTooLong, nameRequired, nameTooShort, restaurantNameRequired (+3 more)
+
+### Community 57 - "Community 57"
+Cohesion: 0.13
+Nodes (15): testimonials, author, role, text, author, role, text, author (+7 more)
+
+### Community 58 - "Community 58"
+Cohesion: 0.18
+Nodes (11): errors, emailInvalid, emailRequired, locationsRequired, messageTooLong, nameRequired, nameTooShort, restaurantNameTooShort (+3 more)
+
+### Community 59 - "Community 59"
+Cohesion: 0.18
+Nodes (11): validationErrors, emailInvalid, emailRequired, locationsInvalid, messageTooLong, nameRequired, nameTooShort, restaurantNameRequired (+3 more)
+
+### Community 60 - "Community 60"
+Cohesion: 0.25
+Nodes (11): Cost Optimization Analytics, Dashboard Analytics System, Dashboard Mock Data SQL, Inventory Items Table, Menu Items Table, Order Items Table, Orders Table, Restaurants Table (+3 more)
+
+### Community 61 - "Community 61"
+Cohesion: 0.07
+Nodes (29): [A-001] 🟠 AuthService God Node — Tight Coupling Across 15+ Components, [A-002] 🟠 DocumentsService Shared by Dashboard, Documents, and Chat, [A-003] 🟡 ChatService Coupled to Subscription and Auth Stacks, [A-004] 🟡 i18n Flat Key Structure Creates False Graph Density, [A-005] 🟡 994 Isolated Nodes Are Graph Noise, Not Code Issues, [A-006] 🟢 Landing Page Eagerly Imports 6+ Sub-Components, Architecture & Design Issues, [B-001] ✅ Cross-Tenant Data Leak — `downloadDocument` (+21 more)
+
+### Community 63 - "Community 63"
+Cohesion: 0.20
+Nodes (4): App, environment, AuthResponse, SidebarService
+
+### Community 64 - "Community 64"
+Cohesion: 0.11
+Nodes (26): Double, Integer, Long, McpToolProvider, MenuItemInfo, OrderDetailInfo, OrderItemInput, OrderSummaryInfo (+18 more)
+
+### Community 65 - "Community 65"
+Cohesion: 0.20
+Nodes (10): labels, agreeToTerms, email, message, name, numberOfLocations, optional, restaurantName (+2 more)
+
+### Community 66 - "Community 66"
+Cohesion: 0.20
+Nodes (10): company, contact, contactEmail, copyright, privacyPolicy, product, productDesc, tagline (+2 more)
+
+### Community 67 - "Community 67"
+Cohesion: 0.20
+Nodes (10): a1, a2, a3, a4, q1, q2, q3, q4 (+2 more)
+
+### Community 68 - "Community 68"
+Cohesion: 0.20
+Nodes (10): labels, agreeToTerms, email, message, name, numberOfLocations, optional, restaurantName (+2 more)
+
+### Community 69 - "Community 69"
+Cohesion: 0.20
+Nodes (10): a1, a2, a3, a4, q1, q2, q3, q4 (+2 more)
+
+### Community 70 - "Community 70"
+Cohesion: 0.27
+Nodes (3): appConfig, routes, AuthInterceptor
+
+### Community 71 - "Community 71"
+Cohesion: 0.36
+Nodes (3): AuthControllerTest, BeforeEach, Test
+
+### Community 72 - "Community 72"
+Cohesion: 0.25
+Nodes (7): InventoryService, StockTransactionType, Document, String, SuppressWarnings, Transactional, User
+
+### Community 73 - "Community 73"
+Cohesion: 0.22
+Nodes (9): pricing, annual, annualDiscount, billingToggle, monthly, perMonth, perYear, sectionSubtitle (+1 more)
+
+### Community 74 - "Community 74"
+Cohesion: 0.22
+Nodes (9): annualPrice, button, cta, description, name, period, price, subtitle (+1 more)
+
+### Community 75 - "Community 75"
+Cohesion: 0.22
+Nodes (9): pricing, starter, subtitle, title, button, name, period, price (+1 more)
+
+### Community 76 - "Community 76"
+Cohesion: 0.22
+Nodes (9): recommendations, name, quote, restaurant, role, owner1, sectionSubtitle, sectionTitle (+1 more)
+
+### Community 77 - "Community 77"
+Cohesion: 0.22
+Nodes (9): pricing, annual, annualDiscount, billingToggle, monthly, perMonth, perYear, sectionSubtitle (+1 more)
+
+### Community 78 - "Community 78"
+Cohesion: 0.22
+Nodes (9): annualPrice, button, cta, description, name, period, price, subtitle (+1 more)
+
+### Community 79 - "Community 79"
+Cohesion: 0.22
+Nodes (9): pricing, starter, subtitle, title, button, name, period, price (+1 more)
+
+### Community 81 - "Community 81"
+Cohesion: 0.25
+Nodes (4): ButtonComponent, ButtonSize, ButtonVariant, ModalComponent
+
+### Community 82 - "Community 82"
+Cohesion: 0.36
+Nodes (4): SubscriptionControllerTest, BeforeEach, String, Test
+
+### Community 83 - "Community 83"
+Cohesion: 0.36
+Nodes (5): ChatService, ChatController, Flux, GetMapping, String
+
+### Community 84 - "Community 84"
+Cohesion: 0.15
+Nodes (4): AiSectionComponent, LandingNewComponent, HomeComponent, HOME_ROUTES
+
+### Community 85 - "Community 85"
+Cohesion: 0.25
+Nodes (8): formLabels, agreeToTerms, email, message, name, numberOfLocations, restaurantName, restaurantType
+
+### Community 86 - "Community 86"
+Cohesion: 0.25
+Nodes (8): formLabels, agreeToTerms, email, message, name, numberOfLocations, restaurantName, restaurantType
+
+### Community 87 - "Community 87"
+Cohesion: 0.07
+Nodes (28): 1. Authentication & Tenant Assignment, 2. Dashboard Metrics, 3. Document Ingestion & Processing, 4. Subscription & Usage, 5. Interactive AI Assistant (Chat & Voice), API Contracts, API Contracts, API Contracts (+20 more)
+
+### Community 88 - "Community 88"
+Cohesion: 0.11
+Nodes (18): 1. System Overview, 2.1 Package Structure, 2.2 Layer Contracts, 2. Backend Module Boundaries, 3.1 Feature Modules (lazy-loaded), 3.2 Routing, 3. Frontend Module Boundaries, 4. Authentication & Security (+10 more)
+
+### Community 89 - "Community 89"
+Cohesion: 0.14
+Nodes (14): chat, greeting, noMessages, noMessagesHint, placeholder, response, send, title (+6 more)
+
+### Community 90 - "Community 90"
+Cohesion: 0.07
+Nodes (9): McpToolProviderTest, SubscriptionUsageRepository, Optional, Restaurant, String, SubscriptionUsage, BeforeEach, SuppressWarnings (+1 more)
+
+### Community 91 - "Community 91"
+Cohesion: 0.15
+Nodes (13): landing, emailPlaceholder, nav, privacy, restaurantNamePlaceholder, socialProof, watchDemo, ai (+5 more)
+
+### Community 92 - "Community 92"
+Cohesion: 0.29
+Nodes (7): professional, badge, button, name, period, price, subtitle
+
+### Community 93 - "Community 93"
+Cohesion: 0.29
+Nodes (7): pro, annualPrice, badge, cta, description, name, price
+
+### Community 94 - "Community 94"
+Cohesion: 0.29
+Nodes (7): professional, badge, button, name, period, price, subtitle
+
+### Community 95 - "Community 95"
+Cohesion: 0.29
+Nodes (7): pro, annualPrice, badge, cta, description, name, price
+
+### Community 96 - "Community 96"
+Cohesion: 0.09
+Nodes (18): DashboardController, McpToolProviderErrorHandlingTest, UserRepository, DashboardService, Authentication, DashboardMetricsResponse, GetMapping, ResponseEntity (+10 more)
+
+### Community 97 - "Community 97"
+Cohesion: 0.14
+Nodes (14): chat, greeting, noMessages, noMessagesHint, placeholder, response, send, title (+6 more)
+
+### Community 98 - "Community 98"
+Cohesion: 0.20
+Nodes (9): McpController, PutMapping, DeleteMapping, GetMapping, Map, Object, PostMapping, ResponseEntity (+1 more)
+
+### Community 99 - "Community 99"
+Cohesion: 0.10
+Nodes (19): Active Epic: Natural Language Data Access via MCP Server (EPIC-MCP-001), Agent: architect, Agent: backend-engineer, Agent: frontend-engineer, Agent: orchestrator, Agent: product-engineer, Agent: qa-reviewer, AGENTS.md (+11 more)
+
+### Community 101 - "Community 101"
+Cohesion: 0.33
+Nodes (6): benefit1, benefit2, benefit3, description, title, aiChat
+
+### Community 102 - "Community 102"
+Cohesion: 0.33
+Nodes (6): startFreeTrial, subheadline, title, watchDemo, landing, hero
+
+### Community 103 - "Community 103"
+Cohesion: 0.33
+Nodes (6): nav, ai, contact, features, home, pricing
+
+### Community 104 - "Community 104"
+Cohesion: 0.33
+Nodes (6): benefit1, benefit2, benefit3, description, title, aiChat
+
+### Community 106 - "Community 106"
+Cohesion: 0.42
+Nodes (6): MenuItem, MenuItemRepository, List, MenuItem, Restaurant, String
+
+### Community 107 - "Community 107"
+Cohesion: 0.53
+Nodes (4): RestaurantSubscriptionRepository, Optional, Restaurant, RestaurantSubscription
+
+### Community 108 - "Community 108"
+Cohesion: 0.53
+Nodes (4): StockTransactionRepository, StockTransaction, InventoryItem, List
+
+### Community 109 - "Community 109"
+Cohesion: 0.46
+Nodes (5): VendorRepository, List, String, User, Vendor
+
+### Community 110 - "Community 110"
+Cohesion: 0.48
+Nodes (5): RestaurantMetricRepository, RestaurantMetric, List, Restaurant, RestaurantMetric
+
+### Community 111 - "Community 111"
+Cohesion: 0.40
+Nodes (4): id, name, projectResources, resources
+
+### Community 112 - "Community 112"
+Cohesion: 0.50
+Nodes (5): AuthService, ChatService, DocumentsService, SubscriptionService, VoiceService
+
+### Community 113 - "Community 113"
+Cohesion: 0.12
+Nodes (9): NoRestaurantException, ResourceNotFoundException, SubscriptionLimitExceededException, UnauthorizedException, RuntimeException, String, String, String (+1 more)
+
+### Community 114 - "Community 114"
+Cohesion: 0.40
+Nodes (5): startFreeTrial, subheadline, title, watchDemo, hero
+
+### Community 115 - "Community 115"
+Cohesion: 0.40
+Nodes (5): button, note, subtitle, title, finalCta
+
+### Community 116 - "Community 116"
+Cohesion: 0.40
+Nodes (5): cta, description, name, price, free
+
+### Community 117 - "Community 117"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, chef1
+
+### Community 118 - "Community 118"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, chef2
+
+### Community 119 - "Community 119"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, chef3
+
+### Community 120 - "Community 120"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, owner2
+
+### Community 121 - "Community 121"
+Cohesion: 0.40
+Nodes (5): cta, description, name, price, free
+
+### Community 122 - "Community 122"
+Cohesion: 0.17
+Nodes (11): 1. Request Economy (The 10 RPM Rule), 2. Token Budgeting (The 25k TPM Rule), CORE DIRECTIVE: BATCH & CONSOLIDATE, CRITICAL OPERATIONAL LIMITS, ERROR RECOVERY, OPTIMIZED EXECUTION WORKFLOW, Phase 1: Targeted Discovery, Phase 2: Calculated Analysis (+3 more)
+
+### Community 123 - "Community 123"
+Cohesion: 0.83
+Nodes (4): Auth Routes, LoginComponent, RegisterComponent, AuthService
+
+### Community 125 - "Community 125"
+Cohesion: 0.06
+Nodes (33): 10. Recommendations for Next Sprint, 1. System Summary, 2.1 Entry Points, 2.2 Trust Boundaries, 2.3 Assets at Risk, 2. Attack Surface Map, 3. Vulnerabilities Found, 4. Threat Model (STRIDE Analysis) (+25 more)
+
+### Community 129 - "Community 129"
+Cohesion: 0.67
+Nodes (4): Angular Project Configuration, TypeScript App Configuration, Base TypeScript Configuration, TypeScript Spec Configuration
+
+### Community 130 - "Community 130"
+Cohesion: 0.67
+Nodes (3): ChatComponent, ChatMessage interface, CHAT_ROUTES
+
+### Community 132 - "Community 132"
+Cohesion: 0.14
+Nodes (13): 1. Local Storage Migration, 2. JWT Security & Expiration Policies, 3. Server-Side Speech Processing, 4. Database Schema Migrations Validation, 5. AI Chat Exception Handling & Rate Limits, EPIC-MCP-001: Natural Language Data Access via MCP Server, Next Task, 🛠️ Outstanding Tasks & Technical Debt (+5 more)
+
+### Community 133 - "Community 133"
+Cohesion: 0.13
+Nodes (9): DocumentResponse, HelloResponse, RestaurantSubscriptionResponse, Document, Order, RestaurantSubscription, StockTransaction, LocalDateTime (+1 more)
+
+### Community 135 - "Community 135"
+Cohesion: 0.67
+Nodes (3): Package Configuration, PostCSS Configuration, Tailwind CSS Configuration
+
+### Community 138 - "Community 138"
+Cohesion: 0.12
+Nodes (18): McpRateLimitFilter, SlidingWindow, FilterChain, HttpServletRequest, HttpServletResponse, OncePerRequestFilter, Override, JwtAuthenticationFilter (+10 more)
+
+### Community 139 - "Community 139"
+Cohesion: 0.08
+Nodes (25): AccountCountResponse, DocumentCountResponse, DocumentCreateResponse, DocumentDeleteResponse, DocumentUpdateStatusResponse, InventoryItemCreateResponse, InventoryItemDeleteResponse, InventoryItemInfo (+17 more)
+
+### Community 140 - "Community 140"
+Cohesion: 0.16
+Nodes (6): ChartOptions, DashboardComponent, DASHBOARD_ROUTES, TranslatePipe, RestaurantMetrics, DocumentInfo
+
+### Community 141 - "Community 141"
+Cohesion: 0.42
+Nodes (6): Query, InventoryItemRepository, InventoryItem, List, String, User
+
+### Community 142 - "Community 142"
+Cohesion: 0.33
+Nodes (6): sidebar, chat, dashboard, documents, profile, subscription
+
+### Community 143 - "Community 143"
+Cohesion: 0.13
+Nodes (14): 10. Tool Summary Matrix, 12. Acceptance Criteria Checklist, 13. Next Task, 1. Overview, 2. Multi-Tenant Isolation Model, 7. Tool Catalog — Menu Items, 8. Tool Catalog — Metrics & Restaurant, Completed Implementation Tasks (+6 more)
+
+### Community 147 - "Community 147"
+Cohesion: 0.22
+Nodes (3): DocumentsUploadComponent, DOCUMENTS_ROUTES, Document
+
+### Community 165 - "Community 165"
+Cohesion: 0.44
+Nodes (6): Order, OrderRepository, List, Order, Restaurant, String
+
+### Community 166 - "Community 166"
+Cohesion: 0.20
+Nodes (10): 4. Architecture Decision Record, ADR-007: Natural Language Data Access via MCP Server, Consequences, Context, Decision, Options Considered, Rationale, Revisit Trigger (+2 more)
+
+### Community 167 - "Community 167"
+Cohesion: 0.22
+Nodes (8): 10. Definition of Done, 12. Future Considerations (Out of Scope), 1. Executive Summary, 6. Non-Functional Requirements, 7. Risk Register, 8. Dependencies, 9. Decision Log, Epic: Natural Language Data Access via MCP Server
+
+### Community 168 - "Community 168"
+Cohesion: 0.22
+Nodes (9): 5. Detailed Task Breakdown, Phase 1: MCP Server Foundation (Sprint 1), Phase 5: Chat Integration & External Client Support (Sprint 5), T-1.1: Add MCP Dependencies, T-1.2: Configure MCP Server, T-1.3: Design MCP Tool Catalog, T-5.1: ChatClient via MCP, T-5.2: External MCP Client Support (+1 more)
+
+### Community 169 - "Community 169"
+Cohesion: 0.22
+Nodes (9): 3. Tool Catalog — Documents, T-D1: `getDocumentCount`, T-D2: `getDocumentById`, T-D3: `getDocumentsByStatus`, T-D4: `getLastUploadedDocument`, T-D5: `searchDocuments`, T-D6: `createDocument`, T-D7: `updateDocumentStatus` (+1 more)
+
+### Community 170 - "Community 170"
+Cohesion: 0.22
+Nodes (9): 5. Tool Catalog — Inventory, T-I1: `getInventoryItems`, T-I2: `getLowStockItems`, T-I3: `getInventoryItemById`, T-I4: `getInventoryByCategory`, T-I5: `createInventoryItem`, T-I6: `updateStock`, T-I7: `createStockTransaction` (+1 more)
+
+### Community 173 - "Community 173"
+Cohesion: 0.25
+Nodes (8): 6. Tool Catalog — Orders, T-O1: `getRecentOrders`, T-O2: `getOrderById`, T-O3: `getOrdersByDateRange`, T-O4: `getOrdersByStatus`, T-O5: `createOrder`, T-O6: `updateOrderStatus`, T-O7: `addOrderItem`
+
+### Community 174 - "Community 174"
+Cohesion: 0.29
+Nodes (7): Phase 4: Service Migration — Replace Direct JPA Calls (Sprint 4), T-4.1: Migrate DocumentService to NL via MCP, T-4.2: Migrate SubscriptionService to NL via MCP, T-4.3: Migrate DashboardService to NL via MCP, T-4.4: Migrate InventoryService to NL via MCP, T-4.5: Migrate DocumentAnalysisService to NL via MCP, T-4.6: Deprecate ChatTools @Tool Methods
+
+### Community 175 - "Community 175"
+Cohesion: 0.29
+Nodes (7): 4. Tool Catalog — Vendors, T-V1: `getVendors`, T-V2: `getVendorById`, T-V3: `getVendorsByCategory`, T-V4: `createVendor`, T-V5: `updateVendor`, T-V6: `deleteVendor`
+
+### Community 176 - "Community 176"
+Cohesion: 0.29
+Nodes (7): description, point1, point2, point3, stat, title, benefit2
+
+### Community 177 - "Community 177"
+Cohesion: 0.29
+Nodes (7): description, point1, point2, point3, stat, title, benefit3
+
+### Community 178 - "Community 178"
+Cohesion: 0.33
+Nodes (6): Phase 2: Core MCP Tools — Read Operations (Sprint 2), T-2.1: Create McpToolProvider — Document Tools, T-2.2: Create McpToolProvider — Vendor Tools, T-2.3: Create McpToolProvider — Inventory Tools, T-2.4: Create McpToolProvider — Order Tools (Read), T-2.5: Create McpToolProvider — Metrics & Restaurant Tools
+
+### Community 179 - "Community 179"
+Cohesion: 0.33
+Nodes (6): Phase 3: Core MCP Tools — Write Operations (Sprint 3), T-3.1: Create McpToolProvider — Document Write Tools, T-3.2: Create McpToolProvider — Vendor Write Tools, T-3.3: Create McpToolProvider — Inventory Write Tools, T-3.4: Create McpToolProvider — Order Write Tools, T-3.5: Create McpToolProvider — Subscription & Usage Tools
+
+### Community 180 - "Community 180"
+Cohesion: 0.33
+Nodes (6): Phase 6: Testing & Validation (Sprint 5–6), T-6.1: Unit Tests — MCP Tools (Read), T-6.2: Unit Tests — MCP Tools (Write), T-6.3: Integration Test — MCP Protocol, T-6.4: Regression Test — Full Application, T-6.5: Performance Baseline
+
+### Community 181 - "Community 181"
+Cohesion: 0.33
+Nodes (6): 11.1 Class Structure, 11.2 User Resolution Pattern, 11.3 Tool Registration, 11.4 Error Handling, 11.5 Error Handling, 11. Implementation Notes
+
+### Community 182 - "Community 182"
+Cohesion: 0.33
+Nodes (6): sidebar, chat, dashboard, documents, profile, subscription
+
+### Community 183 - "Community 183"
+Cohesion: 0.40
+Nodes (5): 2.1 Existing Database Interaction Pattern, 2.2 Current Data Flow Examples, 2.3 Pain Points, 2.4 What Works (Keep), 2. Current State Analysis
+
+### Community 184 - "Community 184"
+Cohesion: 0.40
+Nodes (5): Phase 7: Documentation & Production Readiness (Sprint 6–7), T-7.1: Update Architecture Documentation, T-7.2: Create MCP Tool Catalog Documentation, T-7.3: Update Feature Designs, T-7.4: Production Configuration
+
+### Community 185 - "Community 185"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, chef2
+
+### Community 186 - "Community 186"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, chef3
+
+### Community 187 - "Community 187"
+Cohesion: 0.40
+Nodes (5): name, quote, restaurant, role, owner1
+
+### Community 188 - "Community 188"
+Cohesion: 0.50
+Nodes (4): 11.1 Incremental Migration Approach, 11.2 Rollback Plan, 11.3 Data Integrity, 11. Migration Strategy
+
+### Community 189 - "Community 189"
+Cohesion: 0.50
+Nodes (4): 3.1 Vision, 3.2 Core Principle, 3.3 Key Outcomes, 3. Target State
+
+### Community 190 - "Community 190"
+Cohesion: 0.50
+Nodes (4): 9. Tool Catalog — Subscriptions, T-S1: `getSubscriptionInfo`, T-S2: `checkSubscriptionLimit`, T-S3: `incrementUsage`
+
+## Knowledge Gaps
+- **1313 isolated node(s):** `$schema`, `version`, `newProjectRoot`, `projectType`, `style` (+1308 more)
+  These have ≤1 connection - possible missing edges or undocumented components.
+- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **Why does `landing` connect `Community 91` to `Community 66`, `Community 5`, `Community 37`, `Community 38`, `Community 73`, `Community 41`, `Community 12`, `Community 15`, `Community 47`, `Community 114`, `Community 115`, `Community 57`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `landing` connect `Community 102` to `Community 6`, `Community 103`, `Community 39`, `Community 76`, `Community 77`, `Community 44`, `Community 48`, `Community 52`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `contact` connect `Community 37` to `Community 65`, `Community 85`, `Community 55`, `Community 56`, `Community 91`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **What connects `$schema`, `version`, `newProjectRoot` to the rest of the system?**
+  _1313 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 0` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.08244897959183674 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.12427409988385599 - nodes in this community are weakly interconnected._

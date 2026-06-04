@@ -1,0 +1,217 @@
+<div class="w-full py-12 px-4 md:px-8">
+  <!-- Header Section with improved visibility -->
+  <div class="mb-12 text-center animate-fadeInUp">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-stone-900">{{ 'documents.title' |
+      translate }}</h1>
+    <p class="text-stone-500 text-lg md:text-xl max-w-2xl mx-auto">{{ 'documents.subtitle' | translate }}</p>
+  </div>
+
+  <!-- Symmetrical Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-12">
+
+    <!-- Left Column: Document History -->
+    <div class="rounded-xl p-8 shadow-sm animate-fadeInUp flex flex-col bg-white border border-stone-200">
+
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold text-stone-800">{{ 'documents.historyTitle' | translate }}
+        </h2>
+        <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-stone-100 text-amber-700">
+          {{ documents.length }} {{ 'documents.files' | translate }}
+        </span>
+      </div>
+
+      <!-- Error banner for documents list -->
+      @if (error$ | async; as err) {
+      <div class="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 flex items-center justify-between animate-fadeIn">
+        <div class="flex items-center gap-3">
+          <svg class="h-5 w-5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="font-medium text-sm">{{ err }}</span>
+        </div>
+        <button (click)="dismissError()" class="text-rose-500 hover:text-rose-700 transition-colors">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      }
+
+      @if (loading$ | async) {
+      <!-- Loading spinner for documents list -->
+      <div class="flex items-center justify-center py-20 flex-grow">
+        <div class="w-10 h-10 border-4 border-stone-200 border-t-amber-600 rounded-full animate-spin"></div>
+      </div>
+      } @else {
+        @if (documents.length > 0) {
+        <div class="overflow-y-auto flex-grow rounded-xl border border-stone-100 custom-scrollbar"
+          style="max-height: 500px;">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-stone-50 border-b border-stone-200">
+                <th class="px-4 py-4 text-left font-bold uppercase tracking-wider text-stone-500">{{ 'documents.fileName'
+                  | translate }}</th>
+                <th class="px-4 py-4 text-left font-bold uppercase tracking-wider text-stone-500">{{ 'documents.status'
+                  | translate }}</th>
+                <th class="px-4 py-4 text-right font-bold uppercase tracking-wider text-stone-500">{{ 'documents.actions'
+                  | translate }}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-50">
+              @for (doc of documents; track doc.id) {
+              <tr class="transition-all hover:bg-slate-50 group">
+                <td class="px-4 py-4">
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-3">
+                      <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      <span class="font-semibold text-stone-900 truncate max-w-[150px] md:max-w-[200px]">{{ doc.name
+                        }}</span>
+                      @if (doc.classification) {
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-stone-100 text-stone-600">
+                        {{ doc.classification }}
+                      </span>
+                      }
+                    </div>
+                    <span class="text-xs text-stone-400 mt-1">{{ doc.uploadedAt | date: 'MMM d, y HH:mm' }}</span>
+                  </div>
+                </td>
+                <td class="px-4 py-4">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-bold transition-all" [ngClass]="{
+                        'bg-stone-100 text-stone-500': doc.status === 'RECEIVED',
+                        'bg-blue-100 text-blue-600 animate-pulse': doc.status === 'PROCESSING',
+                        'bg-emerald-100 text-emerald-600': doc.status === 'COMPLETED',
+                        'bg-rose-100 text-rose-600': doc.status === 'FAILED'
+                      }">
+                      {{ 'documents.statuses.' + doc.status | translate }}
+                    </span>
+                  </div>
+                </td>
+                <td class="px-4 py-4 text-right">
+                  <div class="flex items-center justify-end gap-2">
+                    <button (click)="downloadDocument(doc.id, doc.name)"
+                      class="p-2 rounded-lg bg-stone-100 text-stone-600 hover:bg-primary hover:text-white transition-all shadow-sm"
+                      [title]="'documents.download' | translate">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </button>
+                    <button (click)="deleteDocument(doc.id)"
+                      class="p-2 rounded-lg bg-stone-100 text-stone-600 hover:bg-rose-500 hover:text-white transition-all shadow-sm"
+                      [title]="'documents.delete' | translate">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        } @else {
+        <div
+          class="py-20 text-center border-2 border-dashed border-stone-100 rounded-xl flex-grow flex flex-col justify-center">
+          <div class="mb-4 flex justify-center">
+            <svg class="h-16 w-16 text-stone-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+            </svg>
+          </div>
+          <p style="color: var(--color-stone-400);" class="text-lg">{{ 'documents.noDocuments' | translate }}</p>
+        </div>
+        }
+      }
+    </div>
+
+    <!-- Right Column: Upload Area -->
+    <div class="rounded-xl p-8 shadow-sm animate-fadeInUp flex flex-col bg-white border border-stone-200">
+
+      <div class="text-left mb-8">
+        <h2 class="text-2xl font-bold mb-2 text-stone-900">{{ 'documents.uploadNew' | translate
+          }}</h2>
+        <p class="text-stone-400 text-sm">{{ 'documents.uploadDesc' | translate }}</p>
+      </div>
+
+      <!-- Error banner for upload -->
+      @if (uploadError$ | async; as uploadErr) {
+      <div class="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 flex items-center justify-between animate-fadeIn">
+        <div class="flex items-center gap-3">
+          <svg class="h-5 w-5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="font-medium text-sm">{{ uploadErr }}</span>
+        </div>
+        <button (click)="dismissUploadError()" class="text-rose-500 hover:text-rose-700 transition-colors">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      }
+
+      <div class="space-y-6 flex-grow flex flex-col">
+        <div class="relative flex-grow">
+          <input type="file" id="fileInput" #fileInput (change)="onFileSelected($event)" class="hidden"
+            accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" />
+
+          <div (click)="fileInput.click()"
+            class="cursor-pointer group relative overflow-hidden flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-10 h-full transition-all hover:border-primary hover:bg-primary/5"
+            style="border-color: rgba(30, 64, 175, 0.15); min-height: 250px;">
+
+            <div
+              class="h-16 w-16 mb-6 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+            </div>
+
+            @if (!selectedFile) {
+            <p class="text-lg font-bold text-stone-800">
+              {{ 'documents.dropOrBrowse' | translate | slice:0:-8 }}
+              <span class="text-amber-600 underline">{{ 'documents.browse' | translate }}</span>
+            </p>
+            <p class="mt-2 text-sm text-stone-400">{{ 'documents.supportedFormats' | translate }}</p>
+            } @else {
+            <div class="text-center animate-slide-in">
+              <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-stone-100 shadow-sm">
+                <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <div class="text-left">
+                  <p class="font-bold text-stone-900 truncate max-w-[200px]">{{ selectedFile.name }}</p>
+                  <button (click)="$event.stopPropagation(); selectedFile = null"
+                    class="text-xs text-rose-500 hover:underline font-semibold">{{ 'documents.changeFile' | translate
+                    }}</button>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+
+        <button (click)="uploadDocument()" [disabled]="!selectedFile || (uploadLoading$ | async)"
+          class="w-full bg-amber-600 text-white font-bold py-4 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed group flex items-center justify-center gap-3 h-14">
+          @if (uploadLoading$ | async) {
+            <div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            <span>{{ 'common.loading' | translate }}</span>
+          } @else {
+            <span>{{ 'documents.confirmUpload' | translate }}</span>
+            <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

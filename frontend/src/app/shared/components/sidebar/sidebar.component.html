@@ -1,0 +1,158 @@
+@if (authService.isAuthenticated()) {
+<div
+  [class]="'fixed left-0 top-0 h-screen shadow-lg z-40 transition-all duration-300 border-r border-stone-200 ' + (isCollapsed ? 'w-20' : 'w-64')"
+  style="background: #ffffff; color: var(--color-stone-800);" (mouseenter)="onSidebarMouseEnter()"
+  (mouseleave)="onSidebarMouseLeave()">
+  <!-- Toggle Button and Profile Section -->
+  <div class="p-4 flex items-center justify-between" style="border-bottom: 1px solid #E5E7EB;">
+    <!-- User Profile Avatar (visible when logged in and expanded) -->
+    @if (currentUser && !isCollapsed) {
+    <div class="flex items-center space-x-3">
+      <div class="h-10 w-10 rounded-full flex items-center justify-center text-white font-bold text-sm"
+        style="background: linear-gradient(135deg, #1652b0, #1f4d9a);">
+        {{ getInitials() }}
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-stone-900">{{ getFirstName() }}</p>
+      </div>
+    </div>
+    }
+    @if (currentUser && isCollapsed) {
+    <div class="h-10 w-10 rounded-full flex items-center justify-center text-white font-bold text-sm mx-auto"
+      style="background: linear-gradient(135deg, #1652b0, #1f4d9a);">
+      {{ getInitials() }}
+    </div>
+    }
+    <button (click)="toggleSidebar()" *ngIf="!isCollapsed"
+      class="text-stone-500 hover:bg-stone-100 p-2 rounded-lg transition" [title]="collapseLabel">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m0 0l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <nav class="p-4 space-y-2">
+    <!-- Dashboard -->
+    <a routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }"
+      class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition group relative"
+      [class.opacity-40]="!currentUser?.restaurantName" [class.pointer-events-none]="!currentUser?.restaurantName"
+      style="border-left: 3px solid transparent;" [title]="isCollapsed ? dashboardLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 11l4-4m0 0l4 4m-4-4v4" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ dashboardLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ dashboardLabel }}
+      </div>
+      }
+    </a>
+
+    <!-- Documents Upload -->
+    <a routerLink="/documents" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }"
+      class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition group relative"
+      [class.opacity-40]="!currentUser?.restaurantName" [class.pointer-events-none]="!currentUser?.restaurantName"
+      style="border-left: 3px solid transparent;" [title]="isCollapsed ? documentsLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ documentsLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ documentsLabel }}
+      </div>
+      }
+    </a>
+
+    <!-- AI Chat Agent -->
+    <a routerLink="/chat" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }"
+      class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition group relative"
+      [class.opacity-40]="!currentUser?.restaurantName" [class.pointer-events-none]="!currentUser?.restaurantName"
+      style="border-left: 3px solid transparent;" [title]="isCollapsed ? chatLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ chatLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ chatLabel }}
+      </div>
+      }
+    </a>
+
+    <!-- Subscription Status -->
+    <a routerLink="/subscription" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }"
+      class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition group relative"
+      [class.opacity-40]="!currentUser?.restaurantName" [class.pointer-events-none]="!currentUser?.restaurantName"
+      style="border-left: 3px solid transparent;" [title]="isCollapsed ? subscriptionLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ subscriptionLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ subscriptionLabel }}
+      </div>
+      }
+    </a>
+
+    <!-- Profile -->
+    <a routerLink="/profile" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }"
+      class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition group relative"
+      [class.opacity-40]="!currentUser?.restaurantName" [class.pointer-events-none]="!currentUser?.restaurantName"
+      style="border-left: 3px solid transparent;" [title]="isCollapsed ? profileLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ profileLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ profileLabel }}
+      </div>
+      }
+    </a>
+
+    <!-- Divider -->
+    <div class="my-4" style="border-top: 1px solid #E5E7EB;"></div>
+
+    <!-- Logout -->
+    <button (click)="logout()"
+      class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-stone-100 transition text-left group relative"
+      style="color: #ef4444; border: none; background: transparent;" [title]="isCollapsed ? logoutLabel : ''">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+      </svg>
+      @if (!isCollapsed) {
+      <span>{{ logoutLabel }}</span>
+      }
+      @if (isCollapsed) {
+      <div
+        class="absolute left-full ml-2 px-2 py-1 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap bg-stone-800">
+        {{ logoutLabel }}
+      </div>
+      }
+    </button>
+  </nav>
+</div>
+}

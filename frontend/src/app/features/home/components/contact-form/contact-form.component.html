@@ -1,0 +1,133 @@
+<section data-contact-section id="contact-section" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2 class="contact-title">{{ 'landing.contact.title' | translate }}</h2>
+      <p class="contact-subtitle">{{ 'landing.contact.subtitle' | translate }}</p>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <!-- Full Name -->
+      <div data-form-field class="form-group">
+        <label for="fullName" class="form-label">{{ 'landing.contact.labels.name' | translate }}</label>
+        <input
+          id="fullName"
+          type="text"
+          formControlName="fullName"
+          class="form-input"
+          [class.error]="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched"
+          placeholder="John Doe" />
+        <span class="error-message" *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched">
+          {{ 'landing.contact.errors.nameRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Email -->
+      <div data-form-field class="form-group">
+        <label for="email" class="form-label">{{ 'landing.contact.labels.email' | translate }}</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          class="form-input"
+          [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+          placeholder="john@example.com" />
+        <span class="error-message" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+          {{ 'landing.contact.errors.emailRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Restaurant Name -->
+      <div data-form-field class="form-group">
+        <label for="restaurantName" class="form-label">{{ 'landing.contact.labels.restaurantName' | translate }}</label>
+        <input
+          id="restaurantName"
+          type="text"
+          formControlName="restaurantName"
+          class="form-input"
+          [class.error]="contactForm.get('restaurantName')?.invalid && contactForm.get('restaurantName')?.touched"
+          placeholder="Restaurant Name" />
+        <span class="error-message" *ngIf="contactForm.get('restaurantName')?.invalid && contactForm.get('restaurantName')?.touched">
+          {{ 'landing.contact.errors.restaurantRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Restaurant Type -->
+      <div data-form-field class="form-group">
+        <label for="restaurantType" class="form-label">{{ 'landing.contact.labels.restaurantType' | translate }}</label>
+        <select
+          id="restaurantType"
+          formControlName="restaurantType"
+          class="form-input"
+          [class.error]="contactForm.get('restaurantType')?.invalid && contactForm.get('restaurantType')?.touched">
+          <option value="">{{ 'landing.contact.labels.selectType' | translate }}</option>
+          <option *ngFor="let type of restaurantTypes" [value]="type">{{ type }}</option>
+        </select>
+        <span class="error-message" *ngIf="contactForm.get('restaurantType')?.invalid && contactForm.get('restaurantType')?.touched">
+          {{ 'landing.contact.errors.typeRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Number of Locations -->
+      <div data-form-field class="form-group">
+        <label for="numberOfLocations" class="form-label">{{ 'landing.contact.labels.numberOfLocations' | translate }}</label>
+        <input
+          id="numberOfLocations"
+          type="number"
+          formControlName="numberOfLocations"
+          class="form-input"
+          [class.error]="contactForm.get('numberOfLocations')?.invalid && contactForm.get('numberOfLocations')?.touched"
+          placeholder="1" />
+        <span class="error-message" *ngIf="contactForm.get('numberOfLocations')?.invalid && contactForm.get('numberOfLocations')?.touched">
+          {{ 'landing.contact.errors.locationsRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Message -->
+      <div data-form-field class="form-group">
+        <label for="message" class="form-label">{{ 'landing.contact.labels.message' | translate }} ({{ 'landing.contact.labels.optional' | translate }})</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          class="form-textarea"
+          [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+          rows="5"
+          placeholder="Tell us about your restaurant..."></textarea>
+      </div>
+
+      <!-- Agree to Terms -->
+      <div data-form-field class="form-group checkbox">
+        <input
+          id="agreeToTerms"
+          type="checkbox"
+          formControlName="agreeToTerms"
+          class="form-checkbox"
+          [class.error]="contactForm.get('agreeToTerms')?.invalid && contactForm.get('agreeToTerms')?.touched" />
+        <label for="agreeToTerms" class="checkbox-label">
+          {{ 'landing.contact.labels.agreeToTerms' | translate }}
+        </label>
+        <span class="error-message" *ngIf="contactForm.get('agreeToTerms')?.invalid && contactForm.get('agreeToTerms')?.touched">
+          {{ 'landing.contact.errors.termsRequired' | translate }}
+        </span>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        [disabled]="!contactForm.valid || isSubmitting"
+        class="submit-button">
+        <span *ngIf="!isSubmitting">{{ 'landing.contact.submit' | translate }}</span>
+        <span *ngIf="isSubmitting">{{ 'landing.contact.submitting' | translate }}</span>
+      </button>
+
+      <!-- Success Message -->
+      <div class="success-message" *ngIf="showSuccess">
+        {{ 'landing.contact.success' | translate }}
+      </div>
+
+      <!-- Error Message -->
+      <div class="error-banner" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>
+</section>
