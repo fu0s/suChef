@@ -1,6 +1,5 @@
 package com.example.SuChefService.config;
 
-import com.example.SuChefService.mcp.McpToolProvider;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -20,9 +19,8 @@ public class AiConfig {
     }
 
     @Bean
-    ChatClient chatClient(ChatClient.Builder builder, ChatMemory chatMemory, McpToolProvider mcpToolProvider) {
+    ChatClient chatClient(ChatClient.Builder builder, ChatMemory chatMemory) {
         return builder
-                .defaultTools(mcpToolProvider)
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
                 .build();
     }

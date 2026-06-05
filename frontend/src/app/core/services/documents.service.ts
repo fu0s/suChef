@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { McpService, DocumentInfo } from './mcp.service';
 
 export interface Document {
   id: string;
@@ -91,10 +90,7 @@ export class DocumentsService {
 
   private pollingInterval: any;
 
-  constructor(
-    private http: HttpClient,
-    private mcpService: McpService
-  ) {
+  constructor(private http: HttpClient) {
     this.loadDocuments();
     this.startPolling();
     this.loadDashboardMetrics();
@@ -103,7 +99,6 @@ export class DocumentsService {
   loadDashboardMetrics(): void {
     this.metricsLoadingSubject.next(true);
     this.metricsErrorSubject.next(null);
-    // JWT is in HttpOnly cookie — HttpClient interceptor sends it with withCredentials: true
     this.http.get<RestaurantMetrics>(`${environment.apiUrl}/api/dashboard/metrics`).subscribe({
       next: (metrics) => {
         this.metricsSubject.next(metrics);
@@ -138,18 +133,9 @@ export class DocumentsService {
   loadDocuments(): void {
     this.loadingSubject.next(true);
     this.errorSubject.next(null);
-    this.mcpService.getUserDocuments().subscribe({
-      next: (docs: DocumentInfo[]) => {
-        const mapped: Document[] = docs.map(d => ({
-          id: d.id,
-          name: d.name,
-          type: d.type,
-          date: d.date,
-          uploadedAt: d.uploadedAt,
-          status: d.status as Document['status'],
-          classification: d.classification as Document['classification']
-        }));
-        this.documentsSubject.next(mapped);
+    this.http.get<Document[]>(this.apiUrl).subscribe({
+      next: (docs) => {
+        this.documentsSubject.next(docs);
         this.loadingSubject.next(false);
       },
       error: (err) => {
@@ -186,7 +172,7 @@ export class DocumentsService {
   deleteDocument(id: string): void {
     this.loadingSubject.next(true);
     this.errorSubject.next(null);
-    this.mcpService.deleteDocument(id).subscribe({
+    this.http.delete(`${this.apiUrl}/${id}`).subscribe({
       next: () => {
         const currentDocs = this.documentsSubject.value;
         const updatedDocs = currentDocs.filter(doc => doc.id !== id);

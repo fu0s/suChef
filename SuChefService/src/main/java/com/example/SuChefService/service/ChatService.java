@@ -1,6 +1,10 @@
 package com.example.SuChefService.service;
 
+import com.example.SuChefService.chat.IntentClassifier;
+import com.example.SuChefService.chat.QueryIntent;
+import com.example.SuChefService.chat.QueryRouter;
 import com.example.SuChefService.entity.Restaurant;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.ai.chat.client.ChatClient;
@@ -14,50 +18,93 @@ public class ChatService {
 
     private final ChatClient chatClient;
     private final SubscriptionService subscriptionService;
+    private final IntentClassifier intentClassifier;
+    private final QueryRouter queryRouter;
+    private final ObjectMapper objectMapper;
 
-    public ChatService(ChatClient chatClient, SubscriptionService subscriptionService) {
+    public ChatService(ChatClient chatClient, SubscriptionService subscriptionService,
+                       IntentClassifier intentClassifier, QueryRouter queryRouter,
+                       ObjectMapper objectMapper) {
         this.chatClient = chatClient;
         this.subscriptionService = subscriptionService;
+        this.intentClassifier = intentClassifier;
+        this.queryRouter = queryRouter;
+        this.objectMapper = objectMapper;
     }
 
-    /**
-     * Sends a message to the AI and returns the full response.
-     * 
-     * @param message The user's message.
-     * @return The AI's response as a string.
-     */
     @SuppressWarnings("null")
     public String chat(String message) {
         Restaurant restaurant = subscriptionService.getCurrentRestaurant();
         subscriptionService.incrementChatUsage(restaurant);
 
+        IntentClassifier.ClassifiedIntent intent = intentClassifier.classify(message);
+        log.info("Intent: {} for message: {}", intent.intent(), message);
+
+        String systemPrompt;
+        String userMessage;
+
+        if (intent.intent() != QueryIntent.GENERAL_QUESTION) {
+            QueryRouter.QueryResult result = queryRouter.execute(intent);
+            String dataJson;
+            try {
+                dataJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(result.data());
+            } catch (Exception e) {
+                dataJson = result.data().toString();
+            }
+
+            systemPrompt = "You are the SuChef AI Assistant. You have been given database data to answer the user's question. "
+                    + "Use ONLY the data provided. Be concise and specific. Format numbers clearly. "
+                    + "NEVER fabricate data. If the data is empty, say so.";
+            userMessage = "User question: " + message + "\n\nData from database:\n" + dataJson;
+        } else {
+            systemPrompt = "You are the SuChef AI Assistant. You are a helpful restaurant management assistant. "
+                    + "Answer general questions. Be concise and helpful.";
+            userMessage = message;
+        }
+
         return chatClient.prompt()
-                .system("You are the SuChef AI Assistant. You MUST use the provided database tools to answer questions about orders, inventory, vendors, documents, and menu items. NEVER guess, invent, or fabricate data. If a tool returns an error or empty result, tell the user that the data could not be retrieved at this time. NEVER make up transactions, orders, or any business data.")
-                .user(message)
+                .system(systemPrompt)
+                .user(userMessage)
                 .call()
                 .content();
     }
 
-    /**
-     * Sends a message to the AI and returns a stream of response tokens.
-     * 
-     * @param message The user's message.
-     * @return A Flux of strings representing the streaming response.
-     */
     @SuppressWarnings("null")
     public Flux<String> streamChat(String message) {
         log.debug("Starting streamChat for message: {}", message);
 
         Restaurant restaurant = subscriptionService.getCurrentRestaurant();
         subscriptionService.checkChatLimit(restaurant);
-        // Note: For streaming, we increment on start.
-        // In a more complex system, we might increment at the end or based on tokens.
         subscriptionService.incrementChatUsage(restaurant);
 
-        return chatClient.prompt()
+        IntentClassifier.ClassifiedIntent intent = intentClassifier.classify(message);
+        log.info("Stream intent: {} for message: {}", intent.intent(), message);
 
-                .system("You are the SuChef AI Assistant. You MUST use the provided database tools to answer questions about orders, inventory, vendors, documents, and menu items. NEVER guess, invent, or fabricate data. If a tool returns an error or empty result, tell the user that the data could not be retrieved at this time. NEVER make up transactions, orders, or any business data.")
-                .user(message)
+        String systemPrompt;
+        String userMessage;
+
+        if (intent.intent() != QueryIntent.GENERAL_QUESTION) {
+            QueryRouter.QueryResult result = queryRouter.execute(intent);
+            String dataJson;
+            try {
+                dataJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(result.data());
+            } catch (Exception e) {
+                dataJson = result.data().toString();
+            }
+
+            systemPrompt = "You are the SuChef AI Assistant. You have been given database data to answer the user's question. "
+                    + "Use ONLY the data provided. Be concise and specific. Format numbers clearly. "
+                    + "NEVER fabricate data. If the data is empty, say so.";
+            userMessage = "User question: " + message + "\n\nData from database:\n" + dataJson;
+        } else {
+            systemPrompt = "You are the SuChef AI Assistant. You are a helpful restaurant management assistant. "
+                    + "Answer general questions. Be concise and helpful.";
+            userMessage = message;
+        }
+
+        return chatClient.prompt()
+                .system(systemPrompt)
+                .user(userMessage)
                 .stream()
                 .content()
                 .doOnNext(token -> log.trace("Emitting token: {}", token))

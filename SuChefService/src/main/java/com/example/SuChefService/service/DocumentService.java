@@ -7,8 +7,6 @@ import com.example.SuChefService.entity.Restaurant;
 import com.example.SuChefService.entity.User;
 import com.example.SuChefService.exception.ResourceNotFoundException;
 import com.example.SuChefService.exception.UnauthorizedException;
-import com.example.SuChefService.mcp.McpToolProvider;
-
 import com.example.SuChefService.repository.DocumentRepository;
 import com.example.SuChefService.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -41,7 +39,6 @@ public class DocumentService {
     private final UserRepository userRepository;
     private final DocumentAnalysisService documentAnalysisService;
     private final SubscriptionService subscriptionService;
-    private final McpToolProvider mcpToolProvider;
 
     private static final Set<String> ALLOWED_MIME_TYPES = Set.of(
             "application/pdf",
@@ -134,20 +131,9 @@ public class DocumentService {
     }
 
     public List<DocumentResponse> getUserDocuments() {
-        @SuppressWarnings("unchecked")
-        List<McpToolProvider.DocumentInfo> docs =
-                (List<McpToolProvider.DocumentInfo>) (List<?>) mcpToolProvider.getUserDocuments();
-        return docs.stream()
-                .map(d -> DocumentResponse.builder()
-                        .id(d.id())
-                        .name(d.name())
-                        .type(d.type())
-                        .size(d.size())
-                        .date(d.date())
-                        .uploadedAt(d.uploadedAt())
-                        .status(d.status())
-                        .classification(d.classification())
-                        .build())
+        User user = getCurrentUser();
+        return documentRepository.findByUser(user).stream()
+                .map(this::toDocumentResponse)
                 .collect(Collectors.toList());
     }
 
