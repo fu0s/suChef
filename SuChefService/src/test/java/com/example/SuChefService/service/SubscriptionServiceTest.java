@@ -3,11 +3,9 @@ package com.example.SuChefService.service;
 import com.example.SuChefService.dto.RestaurantSubscriptionResponse;
 import com.example.SuChefService.dto.SubscriptionPlanResponse;
 import com.example.SuChefService.dto.SubscriptionUsageResponse;
-import com.example.SuChefService.entity.Restaurant;
-import com.example.SuChefService.entity.User;
+import com.example.SuChefService.entity.*;
 import com.example.SuChefService.exception.ResourceNotFoundException;
 import com.example.SuChefService.exception.SubscriptionLimitExceededException;
-import com.example.SuChefService.mcp.McpToolProvider;
 import com.example.SuChefService.repository.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,9 +39,6 @@ public class SubscriptionServiceTest {
 
     @Mock
     private UserRepository userRepository;
-
-    @Mock
-    private McpToolProvider mcpToolProvider;
 
     @InjectMocks
     private SubscriptionService subscriptionService;
@@ -79,82 +74,122 @@ public class SubscriptionServiceTest {
 
     @Test
     void checkChatLimit_whenAllowed_shouldNotThrowException() {
-        McpToolProvider.SubscriptionLimitCheckResponse allowedResponse =
-                new McpToolProvider.SubscriptionLimitCheckResponse(true, "CHAT", 10, 100, 90);
-        when(mcpToolProvider.checkSubscriptionLimit("CHAT")).thenReturn(allowedResponse);
+        SubscriptionPlan plan = SubscriptionPlan.builder()
+                .id("free-plan-id")
+                .name("Free")
+                .maxChatsPerMonth(100)
+                .build();
+        RestaurantSubscription sub = RestaurantSubscription.builder()
+                .restaurant(currentRestaurant)
+                .plan(plan)
+                .build();
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.of(sub));
+
+        SubscriptionUsage usage = SubscriptionUsage.builder()
+                .chatsCount(10)
+                .monthYear(java.time.YearMonth.now().toString())
+                .build();
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.of(usage));
 
         assertDoesNotThrow(() -> subscriptionService.checkChatLimit(currentRestaurant));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("CHAT");
     }
 
     @Test
     void checkChatLimit_whenNotAllowed_shouldThrowSubscriptionLimitExceededException() {
-        McpToolProvider.SubscriptionLimitCheckResponse blockedResponse =
-                new McpToolProvider.SubscriptionLimitCheckResponse(false, "CHAT", 100, 100, 0);
-        when(mcpToolProvider.checkSubscriptionLimit("CHAT")).thenReturn(blockedResponse);
+        SubscriptionPlan plan = SubscriptionPlan.builder()
+                .id("free-plan-id")
+                .name("Free")
+                .maxChatsPerMonth(100)
+                .build();
+        RestaurantSubscription sub = RestaurantSubscription.builder()
+                .restaurant(currentRestaurant)
+                .plan(plan)
+                .build();
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.of(sub));
+
+        SubscriptionUsage usage = SubscriptionUsage.builder()
+                .chatsCount(100)
+                .monthYear(java.time.YearMonth.now().toString())
+                .build();
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.of(usage));
 
         assertThrows(SubscriptionLimitExceededException.class,
                 () -> subscriptionService.checkChatLimit(currentRestaurant));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("CHAT");
     }
 
     @Test
-    void checkChatLimit_onMcpError_shouldLogAndNotThrow() {
-        Map<String, Object> errorMap = new HashMap<>();
-        errorMap.put("error", "VALIDATION_ERROR");
-        errorMap.put("message", "Something went wrong");
-        when(mcpToolProvider.checkSubscriptionLimit("CHAT")).thenReturn(errorMap);
+    void checkChatLimit_whenNoSubscription_shouldNotThrow() {
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.empty());
 
         assertDoesNotThrow(() -> subscriptionService.checkChatLimit(currentRestaurant));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("CHAT");
     }
 
     @Test
     void checkDocumentLimit_whenAllowed_shouldNotThrowException() {
-        McpToolProvider.SubscriptionLimitCheckResponse allowedResponse =
-                new McpToolProvider.SubscriptionLimitCheckResponse(true, "DOCUMENT_UPLOAD", 5, 50, 45); // Usage in MB
-        when(mcpToolProvider.checkSubscriptionLimit("DOCUMENT_UPLOAD")).thenReturn(allowedResponse);
+        SubscriptionPlan plan = SubscriptionPlan.builder()
+                .id("free-plan-id")
+                .name("Free")
+                .maxDocumentsSizeMb(50L)
+                .build();
+        RestaurantSubscription sub = RestaurantSubscription.builder()
+                .restaurant(currentRestaurant)
+                .plan(plan)
+                .build();
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.of(sub));
 
-        // sizeBytes = 1 MB (1024 * 1024 bytes)
+        SubscriptionUsage usage = SubscriptionUsage.builder()
+                .currentDocumentsSizeBytes(5L * 1024 * 1024)
+                .monthYear(java.time.YearMonth.now().toString())
+                .build();
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.of(usage));
+
+        // sizeBytes = 1 MB, total = 6 MB < 50 MB limit
         assertDoesNotThrow(() -> subscriptionService.checkDocumentLimit(currentRestaurant, 1024 * 1024));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("DOCUMENT_UPLOAD");
     }
 
     @Test
     void checkDocumentLimit_whenExceeded_shouldThrowSubscriptionLimitExceededException() {
-        McpToolProvider.SubscriptionLimitCheckResponse limitResponse =
-                new McpToolProvider.SubscriptionLimitCheckResponse(true, "DOCUMENT_UPLOAD", 49, 50, 1); // Usage in MB
-        when(mcpToolProvider.checkSubscriptionLimit("DOCUMENT_UPLOAD")).thenReturn(limitResponse);
+        SubscriptionPlan plan = SubscriptionPlan.builder()
+                .id("free-plan-id")
+                .name("Free")
+                .maxDocumentsSizeMb(50L)
+                .build();
+        RestaurantSubscription sub = RestaurantSubscription.builder()
+                .restaurant(currentRestaurant)
+                .plan(plan)
+                .build();
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.of(sub));
+
+        SubscriptionUsage usage = SubscriptionUsage.builder()
+                .currentDocumentsSizeBytes(49L * 1024 * 1024)
+                .monthYear(java.time.YearMonth.now().toString())
+                .build();
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.of(usage));
 
         // Requesting 2 MB which exceeds 50 MB limit (49MB + 2MB = 51MB > 50MB)
         assertThrows(SubscriptionLimitExceededException.class,
                 () -> subscriptionService.checkDocumentLimit(currentRestaurant, 2 * 1024 * 1024));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("DOCUMENT_UPLOAD");
     }
 
     @Test
-    void checkDocumentLimit_onMcpError_shouldLogAndNotThrow() {
-        Map<String, Object> errorMap = new HashMap<>();
-        errorMap.put("error", "VALIDATION_ERROR");
-        errorMap.put("message", "Something went wrong");
-        when(mcpToolProvider.checkSubscriptionLimit("DOCUMENT_UPLOAD")).thenReturn(errorMap);
+    void checkDocumentLimit_whenNoSubscription_shouldNotThrow() {
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.empty());
 
         assertDoesNotThrow(() -> subscriptionService.checkDocumentLimit(currentRestaurant, 1024 * 1024));
-
-        verify(mcpToolProvider).checkSubscriptionLimit("DOCUMENT_UPLOAD");
     }
 
     @Test
     void getCurrentUsage_success_shouldReturnResponse() {
-        McpToolProvider.SubscriptionInfo info = new McpToolProvider.SubscriptionInfo(
-                "Free Plan", BigDecimal.ZERO, 50L, 100, 3, 10.0, 5, 15, LocalDateTime.now(), null
-        );
-        when(mcpToolProvider.getSubscriptionInfo()).thenReturn(info);
+        when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(currentUser));
+
+        SubscriptionUsage usage = SubscriptionUsage.builder()
+                .id("usage-1")
+                .monthYear(java.time.YearMonth.now().toString())
+                .currentDocumentsSizeBytes(10L * 1024 * 1024)
+                .chatsCount(5)
+                .notificationsCount(15)
+                .build();
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.of(usage));
 
         SubscriptionUsageResponse usageResponse = subscriptionService.getCurrentUsage();
 
@@ -165,22 +200,37 @@ public class SubscriptionServiceTest {
     }
 
     @Test
-    void getCurrentUsage_onMcpError_shouldThrowResourceNotFoundException() {
-        Map<String, Object> errorMap = new HashMap<>();
-        errorMap.put("error", "VALIDATION_ERROR");
-        errorMap.put("message", "Invalid token");
-        when(mcpToolProvider.getSubscriptionInfo()).thenReturn(errorMap);
+    void getCurrentUsage_noUsage_shouldReturnZeroDefaults() {
+        when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(currentUser));
+        when(usageRepository.findByRestaurantAndMonthYear(eq(currentRestaurant), any())).thenReturn(Optional.empty());
 
-        assertThrows(ResourceNotFoundException.class, () -> subscriptionService.getCurrentUsage());
+        SubscriptionUsageResponse usageResponse = subscriptionService.getCurrentUsage();
+
+        assertNotNull(usageResponse);
+        assertEquals(0, usageResponse.getChatsCount());
+        assertEquals(0L, usageResponse.getCurrentDocumentsSizeBytes());
+        assertEquals(0, usageResponse.getNotificationsCount());
     }
 
     @Test
     void getCurrentSubscription_success_shouldReturnResponse() {
-        McpToolProvider.SubscriptionInfo info = new McpToolProvider.SubscriptionInfo(
-                "Premium Plan", BigDecimal.TEN, 500L, 1000, 10, 50.0, 25, 100, LocalDateTime.now(), null
-        );
-        when(mcpToolProvider.getSubscriptionInfo()).thenReturn(info);
         when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(currentUser));
+
+        SubscriptionPlan plan = SubscriptionPlan.builder()
+                .id("plan-1")
+                .name("Premium Plan")
+                .price(BigDecimal.TEN)
+                .maxDocumentsSizeMb(500L)
+                .maxChatsPerMonth(1000)
+                .maxAccountsPerRestaurant(10)
+                .build();
+        RestaurantSubscription sub = RestaurantSubscription.builder()
+                .id("sub-1")
+                .restaurant(currentRestaurant)
+                .plan(plan)
+                .startDate(LocalDateTime.now())
+                .build();
+        when(subscriptionRepository.findByRestaurant(currentRestaurant)).thenReturn(Optional.of(sub));
 
         RestaurantSubscriptionResponse subscriptionResponse = subscriptionService.getCurrentSubscription();
 
@@ -195,13 +245,15 @@ public class SubscriptionServiceTest {
 
     @Test
     void getAllPlans_success_shouldReturnMappedList() {
-        McpToolProvider.SubscriptionPlanInfo plan1 = new McpToolProvider.SubscriptionPlanInfo(
-                "plan-1", "Free", BigDecimal.ZERO, 50L, 100, 3, 50
-        );
-        McpToolProvider.SubscriptionPlanInfo plan2 = new McpToolProvider.SubscriptionPlanInfo(
-                "plan-2", "Pro", BigDecimal.TEN, 500L, 1000, 10, 500
-        );
-        when(mcpToolProvider.getAllPlans()).thenReturn(Arrays.asList(plan1, plan2));
+        SubscriptionPlan plan1 = SubscriptionPlan.builder()
+                .id("plan-1").name("Free").price(BigDecimal.ZERO)
+                .maxDocumentsSizeMb(50L).maxChatsPerMonth(100).maxAccountsPerRestaurant(3).maxNotificationsPerMonth(50)
+                .build();
+        SubscriptionPlan plan2 = SubscriptionPlan.builder()
+                .id("plan-2").name("Pro").price(BigDecimal.TEN)
+                .maxDocumentsSizeMb(500L).maxChatsPerMonth(1000).maxAccountsPerRestaurant(10).maxNotificationsPerMonth(500)
+                .build();
+        when(planRepository.findAll()).thenReturn(Arrays.asList(plan1, plan2));
 
         List<SubscriptionPlanResponse> plans = subscriptionService.getAllPlans();
 
@@ -209,15 +261,5 @@ public class SubscriptionServiceTest {
         assertEquals(2, plans.size());
         assertEquals("Free", plans.get(0).getName());
         assertEquals("Pro", plans.get(1).getName());
-    }
-
-    @Test
-    void getAllPlans_onMcpError_shouldThrowResourceNotFoundException() {
-        Map<String, Object> errorMap = new HashMap<>();
-        errorMap.put("error", "NOT_FOUND");
-        errorMap.put("message", "Plans not found");
-        when(mcpToolProvider.getAllPlans()).thenReturn(errorMap);
-
-        assertThrows(ResourceNotFoundException.class, () -> subscriptionService.getAllPlans());
     }
 }

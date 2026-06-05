@@ -6,7 +6,6 @@ import com.example.SuChefService.dto.SubscriptionUsageResponse;
 import com.example.SuChefService.entity.*;
 import com.example.SuChefService.exception.ResourceNotFoundException;
 import com.example.SuChefService.exception.SubscriptionLimitExceededException;
-import com.example.SuChefService.mcp.McpToolProvider;
 import com.example.SuChefService.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,11 +14,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -33,7 +31,6 @@ public class SubscriptionService {
     private final RestaurantSubscriptionRepository subscriptionRepository;
     private final SubscriptionUsageRepository usageRepository;
     private final UserRepository userRepository;
-    private final McpToolProvider mcpToolProvider;
 
     private static final String DEFAULT_PLAN_ID = "free-plan-id";
     private static final DateTimeFormatter MONTH_YEAR_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM");
@@ -88,42 +85,73 @@ public class SubscriptionService {
     @Transactional
     public void incrementChatUsage(Restaurant restaurant) {
         checkChatLimit(restaurant);
-        mcpToolProvider.incrementUsage("CHAT", 1);
+        String monthYear = YearMonth.now().toString();
+        SubscriptionUsage usage = usageRepository.findByRestaurantAndMonthYear(restaurant, monthYear)
+                .orElseGet(() -> {
+                    SubscriptionUsage newUsage = SubscriptionUsage.builder()
+                            .id(UUID.randomUUID().toString())
+                            .restaurant(restaurant)
+                            .monthYear(monthYear)
+                            .currentDocumentsSizeBytes(0L)
+                            .chatsCount(0)
+                            .notificationsCount(0)
+                            .build();
+                    return usageRepository.save(newUsage);
+                });
+        usage.setChatsCount((usage.getChatsCount() != null ? usage.getChatsCount() : 0) + 1);
+        usageRepository.save(usage);
     }
 
     @Transactional
     public void incrementDocumentUsage(Restaurant restaurant, long sizeBytes) {
         checkDocumentLimit(restaurant, sizeBytes);
-        mcpToolProvider.incrementUsage("DOCUMENT_UPLOAD", (int) sizeBytes);
+        String monthYear = YearMonth.now().toString();
+        SubscriptionUsage usage = usageRepository.findByRestaurantAndMonthYear(restaurant, monthYear)
+                .orElseGet(() -> {
+                    SubscriptionUsage newUsage = SubscriptionUsage.builder()
+                            .id(UUID.randomUUID().toString())
+                            .restaurant(restaurant)
+                            .monthYear(monthYear)
+                            .currentDocumentsSizeBytes(0L)
+                            .chatsCount(0)
+                            .notificationsCount(0)
+                            .build();
+                    return usageRepository.save(newUsage);
+                });
+        usage.setCurrentDocumentsSizeBytes(
+                (usage.getCurrentDocumentsSizeBytes() != null ? usage.getCurrentDocumentsSizeBytes() : 0L) + sizeBytes);
+        usageRepository.save(usage);
     }
 
     public void checkChatLimit(Restaurant restaurant) {
-        Object result = mcpToolProvider.checkSubscriptionLimit("CHAT");
-        if (result instanceof Map<?, ?> map && map.containsKey("error")) {
-            log.warn("MCP checkSubscriptionLimit returned error: {}", map.get("message"));
+        RestaurantSubscription sub = subscriptionRepository.findByRestaurant(restaurant).orElse(null);
+        if (sub == null || sub.getPlan() == null) {
             return;
         }
-        McpToolProvider.SubscriptionLimitCheckResponse response =
-                (McpToolProvider.SubscriptionLimitCheckResponse) result;
-        if (!response.allowed()) {
+        String monthYear = YearMonth.now().toString();
+        SubscriptionUsage usage = usageRepository.findByRestaurantAndMonthYear(restaurant, monthYear).orElse(null);
+        int currentUsage = usage != null && usage.getChatsCount() != null ? usage.getChatsCount() : 0;
+        int limit = sub.getPlan().getMaxChatsPerMonth() != null ? sub.getPlan().getMaxChatsPerMonth() : 0;
+        if (limit > 0 && currentUsage >= limit) {
             throw new SubscriptionLimitExceededException(
-                    "Monthly chat limit reached. Usage: " + response.currentUsage() + "/" + response.limit());
+                    "Monthly chat limit reached. Usage: " + currentUsage + "/" + limit);
         }
     }
 
     public void checkDocumentLimit(Restaurant restaurant, long sizeBytes) {
-        Object result = mcpToolProvider.checkSubscriptionLimit("DOCUMENT_UPLOAD");
-        if (result instanceof Map<?, ?> map && map.containsKey("error")) {
-            log.warn("MCP checkSubscriptionLimit returned error: {}", map.get("message"));
+        RestaurantSubscription sub = subscriptionRepository.findByRestaurant(restaurant).orElse(null);
+        if (sub == null || sub.getPlan() == null) {
             return;
         }
-        McpToolProvider.SubscriptionLimitCheckResponse response =
-                (McpToolProvider.SubscriptionLimitCheckResponse) result;
-        long currentBytes = (long) response.currentUsage() * 1024 * 1024;
-        long maxBytes = (long) response.limit() * 1024 * 1024;
-        if (currentBytes + sizeBytes > maxBytes) {
+        String monthYear = YearMonth.now().toString();
+        SubscriptionUsage usage = usageRepository.findByRestaurantAndMonthYear(restaurant, monthYear).orElse(null);
+        long currentBytes = usage != null && usage.getCurrentDocumentsSizeBytes() != null ? usage.getCurrentDocumentsSizeBytes() : 0L;
+        long maxBytes = sub.getPlan().getMaxDocumentsSizeMb() != null ? sub.getPlan().getMaxDocumentsSizeMb() * 1024 * 1024 : 0;
+        if (maxBytes > 0 && currentBytes + sizeBytes > maxBytes) {
+            long currentMb = currentBytes / (1024 * 1024);
+            long maxMb = maxBytes / (1024 * 1024);
             throw new SubscriptionLimitExceededException(
-                    "Total document size limit reached. Usage: " + response.currentUsage() + "MB/" + response.limit() + "MB");
+                    "Total document size limit reached. Usage: " + currentMb + "MB/" + maxMb + "MB");
         }
     }
 
@@ -138,68 +166,30 @@ public class SubscriptionService {
     }
 
     public SubscriptionUsageResponse getCurrentUsage() {
-        Object result = mcpToolProvider.getSubscriptionInfo();
-        if (result instanceof Map<?, ?> map && map.containsKey("error")) {
-            throw new ResourceNotFoundException("Subscription info not available: " + map.get("message"));
+        Restaurant restaurant = getCurrentRestaurant();
+        String monthYear = YearMonth.now().toString();
+        SubscriptionUsage usage = usageRepository.findByRestaurantAndMonthYear(restaurant, monthYear).orElse(null);
+        if (usage == null) {
+            return SubscriptionUsageResponse.builder()
+                    .id("none")
+                    .monthYear(monthYear)
+                    .currentDocumentsSizeBytes(0L)
+                    .chatsCount(0)
+                    .notificationsCount(0)
+                    .build();
         }
-        McpToolProvider.SubscriptionInfo info = (McpToolProvider.SubscriptionInfo) result;
-        if (info == null) {
-            throw new ResourceNotFoundException("Subscription info not available");
-        }
-        return SubscriptionUsageResponse.builder()
-                .id("mcp-delegated")
-                .monthYear(java.time.YearMonth.now().toString())
-                .currentDocumentsSizeBytes(info.currentDocumentsSizeMb() != null
-                        ? (long) (info.currentDocumentsSizeMb() * 1024 * 1024) : 0L)
-                .chatsCount(info.currentChatsCount() != null ? info.currentChatsCount() : 0)
-                .notificationsCount(info.currentNotificationsCount() != null ? info.currentNotificationsCount() : 0)
-                .build();
+        return toUsageResponse(usage);
     }
 
     public RestaurantSubscriptionResponse getCurrentSubscription() {
-        Object result = mcpToolProvider.getSubscriptionInfo();
-        if (result instanceof Map<?, ?> map && map.containsKey("error")) {
-            throw new ResourceNotFoundException("Subscription info not available: " + map.get("message"));
-        }
-        McpToolProvider.SubscriptionInfo info = (McpToolProvider.SubscriptionInfo) result;
-        if (info == null) {
-            throw new ResourceNotFoundException("Subscription info not available");
-        }
         Restaurant restaurant = getCurrentRestaurant();
-        return RestaurantSubscriptionResponse.builder()
-                .id("mcp-delegated")
-                .restaurantId(restaurant.getId())
-                .plan(SubscriptionPlanResponse.builder()
-                        .id("mcp-plan")
-                        .name(info.planName())
-                        .price(info.planPrice())
-                        .maxDocumentsSizeMb(info.maxDocumentsSizeMb())
-                        .maxChatsPerMonth(info.maxChatsPerMonth())
-                        .maxAccountsPerRestaurant(info.maxAccountsPerRestaurant())
-                        .build())
-                .startDate(info.startDate())
-                .endDate(info.endDate())
-                .build();
+        RestaurantSubscription sub = getSubscription(restaurant);
+        return toSubscriptionResponse(sub);
     }
 
     public List<SubscriptionPlanResponse> getAllPlans() {
-        Object result = mcpToolProvider.getAllPlans();
-        if (result instanceof Map<?, ?> map && map.containsKey("error")) {
-            throw new ResourceNotFoundException("Plans not available: " + map.get("message"));
-        }
-        @SuppressWarnings("unchecked")
-        List<McpToolProvider.SubscriptionPlanInfo> plans =
-                (List<McpToolProvider.SubscriptionPlanInfo>) (List<?>) result;
-        return plans.stream()
-                .map(p -> SubscriptionPlanResponse.builder()
-                        .id(p.id())
-                        .name(p.name())
-                        .price(p.price())
-                        .maxDocumentsSizeMb(p.maxDocumentsSizeMb())
-                        .maxChatsPerMonth(p.maxChatsPerMonth())
-                        .maxAccountsPerRestaurant(p.maxAccountsPerRestaurant())
-                        .maxNotificationsPerMonth(p.maxNotificationsPerMonth())
-                        .build())
+        return planRepository.findAll().stream()
+                .map(this::toPlanResponse)
                 .collect(Collectors.toList());
     }
 

@@ -4,7 +4,6 @@ import com.example.SuChefService.dto.DocumentResponse;
 import com.example.SuChefService.entity.*;
 import com.example.SuChefService.exception.ResourceNotFoundException;
 import com.example.SuChefService.exception.UnauthorizedException;
-import com.example.SuChefService.mcp.McpToolProvider;
 import com.example.SuChefService.repository.DocumentRepository;
 import com.example.SuChefService.repository.UserRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -48,9 +47,6 @@ public class DocumentServiceTest {
 
     @Mock
     private SubscriptionService subscriptionService;
-
-    @Mock
-    private McpToolProvider mcpToolProvider;
 
     @InjectMocks
     private DocumentService documentService;
@@ -170,10 +166,18 @@ public class DocumentServiceTest {
     @Test
     void getUserDocuments_shouldReturnMappedList() {
         LocalDateTime now = LocalDateTime.now();
-        McpToolProvider.DocumentInfo docInfo = new McpToolProvider.DocumentInfo(
-                "doc-123", "invoice.pdf", "pdf", 2048L, now, now, "RECEIVED", "BILL"
-        );
-        when(mcpToolProvider.getUserDocuments()).thenReturn(Collections.singletonList(docInfo));
+        Document doc = Document.builder()
+                .id("doc-123")
+                .name("invoice.pdf")
+                .type("pdf")
+                .size(2048L)
+                .date(now)
+                .uploadedAt(now)
+                .status(DocumentStatus.RECEIVED)
+                .classification(DocumentClassification.BILL)
+                .user(currentUser)
+                .build();
+        when(documentRepository.findByUser(currentUser)).thenReturn(Collections.singletonList(doc));
 
         List<DocumentResponse> responses = documentService.getUserDocuments();
 
