@@ -1,4 +1,4 @@
-@if (authService.isAuthenticated()) {
+@if (authContext.isAuthenticated()) {
 <div
   [class]="'fixed left-0 top-0 h-screen shadow-lg z-40 transition-all duration-300 border-r border-stone-200 ' + (isCollapsed ? 'w-20' : 'w-64')"
   style="background: #ffffff; color: var(--color-stone-800);" (mouseenter)="onSidebarMouseEnter()"

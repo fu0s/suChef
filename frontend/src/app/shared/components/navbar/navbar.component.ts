@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
+import { AuthContext } from '../../../core/services/auth-context.service';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
@@ -72,7 +73,10 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 export class NavbarComponent {
   isMobileMenuOpen = false;
 
-  constructor(public authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    public authContext: AuthContext
+  ) {}
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
