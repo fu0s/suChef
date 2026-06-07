@@ -1,5 +1,6 @@
 package com.example.SuChefService.service;
 
+import com.example.SuChefService.document.DocumentUploadValidator;
 import com.example.SuChefService.dto.DocumentResponse;
 import com.example.SuChefService.entity.*;
 import com.example.SuChefService.exception.ResourceNotFoundException;
@@ -47,6 +48,9 @@ public class DocumentServiceTest {
 
     @Mock
     private SubscriptionService subscriptionService;
+
+    @Mock
+    private DocumentUploadValidator uploadValidator;
 
     @InjectMocks
     private DocumentService documentService;
@@ -102,6 +106,9 @@ public class DocumentServiceTest {
 
             doNothing().when(file).transferTo(mockFile);
 
+            doNothing().when(uploadValidator).validate(currentRestaurant, 2048L);
+            doNothing().when(uploadValidator).trackUsage(currentRestaurant, 2048L);
+
             Document savedDoc = Document.builder()
                     .id("doc-123")
                     .name("invoice.pdf")
@@ -122,8 +129,8 @@ public class DocumentServiceTest {
             assertEquals("pdf", response.getType());
             assertEquals(2048L, response.getSize());
 
-            verify(subscriptionService).checkDocumentLimit(currentRestaurant, 2048L);
-            verify(subscriptionService).incrementDocumentUsage(currentRestaurant, 2048L);
+            verify(uploadValidator).validate(currentRestaurant, 2048L);
+            verify(uploadValidator).trackUsage(currentRestaurant, 2048L);
             verify(documentAnalysisService).analyzeDocument("doc-123");
             filesMockedStatic.verify(() -> Files.deleteIfExists(mockTempFile), times(1));
         }
