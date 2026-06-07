@@ -1,5 +1,6 @@
 package com.example.SuChefService.service;
 
+import com.example.SuChefService.chat.ChatUsagePolicy;
 import com.example.SuChefService.chat.IntentClassifier;
 import com.example.SuChefService.chat.QueryIntent;
 import com.example.SuChefService.chat.QueryRouter;
@@ -17,16 +18,16 @@ import reactor.core.publisher.Flux;
 public class ChatService {
 
     private final ChatClient chatClient;
-    private final SubscriptionService subscriptionService;
+    private final ChatUsagePolicy usagePolicy;
     private final IntentClassifier intentClassifier;
     private final QueryRouter queryRouter;
     private final ObjectMapper objectMapper;
 
-    public ChatService(ChatClient chatClient, SubscriptionService subscriptionService,
+    public ChatService(ChatClient chatClient, ChatUsagePolicy usagePolicy,
                        IntentClassifier intentClassifier, QueryRouter queryRouter,
                        ObjectMapper objectMapper) {
         this.chatClient = chatClient;
-        this.subscriptionService = subscriptionService;
+        this.usagePolicy = usagePolicy;
         this.intentClassifier = intentClassifier;
         this.queryRouter = queryRouter;
         this.objectMapper = objectMapper;
@@ -34,8 +35,8 @@ public class ChatService {
 
     @SuppressWarnings("null")
     public String chat(String message) {
-        Restaurant restaurant = subscriptionService.getCurrentRestaurant();
-        subscriptionService.incrementChatUsage(restaurant);
+        Restaurant restaurant = usagePolicy.getCurrentRestaurant();
+        usagePolicy.incrementChatUsage(restaurant);
 
         IntentClassifier.ClassifiedIntent intent = intentClassifier.classify(message);
         log.info("Intent: {} for message: {}", intent.intent(), message);
@@ -73,9 +74,9 @@ public class ChatService {
     public Flux<String> streamChat(String message) {
         log.debug("Starting streamChat for message: {}", message);
 
-        Restaurant restaurant = subscriptionService.getCurrentRestaurant();
-        subscriptionService.checkChatLimit(restaurant);
-        subscriptionService.incrementChatUsage(restaurant);
+        Restaurant restaurant = usagePolicy.getCurrentRestaurant();
+        usagePolicy.checkChatLimit(restaurant);
+        usagePolicy.incrementChatUsage(restaurant);
 
         IntentClassifier.ClassifiedIntent intent = intentClassifier.classify(message);
         log.info("Stream intent: {} for message: {}", intent.intent(), message);

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef, NgZone } from '@angula
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
+import { AuthContext } from '../../../core/services/auth-context.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -46,7 +47,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
   constructor(
-    public authService: AuthService,
+    private authService: AuthService,
+    public authContext: AuthContext,
     private translateService: TranslateService,
     private router: Router,
     private cdr: ChangeDetectorRef,
@@ -73,8 +75,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
         });
       });
 
-    // Subscribe to current user changes
-    this.authService.currentUser$
+    // Subscribe to current user changes via AuthContext
+    this.authContext.currentUser$
       .pipe(takeUntil(this.destroy$))
       .subscribe((user) => {
         this.currentUser = user;

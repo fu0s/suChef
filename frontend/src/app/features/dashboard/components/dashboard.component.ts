@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DocumentsService, RestaurantMetrics } from '../../../core/services/documents.service';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 import { AuthService, User } from '../../../core/services/auth.service';
+import { AuthContext } from '../../../core/services/auth-context.service';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Observable } from 'rxjs';
 
@@ -88,14 +89,15 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private documentsService: DocumentsService,
-    private authService: AuthService
+    private authService: AuthService,
+    private authContext: AuthContext
   ) {
     this.metricsLoading$ = this.documentsService.metricsLoading$;
     this.metricsError$ = this.documentsService.metricsError$;
   }
 
   ngOnInit(): void {
-    this.authService.currentUser$.subscribe(user => {
+    this.authContext.currentUser$.subscribe(user => {
       this.currentUser = user;
       if (user && user.restaurantName) {
         this.documentsService.metrics$.subscribe(metrics => {

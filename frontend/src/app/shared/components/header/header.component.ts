@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 import { AuthService } from '../../../core/services/auth.service';
+import { AuthContext } from '../../../core/services/auth-context.service';
 import { SidebarService } from '../../../core/services/sidebar.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
+    private authContext: AuthContext,
     private cdr: ChangeDetectorRef,
     private ngZone: NgZone,
     private el: ElementRef,
@@ -43,10 +45,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     // Check authentication state
-    this.isAuthenticated = this.authService.isAuthenticated();
+    this.isAuthenticated = this.authContext.isAuthenticated();
 
     // Subscribe to auth state changes
-    this.authService.currentUser$
+    this.authContext.currentUser$
       .pipe(takeUntil(this.destroy$))
       .subscribe((user: any) => {
         this.isAuthenticated = user !== null;

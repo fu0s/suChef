@@ -67,8 +67,8 @@
 - `SuChefService/src/main/java/com/example/SuChefService/config/McpRateLimitFilter.java`
 - `SuChefService/src/main/java/com/example/SuChefService/controller/McpController.java`
 - `SuChefService/src/main/java/com/example/SuChefService/mcp/McpToolProvider.java`
-- `SuChefService/src/main/java/com/example/SuChefService/mcp/McpToolProviderErrorHandlingTest.java`
-- `SuChefService/src/main/java/com/example/SuChefService/mcp/McpToolProviderTest.java`
+- `SuChefService/src/test/java/com/example/SuChefService/mcp/McpToolProviderErrorHandlingTest.java`
+- `SuChefService/src/test/java/com/example/SuChefService/mcp/McpToolProviderTest.java`
 
 **Frontend:**
 - `frontend/src/app/core/services/mcp.service.ts`

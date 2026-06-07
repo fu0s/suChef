@@ -34,13 +34,29 @@
     </div>
   </section>
 
-  <app-ai-section></app-ai-section>
+  @defer (on viewport) {
+    <app-ai-section></app-ai-section>
+  } @placeholder {
+    <div class="ai-section-placeholder" style="height: 400px;"></div>
+  }
 
-  <app-recommendations-carousel></app-recommendations-carousel>
+  @defer (on viewport) {
+    <app-recommendations-carousel></app-recommendations-carousel>
+  } @placeholder {
+    <div class="recommendations-placeholder" style="height: 300px;"></div>
+  }
 
-  <app-pricing-section></app-pricing-section>
+  @defer (on viewport) {
+    <app-pricing-section></app-pricing-section>
+  } @placeholder {
+    <div class="pricing-placeholder" style="height: 500px;"></div>
+  }
 
-  <app-contact-form></app-contact-form>
+  @defer (on viewport) {
+    <app-contact-form></app-contact-form>
+  } @placeholder {
+    <div class="contact-placeholder" style="height: 400px;"></div>
+  }
 
   <footer class="landing-footer">
     <div class="footer-content">
