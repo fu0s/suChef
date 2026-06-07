@@ -23,6 +23,9 @@ export interface AuthResponse {
 export class AuthService {
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
+  get currentUserValue(): User | null {
+    return this.currentUserSubject.value;
+  }
   private apiUrl = `${environment.apiUrl}/api/auth`;
 
   constructor(private http: HttpClient) {

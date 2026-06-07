@@ -1,7 +1,7 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
 
-@if (authService.isAuthenticated()) {
+@if (authContext.isAuthenticated()) {
 <main class="min-h-screen transition-all duration-300"
   [style.margin-left]="(sidebarService.isCollapsed$ | async) ? '80px' : '256px'"
   [style.width]="'calc(100% - ' + ((sidebarService.isCollapsed$ | async) ? '80px' : '256px') + ')'"

@@ -5,6 +5,7 @@ import { CardComponent } from '../../../shared/components/card/card.component';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthService, User } from '../../../core/services/auth.service';
+import { AuthContext } from '../../../core/services/auth-context.service';
 
 @Component({
   selector: 'app-profile',
@@ -19,8 +20,11 @@ export class ProfileComponent {
   isLoading = false;
   errorMessage: string | null = null;
 
-  constructor(private authService: AuthService) {
-    this.authService.currentUser$.subscribe(user => {
+  constructor(
+    private authService: AuthService,
+    private authContext: AuthContext
+  ) {
+    this.authContext.currentUser$.subscribe(user => {
       this.currentUser = user;
     });
   }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { AuthService } from './core/services/auth.service';
+import { AuthContext } from './core/services/auth-context.service';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SidebarService } from './core/services/sidebar.service';
@@ -24,7 +24,7 @@ export class App {
   title = 'suChef';
 
   constructor(
-    public authService: AuthService,
+    public authContext: AuthContext,
     private translateService: TranslateService,
     public sidebarService: SidebarService
   ) {

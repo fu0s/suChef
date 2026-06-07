@@ -20,7 +20,7 @@
 
       <!-- Auth Buttons -->
       <div class="hidden lg:flex space-x-4 items-center">
-        @if (authService.isAuthenticated()) {
+@if (authContext.isAuthenticated()) {
           <a routerLink="/dashboard" class="text-white font-medium transition px-4 py-2">Dashboard</a>
           <button (click)="logout()" class="logout-btn px-4 py-2 rounded-lg border-2 transition font-medium text-white" style="border-color: rgba(255, 255, 255, 0.5); background: transparent;">Logout</button>
         } @else {
@@ -53,7 +53,7 @@
       <a href="#demo" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Demo</a>
       <a href="/#pricing-section" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Pricing</a>
       <a href="#" class="block px-4 py-3 text-white transition" style="color: rgba(255, 255, 255, 0.9);">Blog</a>
-      @if (authService.isAuthenticated()) {
+      @if (authContext.isAuthenticated()) {
         <a routerLink="/dashboard" class="block px-4 py-3 text-white font-medium transition" style="color: rgba(255, 255, 255, 0.9);">Dashboard</a>
         <button (click)="logout()" class="logout-btn w-full mt-2 mx-4 px-4 py-2 rounded-lg border-2 transition font-medium text-white" style="border-color: rgba(255, 255, 255, 0.5); background: transparent;">Logout</button>
       } @else {
