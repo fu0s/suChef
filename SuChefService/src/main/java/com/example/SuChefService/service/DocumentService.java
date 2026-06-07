@@ -1,5 +1,6 @@
 package com.example.SuChefService.service;
 
+import com.example.SuChefService.document.DocumentUploadValidator;
 import com.example.SuChefService.dto.DocumentResponse;
 import com.example.SuChefService.entity.Document;
 import com.example.SuChefService.entity.DocumentStatus;
@@ -38,7 +39,7 @@ public class DocumentService {
     private final DocumentRepository documentRepository;
     private final UserRepository userRepository;
     private final DocumentAnalysisService documentAnalysisService;
-    private final SubscriptionService subscriptionService;
+    private final DocumentUploadValidator uploadValidator;
 
     private static final Set<String> ALLOWED_MIME_TYPES = Set.of(
             "application/pdf",
@@ -93,8 +94,8 @@ public class DocumentService {
                         "File content type not allowed: " + probedType + ". Allowed types: " + ALLOWED_MIME_TYPES);
             }
 
-            // Check subscription limits
-            subscriptionService.checkDocumentLimit(restaurant, fileSize);
+            // Check document upload limits via validator
+            uploadValidator.validate(restaurant, fileSize);
 
             String fileId = UUID.randomUUID().toString();
             String storedFilename = fileId + extension;
@@ -120,8 +121,8 @@ public class DocumentService {
 
             Document savedDocument = documentRepository.save(document);
 
-            // Track usage
-            subscriptionService.incrementDocumentUsage(restaurant, fileSize);
+            // Track usage via validator
+            uploadValidator.trackUsage(restaurant, fileSize);
 
             documentAnalysisService.analyzeDocument(savedDocument.getId());
             return toDocumentResponse(savedDocument);
