@@ -50,10 +50,10 @@ public class DocumentAnalysisService {
         Document document = documentRepository.findById(documentId)
                 .orElseThrow(() -> new ResourceNotFoundException("Document not found"));
 
-        try {
-            document.setStatus(DocumentStatus.PROCESSING);
-            documentRepository.save(document);
+        document.setStatus(DocumentStatus.PENDING_VALIDATION);
+        documentRepository.save(document);
 
+        try {
             // Read document content with support for PDF, images, and text files
             String content = readDocumentContent(document);
 
@@ -83,6 +83,23 @@ public class DocumentAnalysisService {
             document.setStatus(DocumentStatus.FAILED);
             documentRepository.save(document);
         }
+    }
+
+    @Async
+    @Transactional
+    @SuppressWarnings("null")
+    public Document createPendingValidation(DocumentDetailsRequest request) {
+        Objects.requireNonNull(request);
+
+        Document document = new Document();
+        document.setTitle(request.getTitle());
+        document.setDescription(request.getDescription());
+        document.setStatus(DocumentStatus.PENDING_VALIDATION);
+        document.setClassification(request.getClassification());
+        document.setDetails(request.getDetails());
+
+        Document savedDocument = documentRepository.save(document);
+        return savedDocument;
     }
 
     private String readDocumentContent(Document document) throws IOException {
