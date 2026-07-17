@@ -1,15 +1,11 @@
 package com.example.SuChefService.controller;
 
-import com.example.SuChefService.dto.EditableMenuDetails;
-import com.example.SuChefService.dto.EditableMenuItem;
-import com.example.SuChefService.dto.EditMenuDetailsRequest;
-import com.example.SuChefService.dto.EditMenuItemRequest;
-import com.example.SuChefService.dto.EditMenuItemQuantityRequest;
-import com.example.SuChefService.dto.AddMenuItemRequest;
+import com.example.SuChefService.dto.*;
+import com.example.SuChefService.entity.DocumentStatus;
 import com.example.SuChefService.service.DataOverviewService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseEntity;
 import java.util.List;
 
 @RestController
@@ -58,7 +54,7 @@ public class DataOverviewController {
         return ResponseEntity.ok(ingredients);
     }
 
-    @GetMapping(value = "/documents/{documentId}/details", method = RequestMethod.GET)
+    @GetMapping("/documents/{documentId}/details")
     public ResponseEntity<DocumentDetailsDTO> getDocumentDetails(@PathVariable String documentId) {
         DocumentDetailsDTO details = dataOverviewService.getDocumentDetails(documentId);
         return ResponseEntity.ok(details);
@@ -67,8 +63,8 @@ public class DataOverviewController {
     @PutMapping("/menus/{menuItemId}")
     public ResponseEntity<Void> updateMenuItem(
             @PathVariable String menuItemId,
-            @RequestBody EditMenuItem editableMenuItem) {
-        dataOverviewService.updateMenuItem(menuItemId, editableMenuItem);
+            @RequestBody EditMenuItemRequest editMenuItemRequest) {
+        dataOverviewService.updateMenuItem(menuItemId, editMenuItemRequest);
         return ResponseEntity.noContent().build();
     }
 

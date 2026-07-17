@@ -1,0 +1,61 @@
+@if (isVisible && (pendingCount() > 0 || isLoading())) {
+  <div 
+    class="validation-banner"
+    role="region"
+    [attr.aria-label]="getAriaLabel()"
+    (click)="onBannerClick()"
+    tabindex="0"
+    (keydown.enter)="onBannerClick()"
+    (keydown.space)="onBannerClick()">
+    
+    <div class="banner-content">
+      <!-- Icon -->
+      <div class="banner-icon" aria-hidden="true">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      </div>
+
+      <!-- Text Content -->
+      <div class="banner-text">
+        @if (isLoading()) {
+          <span class="banner-label">Checking for pending validations...</span>
+        } @else {
+          <span class="banner-label">
+            @if (pendingCount() === 1) {
+              1 document needs validation
+            } @else {
+              {{ pendingCount() }} documents need validation
+            }
+          </span>
+          <span class="banner-action">Click to review</span>
+        }
+      </div>
+
+      <!-- Chevron Icon -->
+      <div class="banner-chevron" aria-hidden="true">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+
+      <!-- Live Count Badge -->
+      @if (!isLoading() && pendingCount() > 0) {
+        <span 
+          class="banner-badge" 
+          aria-live="polite"
+          [attr.aria-label]="pendingCount() + ' pending'">
+          {{ pendingCount() }}
+        </span>
+      }
+    </div>
+
+    <!-- Progress indicator when loading -->
+    @if (isLoading()) {
+      <div class="banner-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <div class="progress-bar"></div>
+      </div>
+    }
+  </div>
+}

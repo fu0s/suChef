@@ -1,0 +1,247 @@
+<div class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4" 
+     (click)="onBackdropClick($event)"
+     role="dialog" 
+     aria-modal="true" 
+     aria-labelledby="modal-title">
+  
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true"></div>
+
+  <!-- Modal Container -->
+  <div class="relative w-full max-w-3xl max-h-[90vh] overflow-hidden bg-white rounded-2xl shadow-xl animate-slide-up">
+    
+    <!-- Header -->
+    <header class="modal-header p-6 border-b border-stone-200 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center" 
+             [style.background]="document ? getStatusColor(document.status) : 'linear-gradient(135deg, #1652b0, #1f4d9a)'">
+          @if (document) {
+            @switch (document.classification) {
+              @case ('BILL') {
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              }
+              @case ('ORDER') {
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              }
+              @case ('MENU') {
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              }
+            }
+          }
+        </div>
+        <div>
+          <h2 id="modal-title" class="text-xl font-semibold text-stone-900">{{ document?.title || 'Document Details' }}</h2>
+          <p class="text-sm text-stone-500 mt-0.5">
+            {{ document?.classification ? getClassificationLabel(document.classification) : 'Document' }}
+            · {{ document?.restaurantName || 'Unknown Restaurant' }}
+          </p>
+        </div>
+      </div>
+      
+      <button 
+        type="button"
+        class="modal-close-btn p-2 rounded-lg text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition"
+        (click)="onClose()"
+        aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Body -->
+    <div class="modal-body p-6 overflow-y-auto max-h-[60vh]">
+      @if (document) {
+        <!-- Status & Classification Badges -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium"
+                [class]="getStatusBadgeClass(document.status)">
+            {{ getStatusLabel(document.status) }}
+          </span>
+          <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+            {{ getClassificationLabel(document.classification) }}
+          </span>
+        </div>
+
+        <!-- Document Info Grid -->
+        <dl class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div>
+            <dt class="text-sm font-medium text-stone-500">Document ID</dt>
+            <dd class="text-sm font-mono text-stone-900 mt-1 break-all">{{ document.id }}</dd>
+          </div>
+          <div>
+            <dt class="text-sm font-medium text-stone-500">Created</dt>
+            <dd class="text-sm text-stone-900 mt-1">{{ document.createdAt | date:'MMM d, yyyy h:mm a' }}</dd>
+          </div>
+          <div>
+            <dt class="text-sm font-medium text-stone-500">Restaurant</dt>
+            <dd class="text-sm text-stone-900 mt-1">{{ document.restaurantName }}</dd>
+          </div>
+          <div>
+            <dt class="text-sm font-medium text-stone-500">Uploaded By</dt>
+            <dd class="text-sm text-stone-900 mt-1">{{ document.userId }}</dd>
+          </div>
+        </dl>
+
+        <!-- Description -->
+        @if (document.description) {
+          <div class="mb-6">
+            <h3 class="text-sm font-medium text-stone-500 mb-2">Description</h3>
+            <p class="text-stone-900 whitespace-pre-wrap">{{ document.description }}</p>
+          </div>
+        }
+
+        <!-- Full Details -->
+        <div class="mb-6">
+          <h3 class="text-sm font-medium text-stone-500 mb-2">Extracted Details</h3>
+          <div class="bg-stone-50 rounded-lg p-4 font-mono text-sm text-stone-800 whitespace-pre-wrap max-h-64 overflow-auto">
+            {{ document.details || 'No details available' }}
+          </div>
+        </div>
+
+        <!-- Edit Form (when in edit mode) -->
+        @if (editMode()) {
+          <hr class="my-6 border-stone-200">
+          <h3 class="text-lg font-semibold text-stone-900 mb-4">Edit Document</h3>
+          
+          <form [formGroup]="editForm" (ngSubmit)="onSave()" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="title" class="block text-sm font-medium text-stone-700 mb-1">Title <span class="text-red-500">*</span></label>
+                <input 
+                  type="text"
+                  id="title"
+                  formControlName="title"
+                  class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                  [class.border-red-500]="editForm.get('title')?.invalid && editForm.get('title')?.touched">
+                @if (editForm.get('title')?.invalid && editForm.get('title')?.touched) {
+                  <p class="mt-1 text-sm text-red-600">Title is required</p>
+                }
+              </div>
+
+              <div>
+                <label for="status" class="block text-sm font-medium text-stone-700 mb-1">Status <span class="text-red-500">*</span></label>
+                <select 
+                  id="status"
+                  formControlName="status"
+                  class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition">
+                  @for (opt of getDocumentStatusOptions(); track opt.value) {
+                    <option [value]="opt.value">{{ opt.label }}</option>
+                  }
+                </select>
+              </div>
+
+              <div>
+                <label for="classification" class="block text-sm font-medium text-stone-700 mb-1">Classification <span class="text-red-500">*</span></label>
+                <select 
+                  id="classification"
+                  formControlName="classification"
+                  class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition">
+                  @for (opt of getDocumentClassificationOptions(); track opt.value) {
+                    <option [value]="opt.value">{{ opt.label }}</option>
+                  }
+                </select>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="description" class="block text-sm font-medium text-stone-700 mb-1">Description</label>
+                <textarea 
+                  id="description"
+                  formControlName="description"
+                  rows="3"
+                  class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"></textarea>
+              </div>
+            </div>
+
+            <!-- Classification-specific fields -->
+            @if (isBill()) {
+              <fieldset class="border-t border-stone-200 pt-4">
+                <legend class="text-sm font-medium text-stone-700 mb-3">Bill Details</legend>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Amount</label>
+                    <input type="number" formControlName="amount" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Vendor</label>
+                    <input type="text" formControlName="vendor" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Date</label>
+                    <input type="date" formControlName="date" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                </div>
+              </fieldset>
+            } @else if (isOrder()) {
+              <fieldset class="border-t border-stone-200 pt-4">
+                <legend class="text-sm font-medium text-stone-700 mb-3">Order Details</legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Customer</label>
+                    <input type="text" formControlName="customerName" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Total</label>
+                    <input type="number" formControlName="total" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-stone-700 mb-1">Items</label>
+                  <textarea formControlName="items" rows="2" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                </div>
+              </fieldset>
+            } @else if (isMenu()) {
+              <fieldset class="border-t border-stone-200 pt-4">
+                <legend class="text-sm font-medium text-stone-700 mb-3">Menu Details</legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Restaurant</label>
+                    <input type="text" formControlName="restaurantName" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Menu Items</label>
+                    <textarea formControlName="menuItems" rows="3" class="w-full px-4 py-2.5 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+            }
+
+            <!-- Form Actions -->
+            <div class="flex justify-end gap-3 pt-4 border-t border-stone-200">
+              <button 
+                type="button"
+                class="btn-secondary px-6 py-2.5"
+                (click)="toggleEditMode()">
+                Cancel
+              </button>
+              <button 
+                type="submit"
+                class="btn-primary px-6 py-2.5"
+                [disabled]="editForm.invalid || isSaving()">
+                @if (isSaving()) {
+                  <svg class="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Saving...
+                } @else {
+                  Save Changes
+                }
+              </button>
+            </div>
+
+            @if (saveError()) {
+              <p class="text-red-600 text-sm mt-3" role="alert">{{ saveError() }}</p>
+            }
+          </form>
+        }
+      }
+    </div>
+  </div>
+</div>

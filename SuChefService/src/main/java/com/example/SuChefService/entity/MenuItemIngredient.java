@@ -1,19 +1,23 @@
 package com.example.SuChefService.entity;
 
-import java.util.UUID;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
 @Entity
 @Table(name = "menu_item_ingredients")
+@Data
 public class MenuItemIngredient {
 
     @Id
     private String id;
 
-    @NotBlank(message = "Menu item ID cannot be blank")
-    @Size(min = 1, max = 36, message = "Menu item ID must be between 1 and 36 characters")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "menu_item_id", nullable = false, insertable = false, updatable = false)
+    private MenuItem menuItem;
+
+    @Column(name = "menu_item_id", nullable = false)
     private String menuItemId;
 
     @NotBlank(message = "Ingredient name cannot be blank")
@@ -35,6 +39,14 @@ public class MenuItemIngredient {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public MenuItem getMenuItem() {
+        return menuItem;
+    }
+
+    public void setMenuItem(MenuItem menuItem) {
+        this.menuItem = menuItem;
     }
 
     public String getMenuItemId() {

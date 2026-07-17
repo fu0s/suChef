@@ -179,6 +179,7 @@
   "sidebar": {
     "dashboard": "Dashboard",
     "documents": "Dokumente hochladen",
+    "dataOverview": "Datenübersicht",
     "chat": "KI-Chat-Assistent",
     "subscription": "Abonnement",
     "profile": "Profil"

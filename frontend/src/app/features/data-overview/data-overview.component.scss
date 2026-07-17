@@ -1,0 +1,82 @@
+.data-overview {
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  
+  .container {
+    max-width: 1400px;
+  }
+
+  // Stats Cards
+  .bg-white {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  // Status Filter Buttons
+  button[role="tab"] {
+    transition: all 0.2s ease;
+    
+    &:focus-visible {
+      outline: 2px solid #1652b0;
+      outline-offset: 2px;
+    }
+  }
+
+  // Toast Animations
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 1024px) {
+    .grid.lg\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+    
+    section.lg\:col-span-2 {
+      grid-column: span 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .flex.flex-wrap.gap-2 {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    button[role="tab"] {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
+  // Glassmorphism effect for cards
+  .bg-white {
+    backdrop-filter: blur(10px);
+  }
+}
+
+// Modal backdrop
+.fixed.inset-0 {
+  z-index: 50;
+}
+
+.fixed.inset-0.bg-black\/50 {
+  backdrop-filter: blur(4px);
+}
