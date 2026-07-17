@@ -1,0 +1,248 @@
+<section class="restaurant-menus-section" aria-labelledby="restaurant-menus-heading">
+  <header class="section-header flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+    <div>
+      <h2 id="restaurant-menus-heading" class="text-xl font-semibold text-stone-900 flex items-center gap-2">
+        <svg class="w-5 h-5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+        </svg>
+        Menus by Restaurant
+      </h2>
+      <p class="text-stone-500 text-sm mt-1">
+        @if (restaurantGroups().length > 0) {
+          {{ restaurantGroups().length }} restaurant{{ restaurantGroups().length !== 1 ? 's' : '' }}, {{ menus.length }} menu item{{ menus.length !== 1 ? 's' : '' }}
+        } @else {
+          No restaurant data available
+        }
+      </p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-3">
+      <!-- View Mode Toggle -->
+      <div class="view-mode-toggle flex items-center gap-1 bg-stone-100 rounded-lg p-1" role="group" aria-label="View mode">
+        @for (mode of ['cards', 'grid', 'table']; track mode) {
+          <button
+            type="button"
+            class="view-mode-btn px-3 py-1.5 text-sm font-medium rounded-md transition-all"
+            [class]="viewMode() === mode 
+              ? 'bg-white text-stone-900 shadow-sm' 
+              : 'text-stone-600 hover:text-stone-900'"
+            (click)="setViewMode(mode)"
+            [attr.aria-pressed]="viewMode() === mode">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              @if (mode === 'cards') {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              } @else if (mode === 'grid') {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM10 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM16 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM10 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM16 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM4 18a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM10 18a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM16 18a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              } @else {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              }
+            </svg>
+          </button>
+        }
+      </div>
+
+      <!-- Sort Controls -->
+      <div class="flex items-center gap-2">
+        <label for="restaurant-sort-field" class="sr-only">Sort by</label>
+        <select 
+          id="restaurant-sort-field"
+          class="sort-select px-3 py-1.5 text-sm border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          [value]="sortField()"
+          (change)="setSort($event.target.value)">
+          <option value="name">Name</option>
+          <option value="price">Price</option>
+          <option value="category">Category</option>
+        </select>
+        <button 
+          type="button"
+          class="sort-direction-btn p-2 border border-stone-300 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition"
+          (click)="setSort(sortField())"
+          [attr.aria-label]="'Sort ' + (sortDirection() === 'asc' ? 'descending' : 'ascending')">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            @if (sortDirection() === 'asc') {
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            } @else {
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            }
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  @if (isLoading && menus.length === 0) {
+    <div class="loading-state p-12 text-center" role="status" aria-live="polite">
+      <div class="loading-spinner w-10 h-10 border-3 border-stone-200 border-t-primary-600 rounded-full mx-auto mb-4 animate-spin" aria-hidden="true"></div>
+      <p class="text-stone-600">Loading restaurant menus...</p>
+    </div>
+  } @else if (restaurantGroups().length === 0) {
+    <div class="empty-state p-12 text-center">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-stone-100">
+        <svg class="w-8 h-8 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-medium text-stone-900 mb-2">No restaurant menus found</h3>
+      <p class="text-stone-500">Menu data will appear here once documents are processed.</p>
+    </div>
+  } @else {
+    <!-- Cards View (Default) -->
+    @if (viewMode() === 'cards') {
+      <div class="restaurants-cards space-y-6">
+        @for (group of restaurantGroups(); track group.restaurantId) {
+          <article class="restaurant-card bg-white border border-stone-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+            <header class="card-header p-4 bg-stone-50 border-b border-stone-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-primary-100">
+                  <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-stone-900">{{ group.restaurantName }}</h3>
+                  <p class="text-sm text-stone-500">{{ group.totalItems }} item{{ group.totalItems !== 1 ? 's' : '' }} · {{ group.totalValue | currency:'USD' }}</p>
+                </div>
+              </div>
+              <div class="text-sm font-medium text-primary-600">{{ group.totalValue | currency:'USD' }}</div>
+            </header>
+
+            <div class="card-body p-4">
+              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                @for (menu of sortedMenus(group.menus); track menu.id) {
+                  <div class="menu-card bg-stone-50 border border-stone-200 rounded-lg p-4 hover:border-primary-300 hover:shadow-sm transition-all">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                      <div class="flex-1 min-w-0">
+                        <h4 class="font-medium text-stone-900 truncate">{{ menu.name }}</h4>
+                        <p class="text-xs text-stone-500 capitalize mt-0.5">{{ menu.category }}</p>
+                      </div>
+                      <span class="text-lg font-bold text-primary-700 flex-shrink-0">{{ menu.price | currency:'USD' }}</span>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    }
+
+    <!-- Grid View -->
+    @else if (viewMode() === 'grid') {
+      <div class="restaurants-grid">
+        @for (group of restaurantGroups(); track group.restaurantId) {
+          <section class="restaurant-section mb-8">
+            <header class="section-header mb-4 pb-2 border-b border-stone-200 flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-stone-900">{{ group.restaurantName }}</h3>
+              <div class="flex items-center gap-4 text-sm text-stone-500">
+                <span>{{ group.totalItems }} items</span>
+                <span class="font-medium text-primary-600">{{ group.totalValue | currency:'USD' }}</span>
+              </div>
+            </header>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              @for (menu of sortedMenus(group.menus); track menu.id) {
+                <article class="menu-grid-card bg-white border border-stone-200 rounded-xl p-4 hover:shadow-md hover:border-primary-300 transition-all">
+                  <div class="flex items-start justify-between gap-3 mb-3">
+                    <div class="flex-1 min-w-0">
+                      <h4 class="font-medium text-stone-900 truncate">{{ menu.name }}</h4>
+                      <p class="text-xs text-stone-500 capitalize mt-0.5">{{ menu.category }}</p>
+                    </div>
+                    <span class="text-xl font-bold text-primary-700 flex-shrink-0">{{ menu.price | currency:'USD' }}</span>
+                  </div>
+                </article>
+              }
+            </div>
+          </section>
+        }
+      </div>
+    }
+
+    <!-- Table View -->
+    @else if (viewMode() === 'table') {
+      <div class="table-container overflow-x-auto" role="region" aria-label="Restaurant menus table" tabindex="0">
+        <table class="restaurants-table w-full" role="grid">
+          <thead class="table-header">
+            <tr class="border-b border-stone-200">
+              <th scope="col" class="table-th px-6 py-3 text-left" (click)="setSort('name')">
+                <div class="flex items-center gap-2">
+                  Restaurant
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="table-th px-6 py-3 text-left" (click)="setSort('name')">
+                <div class="flex items-center gap-2">
+                  Menu Item
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="table-th px-6 py-3 text-left" (click)="setSort('category')">
+                <div class="flex items-center gap-2">
+                  Category
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="table-th px-6 py-3 text-right" (click)="setSort('price')">
+                <div class="flex items-center justify-end gap-2">
+                  Price
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                  </svg>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-100">
+            @for (group of restaurantGroups(); track group.restaurantId) {
+              @for (menu of sortedMenus(group.menus); track menu.id; let i = $index) {
+                <tr class="table-row hover:bg-stone-50 transition-colors" [class.bg-stone-50]="i % 2 === 1">
+                  <td class="table-td px-6 py-4 font-medium text-stone-900" [attr.rowspan]="i === 0 ? group.menus.length : null" style="vertical-align: middle;">
+                    {{ group.restaurantName }}
+                  </td>
+                  <td class="table-td px-6 py-4" data-label="Menu Item">
+                    <div>
+                      <p class="font-medium text-stone-900">{{ menu.name }}</p>
+                    </div>
+                  </td>
+                  <td class="table-td px-6 py-4" data-label="Category">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-stone-100 text-stone-700">{{ menu.category }}</span>
+                  </td>
+                  <td class="table-td px-6 py-4 text-right" data-label="Price">
+                    <span class="font-semibold text-stone-900">{{ menu.price | currency:'USD' }}</span>
+                  </td>
+                </tr>
+              }
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  }
+</section>
+
+<style>
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+</style>

@@ -27,6 +27,11 @@ export const routes: Routes = [
       .then(m => m.DOCUMENTS_ROUTES)
   },
   {
+    path: 'data-overview',
+    loadChildren: () => import('./features/data-overview/data-overview.routes')
+      .then(m => m.DATA_OVERVIEW_ROUTES)
+  },
+  {
     path: 'profile',
     loadChildren: () => import('./features/profile/profile.routes')
       .then(m => m.profileRoutes)

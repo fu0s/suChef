@@ -178,6 +178,7 @@
   "sidebar": {
     "dashboard": "Dashboard",
     "documents": "Upload Documents",
+    "dataOverview": "Data Overview",
     "chat": "AI Chat Assistant",
     "subscription": "Subscription",
     "profile": "Profile"

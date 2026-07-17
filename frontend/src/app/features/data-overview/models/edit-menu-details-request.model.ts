@@ -1,6 +1,7 @@
 export interface EditMenuDetailsRequest {
-  name: string;
-  price: number;
-  category: string;
-  restaurantId: string;
+  documentId: string;
+  title: string;
+  description: string;
+  status: string;
+  classification: string;
 }

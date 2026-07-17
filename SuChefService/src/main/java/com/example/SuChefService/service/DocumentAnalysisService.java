@@ -1,5 +1,6 @@
 package com.example.SuChefService.service;
 
+import com.example.SuChefService.dto.DocumentDetailsDTO;
 import com.example.SuChefService.dto.ExtractedDocumentData;
 import com.example.SuChefService.entity.*;
 import com.example.SuChefService.exception.ResourceNotFoundException;
@@ -22,6 +23,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.Objects;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -88,15 +91,16 @@ public class DocumentAnalysisService {
     @Async
     @Transactional
     @SuppressWarnings("null")
-    public Document createPendingValidation(DocumentDetailsRequest request) {
+    public Document createPendingValidation(DocumentDetailsDTO request) {
         Objects.requireNonNull(request);
 
         Document document = new Document();
-        document.setTitle(request.getTitle());
-        document.setDescription(request.getDescription());
+        document.setName(request.getTitle());
+        document.setType(request.getClassification() != null ? request.getClassification().name() : "MANUAL");
         document.setStatus(DocumentStatus.PENDING_VALIDATION);
         document.setClassification(request.getClassification());
-        document.setDetails(request.getDetails());
+        document.setDate(LocalDateTime.now());
+        document.setUploadedAt(LocalDateTime.now());
 
         Document savedDocument = documentRepository.save(document);
         return savedDocument;

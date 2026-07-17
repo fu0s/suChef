@@ -1,5 +1,7 @@
 package com.example.SuChefService.dto;
 
+import com.example.SuChefService.entity.DocumentClassification;
+import com.example.SuChefService.entity.DocumentStatus;
 import java.time.LocalDateTime;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -14,7 +14,7 @@ public class ExtractedMenuDetails {
     @Size(max = 500, message = "Description cannot exceed 500 characters")
     private String description;
 
-    private ExtractedItem[] items;
+    private ExtractedDocumentData.ExtractedItem[] items;
 
     public ExtractedMenuDetails() {
     }
@@ -35,11 +35,11 @@ public class ExtractedMenuDetails {
         this.description = description;
     }
 
-    public ExtractedItem[] getItems() {
+    public ExtractedDocumentData.ExtractedItem[] getItems() {
         return items;
     }
 
-    public void setItems(ExtractedItem[] items) {
+    public void setItems(ExtractedDocumentData.ExtractedItem[] items) {
         this.items = items;
     }
 }

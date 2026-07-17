@@ -1,0 +1,101 @@
+<section class="menus-section bg-white rounded-xl shadow-sm border border-stone-200" aria-labelledby="menus-heading">
+  <div class="section-header p-6 border-b border-stone-200 bg-stone-50">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-emerald-100">
+        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+      </div>
+      <div>
+        <h2 id="menus-heading" class="text-xl font-semibold text-stone-900">Menu Items</h2>
+        <p class="text-sm text-stone-500">{{ menus.length }} menu item{{ menus.length !== 1 ? 's' : '' }}</p>
+      </div>
+    </div>
+  </div>
+
+  @if (isLoading && menus.length === 0) {
+    <div class="loading-state p-12 text-center">
+      <div class="loading-spinner w-10 h-10 border-3 border-stone-200 border-t-emerald-600 rounded-full mx-auto mb-4 animate-spin" aria-hidden="true"></div>
+      <p class="text-stone-600">Loading menu items...</p>
+    </div>
+  } @else if (groupedMenus().length === 0) {
+    <div class="empty-state p-12 text-center">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-stone-100">
+        <svg class="w-8 h-8 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-medium text-stone-900 mb-2">No menu items found</h3>
+      <p class="text-stone-500">Menu items will appear here once documents are processed.</p>
+    </div>
+  } @else {
+    <div class="p-6">
+      @for (group of groupedMenus(); track group.restaurantId) {
+        <div class="restaurant-group mb-6 last:mb-0">
+          <button 
+            type="button"
+            class="restaurant-header
+            class="w-full flex items-center justify-between p-4 rounded-xl transition-colors"
+            [class]="isExpanded(group.restaurantId) ? 'bg-emerald-50 border border-emerald-200' : 'bg-stone-50 border border-stone-200 hover:bg-stone-100'"
+            (click)="toggleRestaurant(group.restaurantId)"
+            [attr.aria-expanded]="isExpanded(group.restaurantId)"
+            [attr.aria-controls]="'menus-' + group.restaurantId">
+            
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-emerald-100">
+                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900">{{ group.restaurantName }}</h3>
+                <p class="text-sm text-stone-500">{{ group.menus.length }} item{{ group.menus.length !== 1 ? 's' : '' }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="text-sm font-medium text-emerald-600">
+                {{ group.menus.reduce((sum, m) => sum + m.price, 0) | currency:'USD' }}
+              </span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" [class.rotate-180]="isExpanded(group.restaurantId)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+
+          <div 
+            id="menus-{{ group.restaurantId }}"
+            class="restaurant-menus overflow-hidden transition-all duration-300"
+            [class.hidden]="!isExpanded(group.restaurantId)">
+            <div class="pt-4">
+              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                @for (menu of group.menus; track menu.id) {
+                  <article class="menu-card bg-white border border-stone-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                      <div class="flex-1 min-w-0">
+                        <h4 class="font-semibold text-stone-900 truncate">{{ menu.name }}</h4>
+                        <p class="text-xs text-stone-500 capitalize mt-0.5">{{ menu.category }}</p>
+                      </div>
+                      <span class="text-lg font-bold text-emerald-700 flex-shrink-0">{{ menu.price | currency:'USD' }}</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                      <button 
+                        type="button"
+                        class="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
+                        (click)="onViewIngredientsClick(menu.id)">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Ingredients
+                      </button>
+                    </div>
+                  </article>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</section>

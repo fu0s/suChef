@@ -39,6 +39,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   collapseLabel = '';
   dashboardLabel = '';
   documentsLabel = '';
+  dataOverviewLabel = '';
   chatLabel = '';
   subscriptionLabel = '';
   profileLabel = '';
@@ -100,6 +101,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.collapseLabel = this.translateService.instant('common.collapse');
     this.dashboardLabel = this.translateService.instant('sidebar.dashboard');
     this.documentsLabel = this.translateService.instant('sidebar.documents');
+    this.dataOverviewLabel = this.translateService.instant('sidebar.dataOverview');
     this.chatLabel = this.translateService.instant('sidebar.chat');
     this.subscriptionLabel = this.translateService.instant('sidebar.subscription');
     this.profileLabel = this.translateService.instant('sidebar.profile');
@@ -107,7 +109,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
     console.log('Sidebar labels updated:', {
       menu: this.menuLabel,
       dashboard: this.dashboardLabel,
-      documents: this.documentsLabel
+      documents: this.documentsLabel,
+      dataOverview: this.dataOverviewLabel
     });
     this.cdr.markForCheck();
   }

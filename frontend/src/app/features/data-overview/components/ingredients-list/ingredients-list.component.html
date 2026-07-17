@@ -1,0 +1,129 @@
+<section class="ingredients-section" aria-labelledby="ingredients-heading">
+  <header class="section-header flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+    <div>
+      <h2 id="ingredients-heading" class="text-xl font-semibold text-stone-900 flex items-center gap-2">
+        <svg class="w-5 h-5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Ingredients
+      </h2>
+      <p class="text-stone-500 text-sm mt-1">{{ ingredients.length }} ingredient{{ ingredients.length !== 1 ? 's' : '' }} across {{ groupedIngredients().length }} menu item{{ groupedIngredients().length !== 1 ? 's' : '' }}</p>
+    </div>
+  </header>
+
+  @if (isLoading && ingredients.length === 0) {
+    <div class="loading-state p-12 text-center" role="status" aria-live="polite">
+      <div class="loading-spinner w-10 h-10 border-3 border-stone-200 border-t-amber-600 rounded-full mx-auto mb-4 animate-spin" aria-hidden="true"></div>
+      <p class="text-stone-600">Loading ingredients...</p>
+    </div>
+  } @else if (ingredients.length === 0) {
+    <div class="empty-state p-12 text-center">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-stone-100">
+        <svg class="w-8 h-8 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-medium text-stone-900 mb-2">No ingredients found</h3>
+      <p class="text-stone-500">Ingredients will appear here once menu items are processed from documents.</p>
+    </div>
+  } @else {
+    <!-- Menu Item Groups -->
+    <div class="space-y-6">
+      @for (group of groupedIngredients(); track group.menuItemId) {
+        <article class="menu-ingredient-group bg-white border border-stone-200 rounded-xl overflow-hidden">
+          <header class="group-header p-4 bg-stone-50 border-b border-stone-200 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-amber-100 flex-shrink-0">
+                <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-semibold text-stone-900 truncate">Menu Item #{{ group.menuItemId.slice(0, 8) }}</h3>
+                <p class="text-sm text-stone-500 mt-0.5">{{ group.ingredients.length }} ingredient{{ group.ingredients.length !== 1 ? 's' : '' }}</p>
+              </div>
+            </div>
+          </header>
+
+          <div class="p-4">
+            <dl class="divide-y divide-stone-100">
+              @for (ing of group.ingredients; track ing.id) {
+                <div class="ingredient-item py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <dt class="font-medium text-stone-900 truncate">{{ ing.ingredientName }}</dt>
+                    <dd class="text-sm text-stone-500 mt-0.5">{{ ing.quantity }} {{ ing.unit }}</dd>
+                  </div>
+                </div>
+              }
+            </dl>
+          </div>
+        </article>
+      }
+    </div>
+
+    <!-- Consolidated View Toggle -->
+    <details class="consolidated-toggle mt-6">
+      <summary class="consolidated-toggle summary cursor-pointer p-4 bg-stone-50 border border-stone-200 rounded-xl flex items-center justify-between gap-4 list-none">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-indigo-100">
+            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium text-stone-900">View consolidated ingredients</p>
+            <p class="text-sm text-stone-500 mt-0.5">Combine quantities across all menu items ({{ uniqueIngredients().length }} unique)</p>
+          </div>
+        </div>
+        <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+
+      <div class="consolidated-content p-4 space-y-3 animate-slide-down" role="region" aria-label="Consolidated ingredients">
+        @for (ing of uniqueIngredients(); track ing.name) {
+          <article class="ingredient-item bg-white border border-stone-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded flex items-center justify-center bg-indigo-100 flex-shrink-0">
+                  <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-medium text-stone-900">{{ ing.name }}</p>
+                  <p class="text-sm text-stone-500">Used in {{ ing.menuItems.size }} menu item{{ ing.menuItems.size !== 1 ? 's' : '' }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-right sm:flex-shrink-0">
+              <p class="text-lg font-bold text-indigo-700">{{ ing.totalQuantity }} {{ ing.unit }}</p>
+              <p class="text-xs text-stone-500 mt-0.5">Total quantity</p>
+            </div>
+          </article>
+        }
+      </div>
+    </details>
+  }
+</section>
+
+<style>
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+</style>
