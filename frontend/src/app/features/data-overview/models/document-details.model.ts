@@ -1,3 +1,6 @@
+import { DocumentStatus } from '../../../shared/models/document-status.model';
+import { DocumentClassification } from '../../../shared/models/document-classification.model';
+
 export interface DocumentDetailsDTO {
   id: string;
   title: string;

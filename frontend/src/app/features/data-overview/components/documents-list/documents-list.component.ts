@@ -1,10 +1,9 @@
-import { Component, Input, Output, EventEmitter, signal, computed, inject } from '@angular/core';
+import { Component, Input, Output, EventEmitter, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DocumentOverviewDTO } from '../../models/document-overview.model';
-import { DocumentStatus, getDocumentStatusLabel, getDocumentStatusColor } from '../../../shared/models/document-status.model';
-import { DocumentClassification, getDocumentClassificationLabel, getDocumentClassificationColor } from '../../../shared/models/document-classification.model';
-import { DataOverviewService } from '../../services/data-overview.service';
+import { DocumentStatus, getDocumentStatusLabel, getDocumentStatusColor } from '../../../../shared/models/document-status.model';
+import { DocumentClassification, getDocumentClassificationLabel, getDocumentClassificationColor } from '../../../../shared/models/document-classification.model';
 
 @Component({
   selector: 'app-documents-list',
@@ -14,8 +13,6 @@ import { DataOverviewService } from '../../services/data-overview.service';
   styleUrls: ['./documents-list.component.scss']
 })
 export class DocumentsListComponent {
-  private dataOverviewService = inject(DataOverviewService);
-
   @Input() documents: DocumentOverviewDTO[] = [];
   @Input() selectedStatus: string = 'PENDING_VALIDATION';
   @Input() isLoading = false;
@@ -29,7 +26,7 @@ export class DocumentsListComponent {
 
   // Computed filtered documents
   filteredDocuments = computed(() => {
-    let filtered = this.documents();
+    let filtered = [...this.documents];
     
     if (this.localFilter()) {
       filtered = filtered.filter(d => d.status === this.localFilter());

@@ -23,3 +23,14 @@ export function getDocumentClassificationLabel(classification: DocumentClassific
 export function getDocumentClassificationColor(classification: DocumentClassification): string {
   return DocumentClassificationColors[classification] || 'bg-gray-100 text-gray-800';
 }
+
+export interface DocumentClassificationOptions {
+  value: DocumentClassification;
+  label: string;
+}
+
+export const ALL_DOCUMENT_CLASSIFICATIONS: DocumentClassificationOptions[] = [
+  { value: DocumentClassification.BILL, label: DocumentClassificationLabels[DocumentClassification.BILL] },
+  { value: DocumentClassification.ORDER, label: DocumentClassificationLabels[DocumentClassification.ORDER] },
+  { value: DocumentClassification.MENU, label: DocumentClassificationLabels[DocumentClassification.MENU] }
+];

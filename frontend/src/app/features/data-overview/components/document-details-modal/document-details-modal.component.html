@@ -38,7 +38,7 @@
         <div>
           <h2 id="modal-title" class="text-xl font-semibold text-stone-900">{{ document?.title || 'Document Details' }}</h2>
           <p class="text-sm text-stone-500 mt-0.5">
-            {{ document?.classification ? getClassificationLabel(document.classification) : 'Document' }}
+            {{ getClassificationLabelForDisplay() }}
             · {{ document?.restaurantName || 'Unknown Restaurant' }}
           </p>
         </div>
@@ -110,7 +110,7 @@
           <hr class="my-6 border-stone-200">
           <h3 class="text-lg font-semibold text-stone-900 mb-4">Edit Document</h3>
           
-          <form [formGroup]="editForm" (ngSubmit)="onSave()" class="space-y-4">
+          <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="title" class="block text-sm font-medium text-stone-700 mb-1">Title <span class="text-red-500">*</span></label>

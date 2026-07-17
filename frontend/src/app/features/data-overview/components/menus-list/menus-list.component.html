@@ -34,8 +34,7 @@
         <div class="restaurant-group mb-6 last:mb-0">
           <button 
             type="button"
-            class="restaurant-header
-            class="w-full flex items-center justify-between p-4 rounded-xl transition-colors"
+            class="restaurant-header w-full flex items-center justify-between p-4 rounded-xl transition-colors"
             [class]="isExpanded(group.restaurantId) ? 'bg-emerald-50 border border-emerald-200' : 'bg-stone-50 border border-stone-200 hover:bg-stone-100'"
             (click)="toggleRestaurant(group.restaurantId)"
             [attr.aria-expanded]="isExpanded(group.restaurantId)"
@@ -55,7 +54,7 @@
 
             <div class="flex items-center gap-3">
               <span class="text-sm font-medium text-emerald-600">
-                {{ group.menus.reduce((sum, m) => sum + m.price, 0) | currency:'USD' }}
+                {{ getTotalPrice(group.menus) | currency:'USD' }}
               </span>
               <svg class="w-5 h-5 text-stone-400 transition-transform" [class.rotate-180]="isExpanded(group.restaurantId)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />

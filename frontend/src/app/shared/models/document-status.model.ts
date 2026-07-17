@@ -32,3 +32,17 @@ export function getDocumentStatusLabel(status: DocumentStatus): string {
 export function getDocumentStatusColor(status: DocumentStatus): string {
   return DocumentStatusColors[status] || 'bg-gray-100 text-gray-800';
 }
+
+export interface DocumentStatusOptions {
+  value: DocumentStatus;
+  label: string;
+}
+
+export const ALL_DOCUMENT_STATUSES: DocumentStatusOptions[] = [
+  { value: DocumentStatus.RECEIVED, label: DocumentStatusLabels[DocumentStatus.RECEIVED] },
+  { value: DocumentStatus.PROCESSING, label: DocumentStatusLabels[DocumentStatus.PROCESSING] },
+  { value: DocumentStatus.OCR_PROCESSING, label: DocumentStatusLabels[DocumentStatus.OCR_PROCESSING] },
+  { value: DocumentStatus.PENDING_VALIDATION, label: DocumentStatusLabels[DocumentStatus.PENDING_VALIDATION] },
+  { value: DocumentStatus.COMPLETED, label: DocumentStatusLabels[DocumentStatus.COMPLETED] },
+  { value: DocumentStatus.FAILED, label: DocumentStatusLabels[DocumentStatus.FAILED] }
+];

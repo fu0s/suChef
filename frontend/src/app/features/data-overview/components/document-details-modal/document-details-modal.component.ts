@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter, signal, inject, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { DocumentDetailsDTO } from '../../models/document-details.model';
-import { DocumentStatus, getDocumentStatusLabel, getDocumentStatusColor } from '../../../shared/models/document-status.model';
-import { DocumentClassification, getDocumentClassificationLabel, getDocumentClassificationColor } from '../../../shared/models/document-classification.model';
+import { DocumentOverviewDTO } from '../../models/document-overview.model';
+import { DocumentStatus, getDocumentStatusLabel, getDocumentStatusColor, ALL_DOCUMENT_STATUSES } from '../../../../shared/models/document-status.model';
+import { DocumentClassification, getDocumentClassificationLabel, getDocumentClassificationColor, ALL_DOCUMENT_CLASSIFICATIONS } from '../../../../shared/models/document-classification.model';
 import { DataOverviewService } from '../../services/data-overview.service';
 import { EditMenuDetailsRequest } from '../../models/edit-menu-details-request.model';
 
@@ -25,9 +25,9 @@ export class DocumentDetailsModalComponent implements OnChanges {
   private dataOverviewService = inject(DataOverviewService);
   private fb = inject(FormBuilder);
 
-  @Input() document: DocumentDetailsDTO | null = null;
+  @Input() document: DocumentOverviewDTO | null = null;
   @Output() close = new EventEmitter<void>();
-  @Output() save = new EventEmitter<DocumentDetailsDTO>();
+  @Output() save = new EventEmitter<DocumentOverviewDTO>();
 
   isSaving = signal(false);
   saveError = signal<string | null>(null);
@@ -80,8 +80,37 @@ export class DocumentDetailsModalComponent implements OnChanges {
     return getDocumentClassificationLabel(classification);
   }
 
+  getClassificationLabelForDisplay(): string {
+    if (!this.document?.classification) return 'Document';
+    return getDocumentClassificationLabel(this.document.classification);
+  }
+
   getClassificationColor(classification: DocumentClassification): string {
     return getDocumentClassificationColor(classification);
+  }
+
+  getStatusBadgeClass(status: DocumentStatus): string {
+    return getDocumentStatusColor(status);
+  }
+
+  getDocumentStatusOptions() {
+    return ALL_DOCUMENT_STATUSES;
+  }
+
+  getDocumentClassificationOptions() {
+    return ALL_DOCUMENT_CLASSIFICATIONS;
+  }
+
+  isBill(): boolean {
+    return this.document?.classification === DocumentClassification.BILL;
+  }
+
+  isOrder(): boolean {
+    return this.document?.classification === DocumentClassification.ORDER;
+  }
+
+  isMenu(): boolean {
+    return this.document?.classification === DocumentClassification.MENU;
   }
 
   formatDate(date: Date | string): string {
@@ -94,6 +123,13 @@ export class DocumentDetailsModalComponent implements OnChanges {
     });
   }
 
+  onBackdropClick(event: MouseEvent): void {
+    // Only close if clicking directly on the backdrop (not the modal content)
+    if ((event.target as HTMLElement).classList.contains('modal-backdrop')) {
+      this.onClose();
+    }
+  }
+
   onSubmit(): void {
     if (this.editForm.invalid || !this.document || this.isSaving()) {
       this.editForm.markAllAsTouched();
@@ -103,7 +139,7 @@ export class DocumentDetailsModalComponent implements OnChanges {
     this.isSaving.set(true);
     this.saveError.set(null);
 
-    const formValue = this.editForm.value as DocumentFormValue;
+    const formValue = this.editForm.value;
     
     const request: EditMenuDetailsRequest = {
       documentId: this.document.id,
@@ -115,7 +151,7 @@ export class DocumentDetailsModalComponent implements OnChanges {
 
     this.dataOverviewService.updateMenuDetails(request).subscribe({
       next: () => {
-        const updatedDoc: DocumentDetailsDTO = {
+        const updatedDoc: DocumentOverviewDTO = {
           ...this.document!,
           title: formValue.title,
           description: formValue.description,

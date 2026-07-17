@@ -10,6 +10,9 @@ interface RestaurantGroup {
   totalValue: number;
 }
 
+type ViewMode = 'grid' | 'table' | 'cards';
+type SortField = 'name' | 'price' | 'category';
+
 @Component({
   selector: 'app-restaurant-menus',
   standalone: true,
@@ -22,8 +25,8 @@ export class RestaurantMenusComponent {
   @Input() isLoading = false;
 
   // Signal for view mode: 'grid' | 'table' | 'cards'
-  viewMode = signal<'grid' | 'table' | 'cards'>('cards');
-  sortField = signal<'name' | 'price' | 'category'>('name');
+  viewMode = signal<ViewMode>('cards');
+  sortField = signal<SortField>('name');
   sortDirection = signal<'asc' | 'desc'>('asc');
 
   restaurantGroups = computed<RestaurantGroup[]>(() => {
@@ -50,15 +53,16 @@ export class RestaurantMenusComponent {
       .sort((a, b) => a.restaurantName.localeCompare(b.restaurantName));
   });
 
-  setViewMode(mode: 'grid' | 'table' | 'cards'): void {
-    this.viewMode.set(mode);
+  setViewMode(mode: ViewMode | string): void {
+    this.viewMode.set(mode as ViewMode);
   }
 
-  setSort(field: 'name' | 'price' | 'category'): void {
-    if (this.sortField() === field) {
+  setSort(field: SortField | string): void {
+    const sortField = field as SortField;
+    if (this.sortField() === sortField) {
       this.sortDirection.set(this.sortDirection() === 'asc' ? 'desc' : 'asc');
     } else {
-      this.sortField.set(field);
+      this.sortField.set(sortField);
       this.sortDirection.set('asc');
     }
   }

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataOverviewService } from '../services/data-overview.service';
+import { DataOverviewService } from '../../services/data-overview.service';
 
 @Component({
   selector: 'app-validation-banner',

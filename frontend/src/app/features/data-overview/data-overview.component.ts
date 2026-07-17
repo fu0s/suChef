@@ -1,10 +1,10 @@
 import { Component, OnInit, signal, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { DataOverviewService } from './services/data-overview.service';
-import { DocumentOverviewDTO } from '../../../shared/models/document-overview.model';
-import { MenuOverviewDTO } from '../../../shared/models/menu-overview.model';
-import { IngredientOverviewDTO } from '../../../shared/models/ingredient-overview.model';
+import { DocumentOverviewDTO } from './models/document-overview.model';
+import { DocumentDetailsDTO } from './models/document-details.model';
+import { MenuOverviewDTO } from './models/menu-overview.model';
+import { IngredientOverviewDTO } from './models/ingredient-overview.model';
 import { ValidationBannerComponent } from './components/validation-banner/validation-banner.component';
 import { DocumentsListComponent } from './components/documents-list/documents-list.component';
 import { MenusListComponent } from './components/menus-list/menus-list.component';
@@ -18,12 +18,17 @@ interface Toast {
   type: 'success' | 'error';
 }
 
+interface StatusOption {
+  value: string;
+  label: string;
+  color: string;
+}
+
 @Component({
   selector: 'app-data-overview',
   standalone: true,
   imports: [
     CommonModule, 
-    RouterOutlet,
     ValidationBannerComponent,
     DocumentsListComponent,
     MenusListComponent,
@@ -47,7 +52,18 @@ export class DataOverviewComponent implements OnInit {
   // Local component state
   selectedStatus = signal<string>('PENDING_VALIDATION');
   toasts = signal<Toast[]>([]);
-  selectedDocument = signal<DocumentOverviewDTO | null>(null);
+  selectedDocument = signal<DocumentDetailsDTO | null>(null);
+  isLoadingDetails = signal(false);
+
+  // Status options for filter tabs
+  statusOptions: StatusOption[] = [
+    { value: 'PENDING_VALIDATION', label: 'Pending Validation', color: '#a855f7' },
+    { value: 'RECEIVED', label: 'Received', color: '#3b82f6' },
+    { value: 'PROCESSING', label: 'Processing', color: '#f59e0b' },
+    { value: 'OCR_PROCESSING', label: 'OCR Processing', color: '#f97316' },
+    { value: 'COMPLETED', label: 'Completed', color: '#22c55e' },
+    { value: 'FAILED', label: 'Failed', color: '#ef4444' }
+  ];
 
   ngOnInit(): void {
     this.loadData();
@@ -61,19 +77,47 @@ export class DataOverviewComponent implements OnInit {
     this.selectedStatus.set(status);
   }
 
+  setStatus(status: string): void {
+    this.selectedStatus.set(status);
+  }
+
   openDocumentDetails(doc: DocumentOverviewDTO): void {
-    this.selectedDocument.set(doc);
+    this.isLoadingDetails.set(true);
+    this.dataOverviewService.getDocumentDetails(doc.id).subscribe({
+      next: (details) => {
+        this.selectedDocument.set(details);
+        this.isLoadingDetails.set(false);
+      },
+      error: (error) => {
+        console.error('Error loading document details:', error);
+        this.isLoadingDetails.set(false);
+        this.showToast('Failed to load document details', 'error');
+      }
+    });
   }
 
   closeDocumentDetails(): void {
     this.selectedDocument.set(null);
   }
 
-  onDocumentSaved(doc: DocumentOverviewDTO): void {
+  onDocumentSaved(doc: DocumentDetailsDTO): void {
     // Optimistic update via service
     this.dataOverviewService.optimisticUpdateDocument(doc.id, doc);
     this.showToast('Document updated successfully', 'success');
     this.closeDocumentDetails();
+  }
+
+  loadIngredientsForMenu(menuId: string): void {
+    this.dataOverviewService.getIngredientsByMenuItem(menuId).subscribe({
+      next: (ingredients) => {
+        // The service handles the signal update
+        console.log('Ingredients loaded for menu:', menuId, ingredients);
+      },
+      error: (error) => {
+        console.error('Error loading ingredients:', error);
+        this.showToast('Failed to load ingredients', 'error');
+      }
+    });
   }
 
   refreshData(): void {

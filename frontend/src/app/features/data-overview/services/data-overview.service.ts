@@ -1,14 +1,14 @@
 import { Injectable, signal, computed, inject } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-import { DocumentOverviewDTO } from '../../shared/models/document-overview.model';
-import { MenuOverviewDTO } from '../../shared/models/menu-overview.model';
-import { IngredientOverviewDTO } from '../../shared/models/ingredient-overview.model';
-import { DocumentDetailsDTO } from '../../shared/models/document-details.model';
-import { EditableMenuItem } from '../../shared/models/editable-menu-item.model';
-import { AddMenuItemRequest } from '../../shared/models/add-menu-item-request.model';
-import { EditMenuDetailsRequest } from '../../shared/models/edit-menu-details-request.model';
+import { environment } from '../../../../environments/environment';
+import { DocumentOverviewDTO } from '../models/document-overview.model';
+import { MenuOverviewDTO } from '../models/menu-overview.model';
+import { IngredientOverviewDTO } from '../models/ingredient-overview.model';
+import { DocumentDetailsDTO } from '../models/document-details.model';
+import { EditableMenuItem } from '../models/editable-menu-item.model';
+import { AddMenuItemRequest } from '../models/add-menu-item-request.model';
+import { EditMenuDetailsRequest } from '../models/edit-menu-details-request.model';
 
 @Injectable({
   providedIn: 'root'

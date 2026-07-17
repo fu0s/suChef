@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, signal, computed, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { MenuOverviewDTO } from '../../models/menu-overview.model';
 import { DataOverviewService } from '../../services/data-overview.service';
 
@@ -12,7 +12,7 @@ interface RestaurantGroup {
 @Component({
   selector: 'app-menus-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CurrencyPipe],
   templateUrl: './menus-list.component.html',
   styleUrls: ['./menus-list.component.scss']
 })
@@ -47,6 +47,9 @@ export class MenusListComponent {
       .sort((a, b) => a.restaurantName.localeCompare(b.restaurantName));
   });
 
+  // Alias for template compatibility
+  groupedMenus = this.restaurantGroups;
+
   isExpanded(restaurantId: string): boolean {
     return this.expandedRestaurants().has(restaurantId);
   }
@@ -60,6 +63,10 @@ export class MenusListComponent {
       next.add(restaurantId);
     }
     this.expandedRestaurants.set(next);
+  }
+
+  getTotalPrice(menus: MenuOverviewDTO[]): number {
+    return menus.reduce((sum, m) => sum + m.price, 0);
   }
 
   onViewIngredientsClick(menuId: string): void {
