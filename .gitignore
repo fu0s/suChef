@@ -82,6 +82,7 @@ graphify-out/
 
 # Uploads
 uploads/
+SuChefService/uploads/
 
 # Generated files
 *.class
